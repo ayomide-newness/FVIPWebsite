@@ -1,0 +1,170 @@
+/* Shared responsive refinements — loaded after each page's local styles. */
+:root { --page-gutter: clamp(18px, 4vw, 52px); }
+
+html, body { max-width: 100%; overflow-x: hidden; }
+body { cursor: auto; }
+body.menu-open { overflow: hidden; }
+img, video, iframe, svg { max-width: 100%; }
+video { display: block; }
+
+/* Back-to-top control — added by site-enhance.js on every page. */
+.back-to-top {
+  position: fixed;
+  right: max(22px, env(safe-area-inset-right));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 9000;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(216,190,122,.62);
+  border-radius: 50%;
+  background: rgba(9,22,22,.86);
+  color: #efe3c2;
+  box-shadow: 0 12px 30px rgba(0,0,0,.24);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(.92);
+  transition: opacity .28s ease, transform .28s ease, visibility .28s, background .28s, color .28s;
+}
+.back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+.back-to-top:hover { background: #b9904a; color: #091616; transform: translateY(-3px) scale(1.04); }
+.back-to-top:focus-visible { outline: 3px solid rgba(239,227,194,.8); outline-offset: 3px; }
+.back-to-top svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+/* The shared visibility helper uses inline styles; retain intentional hover pause. */
+@media (hover: hover) {
+  .partners-row:hover .partners-track { animation-play-state: paused !important; }
+}
+
+/* Make the opening masterplan cinematic at every aspect ratio. */
+#intro-video {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1024px) {
+  .cursor, .cursor-ring { display: none !important; }
+  nav, nav.scrolled { padding-inline: var(--page-gutter) !important; }
+  .nav-inner { min-width: 0; }
+  .mobile-menu, .mob-menu { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .mobile-menu a, .mob-menu a { min-height: 44px; }
+  .page-hero, .hero, #home { min-height: min(760px, 100svh); }
+  .hero-content, .hero-inner, .h-wrap { padding-inline: var(--page-gutter) !important; }
+  .hero-actions, .h-actions, .cta-row, .form-row, .nl-form { gap: 12px; }
+  .hero-actions > *, .h-actions > *, .cta-row > * { min-height: 46px; }
+  .section, .sec, #vision, #masterplan, #invest, #news, #testi, #props,
+  .about-section, .services-section, .contact-section { padding-inline: var(--page-gutter) !important; }
+  .grid-2, .grid-3, .grid-4, .about-grid, .contact-grid, .service-grid,
+  .feature-grid, .project-grid, .property-grid, .team-grid { min-width: 0; }
+  .mp-img-box, .masterplan-wrap, .masterplan-image { width: 100%; }
+  .mp-img-box img, .masterplan-image img { width: 100%; height: auto; object-fit: contain; }
+  .mp-legend { gap: 12px; }
+  .partners-track { animation-duration: 36s; }
+}
+
+@media (max-width: 700px) {
+  :root { --page-gutter: 18px; }
+  body { font-size: 16px; }
+  #intro-container { align-items: stretch; }
+  #intro-video { object-position: 58% center; }
+  #skip-btn { bottom: max(18px, env(safe-area-inset-bottom)); font-size: 9px; }
+  .i-logo-name { font-size: clamp(34px, 11vw, 48px); letter-spacing: 3px; }
+  .i-logo-sub { letter-spacing: 3.5px; }
+  .i-annots, .i-legend { display: none !important; }
+  .back-to-top { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); width: 44px; height: 44px; }
+
+  nav, nav.scrolled { min-height: 64px; }
+  .logo-name { font-size: 14px; letter-spacing: 1px; }
+  .logo-tag, .logo-sub { font-size: 7px; letter-spacing: 1.8px; }
+  .hamburger { min-width: 44px; min-height: 44px; justify-content: center; }
+  .mobile-menu, .mob-menu { padding: 86px var(--page-gutter) 30px !important; }
+
+  .h-wrap { padding-top: 88px !important; }
+  .h-hl, .hero-title { font-size: clamp(38px, 12vw, 58px) !important; line-height: 1.04; }
+  .h-sub, .hero-subtitle { font-size: 14px; line-height: 1.75; }
+  .h-over { margin-bottom: 22px; }
+  .hero-progress, .hero-arrows, .scue { display: none !important; }
+  .h-stats { margin-top: 40px; }
+  .h-sn { font-size: 40px; }
+
+  .vis-grid, .mp-grid, .inv-g, .sus-g, .nl-g, .prop-fg, .park-strip,
+  .news-g, .tc-grid, .about-grid, .contact-grid, .service-grid,
+  .feature-grid, .project-grid, .property-grid, .team-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 32px !important; }
+  .vis-num { font-size: 72px; }
+  .vis-quote { padding-left: 18px; font-size: 23px; }
+  .mp-img-box { cursor: default; }
+  .hs { transform: scale(.82); transform-origin: center; }
+  .hs-tip { display: none; }
+  .ph-item { gap: 14px; }
+  .ph-num { width: 44px; font-size: 34px; }
+
+  /* Properties — keep the development portfolio legible and balanced. */
+  .properties-page #development.section { padding-block: 58px !important; }
+  .properties-page .dev-intro { margin-bottom: 28px; }
+  .properties-page .dev-intro-p { font-size: 14px; line-height: 1.8; }
+  .properties-page .dev-portfolio-grid,
+  .properties-page .infra-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 16px; }
+  .properties-page .dev-portfolio-grid { margin-bottom: 38px; }
+  .properties-page .dev-portfolio-card,
+  .properties-page .infra-card { padding: 24px 20px; }
+  .properties-page .dev-stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; }
+  .properties-page .dev-stat { padding: 24px 14px; border-right: 0; border-bottom: 1px solid rgba(185,144,74,.18); }
+  .properties-page .dev-stat:last-child { grid-column: 1 / -1; }
+  .properties-page .ds-num { font-size: 38px; }
+
+  /* Services — prevent the long title, CTAs and section links from clipping. */
+  .services-page .page-hero { min-height: 0; padding: 112px var(--page-gutter) 52px !important; align-items: flex-start; }
+  .services-page .page-hero-inner { width: 100%; }
+  .services-page .breadcrumb { margin-bottom: 16px; }
+  .services-page .ph-tag { margin-bottom: 16px; }
+  .services-page .page-hero-h { max-width: 100%; font-size: clamp(34px, 10.4vw, 48px) !important; line-height: 1.08; }
+  .services-page .page-hero-sub { margin-top: 16px; font-size: 14px; line-height: 1.75; }
+  .services-page .hero-actions { display: grid; grid-template-columns: minmax(0, 1fr); margin-top: 24px; gap: 10px; }
+  .services-page .hero-actions a { width: 100%; min-height: 50px; justify-content: center; padding: 14px 18px; text-align: center; }
+  .services-page .hero-nav-tabs { margin-top: 30px; }
+  .services-page .hnt { padding: 14px 20px 14px 0; margin-right: 20px; }
+
+  .gl-stats, .gl-infra, .partners-row, .sus-metrics, .inv-nums,
+  .inv-opportunity-grid, .stats-grid, .info-grid, .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .gl-portfolio, .tc-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .gs, .gi { padding: 24px 14px; }
+  .gs-n { font-size: 40px; }
+  .inv-opportunity-card.wide { grid-column: auto; }
+  .inv-pull { position: relative; right: auto; bottom: auto; max-width: none; margin-top: 12px; }
+  .psm { grid-template-columns: 110px minmax(0, 1fr); }
+  .psm-img { width: 110px; }
+  .park-body, .pb-body { padding: 26px 22px; }
+  .prop-big { min-height: 440px; }
+
+  .nl-form, .coming-form { flex-direction: column; }
+  .nl-in, .coming-input { width: 100%; min-width: 0 !important; border-right: 1px solid rgba(185,144,74,.3) !important; border-bottom: 0; }
+  .nl-btn, .coming-btn { width: 100%; min-height: 50px; }
+  .news-cats { margin-inline: calc(var(--page-gutter) * -1); padding-inline: var(--page-gutter); }
+  .ns { grid-template-columns: 86px minmax(0, 1fr); }
+  .ns-img { width: 86px; }
+
+  footer { padding-inline: var(--page-gutter) !important; }
+  .ft { grid-template-columns: minmax(0, 1fr) !important; gap: 26px; }
+  .ft > :first-child { grid-column: auto; }
+  .fb { align-items: flex-start; text-align: left; }
+}
+
+@media (max-width: 390px) {
+  .gl-stats, .gl-infra, .partners-row, .sus-metrics, .inv-nums,
+  .inv-opportunity-grid, .stats-grid, .info-grid, .form-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .psm { grid-template-columns: minmax(0, 1fr); }
+  .psm-img { width: 100%; height: 180px; }
+  .btn-p, .btn-g, .btn-cta, .btn-portal { width: 100%; justify-content: center; }
+  .services-page .page-hero { padding-top: 96px !important; }
+  .services-page .page-hero-h { font-size: 33px !important; }
+  .properties-page .dev-stats-row { grid-template-columns: minmax(0, 1fr); }
+  .properties-page .dev-stat:last-child { grid-column: auto; }
+}
