@@ -48,7 +48,7 @@ button{font-family:var(--font-b);cursor:pointer;border:none}
 #intro-container{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:#091616;opacity:0;transform:scale(1.04);transition:opacity 1s var(--ease),transform 1s var(--ease);overflow:hidden}
 #intro-container.show{opacity:1;transform:scale(1)}
 #intro-container.fade-out{opacity:0;pointer-events:none}
-#intro-video{width:60%;height:60%;object-fit:cover;opacity:.76;filter:saturate(1.05) contrast(1.05)}
+#intro-video{width:50%;height:50%;object-fit:cover;opacity:.76;filter:saturate(1.05) contrast(1.05)}
 #skip-btn{position:absolute;left:50%;bottom:24px;z-index:9;transform:translateX(-50%);padding:12px 22px;background:rgba(9,22,22,.68);border:1px solid rgba(185,144,74,.45);color:rgba(255,255,255,.86);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;backdrop-filter:blur(10px);transition:background .3s,color .3s,border-color .3s}
 #skip-btn:hover{background:rgba(185,144,74,.92);border-color:var(--gold);color:var(--green)}
 
@@ -534,6 +534,7 @@ html.fx-lite .h-bg{animation:none}
 @media(hover:none){.nav-item.dd-open>.nav-dd{opacity:1;visibility:visible;transform:translateY(0)}}
 </style>
 <link rel="stylesheet" href="assets/responsive.css">
+<script>location.replace('index.html' + location.search + location.hash);</script>
 </head>
 <body>
 
@@ -544,15 +545,15 @@ html.fx-lite .h-bg{animation:none}
 <!-- ═══════════════════════════════════════════
      MASTERPLAN INTRO
 ═══════════════════════════════════════════ -->
-<div id="intro">
-  <!-- Phase 1 - Logo -->
+<!--<div id="intro">-->
+  <!-- Phase 1 - Logo--> 
   <div class="i-logo" id="iLogo">
     <div class="i-logo-name">Fish Valley</div>
     <div class="i-logo-rule"></div>
     <div class="i-logo-sub">Investments & Property Ltd.</div>
   </div>
 
-  <!-- 1. INTRO VIDEO LAYER (WITH SKIP BUTTON) -->
+  <!-- 1. INTRO VIDEO LAYER (WITH SKIP BUTTON)-->
     <div id="intro-container">
         <button id="skip-btn">Skip Intro</button>
         <video id="intro-video" autoplay muted playsinline>
@@ -568,10 +569,10 @@ html.fx-lite .h-bg{animation:none}
     <div class="leg"><div class="leg-sw" style="background:rgba(50,130,200,.3);border-color:rgba(50,130,200,.5)"></div>Mixed Use - Max. 10 Floors</div>
   </div>
 
-  <!-- Enter CTA 
+  <!-- Enter CTA
   <div class="i-enter-wrap" id="iEnter">
     <button class="i-enter" onclick="dismissIntro()">Enter Fish Valley →</button>
-  </div>-->
+  </div>--> 
 
   <!-- Progress bar -->
   <div class="i-progress"><div class="i-prog-fill" id="iProg"></div></div>
@@ -1093,20 +1094,8 @@ html.fx-lite .h-bg{animation:none}
 /* ── INTRO ── */
 const DURATION = 10200;
 let done = false;
-let introEnabled = false;
 
 (function runIntro(){
-  const intro = document.getElementById('intro');
-  let hasSeenIntro = false;
-  try { hasSeenIntro = sessionStorage.getItem('fvip-intro-seen') === 'true'; } catch (e) {}
-  if (!intro || hasSeenIntro) {
-    if (intro) intro.style.display = 'none';
-    done = true;
-    requestAnimationFrame(() => { initCounters(); initReveal(); });
-    return;
-  }
-  introEnabled = true;
-  try { sessionStorage.setItem('fvip-intro-seen', 'true'); } catch (e) {}
   const prog = document.getElementById('iProg');
   const introContainer = document.getElementById('intro-container');
   const introVideo = document.getElementById('intro-video');
@@ -1163,7 +1152,7 @@ function dismissIntro() {
   }, 1000);
 }
 
-if (introEnabled) document.body.style.overflowY = 'hidden';
+document.body.style.overflowY = 'hidden';
 
 /* ── PAGE TRANSITION ── */
 function navTo(e, href) {
