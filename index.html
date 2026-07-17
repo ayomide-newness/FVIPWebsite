@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FVIP | Home - Luxury Real Estate & Mixed-Use Development, Lagos</title>
+<meta name="description" content="Fish Valley Investments & Property Ltd. is a Nigerian real estate development company. Fish Valley is its current mixed-use project in Ikeja GRA, Lagos, with land, residential, commercial and investment opportunities.">
+<meta name="keywords" content="Fish Valley, FVIP, luxury real estate Lagos, mixed use development Nigeria, property investment Ikeja, land for sale Lagos GRA">
+<meta name="theme-color" content="#091616">
+<link rel="icon" type="image/png" href="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png">
+<link rel="apple-touch-icon" href="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ibb.co">
+<link rel="dns-prefetch" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#091616;--green-mid:#164040;--green-rich:#2D8080;
+  --gold:#B9904A;--gold-light:#D8BE7A;--gold-pale:#EFE3C2;
+  --cream:#F3F2F0;--cream-dark:#C0DDDD;--white:#ffffff;--ink:#091616;
+  --text:#091616;--text-mid:#315F5F;--text-muted:#6DA5A5;
+  --font-d:'Playfair Display',Georgia,serif;
+  --font-b:'DM Sans',system-ui,sans-serif;
+  --font-u:'Cormorant Garamond',Georgia,serif;
+  --ease:cubic-bezier(.22,1,.36,1);--ease2:cubic-bezier(.65,0,.35,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--ink);color:var(--text);overflow-x:hidden;cursor:none}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+button{font-family:var(--font-b);cursor:pointer;border:none}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--green)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+/* ── CURSOR ── */
+.cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .25s,height .25s}
+.cursor-ring{position:fixed;width:38px;height:38px;border:1px solid rgba(185,144,74,.5);border-radius:50%;pointer-events:none;z-index:99997;transform:translate(-50%,-50%);transition:width .38s,height .38s}
+@media(hover:none){.cursor,.cursor-ring{display:none}}
+
+/* ═══════════════════════════════════════
+   MASTERPLAN INTRO
+═══════════════════════════════════════ */
+#intro{
+  position:fixed;inset:0;z-index:9990;background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;transition:opacity 1.1s var(--ease),transform 1.1s var(--ease);
+}
+#intro.out{opacity:0;transform:scale(1.05);pointer-events:none}
+#intro-container{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;background:#091616;opacity:0;transform:scale(1.04);transition:opacity 1s var(--ease),transform 1s var(--ease);overflow:hidden}
+#intro-container.show{opacity:1;transform:scale(1)}
+#intro-container.fade-out{opacity:0;pointer-events:none}
+#intro-video{width:60%;height:60%;object-fit:cover;opacity:.76;filter:saturate(1.05) contrast(1.05)}
+#skip-btn{position:absolute;left:50%;bottom:24px;z-index:9;transform:translateX(-50%);padding:12px 22px;background:rgba(9,22,22,.68);border:1px solid rgba(185,144,74,.45);color:rgba(255,255,255,.86);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;backdrop-filter:blur(10px);transition:background .3s,color .3s,border-color .3s}
+#skip-btn:hover{background:rgba(185,144,74,.92);border-color:var(--gold);color:var(--green)}
+
+/* Logo phase */
+.i-logo{position:absolute;z-index:10;text-align:center;transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.i-logo.fade{opacity:0;transform:translateY(-20px)}
+.i-logo-name{font-family:var(--font-d);font-size:clamp(40px,6vw,72px);font-weight:500;color:var(--white);letter-spacing:5px;opacity:0;animation:iUp 1.1s var(--ease) .4s forwards}
+.i-logo-rule{width:0;height:1px;background:var(--gold);margin:18px auto;animation:iRule 1s var(--ease) 1.1s forwards}
+.i-logo-sub{font-size:10px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);opacity:0;animation:iUp .8s .9s forwards}
+@keyframes iUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes iRule{to{width:110px}}
+
+/* Masterplan image stage */
+.i-stage{position:absolute;inset:0;opacity:0;transition:opacity 1.2s var(--ease)}
+.i-stage.show{opacity:1}
+.i-stage-bg{position:absolute;inset:0;background:rgba(9,22,22,.72);z-index:1}
+.i-img-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.i-img{width:100%;height:100%;object-fit:contain;transform-origin:center;animation:mpPan 12s ease-in-out forwards}
+@keyframes mpPan{0%{transform:scale(1.35) translate(3%,2%)}50%{transform:scale(1.15) translate(0,0)}100%{transform:scale(1) translate(0,0)}}
+
+/* Annotation labels */
+.i-annots{position:absolute;inset:0;z-index:3;opacity:0;transition:opacity .7s;pointer-events:none}
+.i-annots.show{opacity:1}
+.ann{position:absolute;display:flex;align-items:center;gap:8px;opacity:0;transform:translateY(6px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.ann.v{opacity:1;transform:none}
+.ann-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px rgba(185,144,74,.8);animation:aDot 2s ease-in-out infinite}
+@keyframes aDot{0%,100%{box-shadow:0 0 12px rgba(185,144,74,.7)}50%{box-shadow:0 0 28px rgba(185,144,74,1)}}
+.ann-line{width:36px;height:1px;background:rgba(185,144,74,.6)}
+.ann-text{background:rgba(9,22,22,.7);backdrop-filter:blur(6px);padding:4px 10px;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.88);font-weight:600;white-space:nowrap;border:1px solid rgba(185,144,74,.2)}
+/* Zone chips */
+.zone-chip{position:absolute;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:5px 13px;border:1px solid;backdrop-filter:blur(5px);opacity:0;transition:opacity .7s;z-index:4}
+.zone-chip.v{opacity:1}
+.zc-y{background:rgba(255,220,50,.1);border-color:rgba(255,220,50,.5);color:#ffe040}
+.zc-p{background:rgba(140,100,200,.1);border-color:rgba(140,100,200,.5);color:#c4a0ff}
+.zc-b{background:rgba(50,130,200,.1);border-color:rgba(50,130,200,.5);color:#70bbff}
+
+/* Legend */
+.i-legend{position:absolute;bottom:90px;right:44px;z-index:5;display:flex;flex-direction:column;gap:10px;opacity:0;transition:opacity .7s}
+.i-legend.show{opacity:1}
+.leg{display:flex;align-items:center;gap:10px;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.leg-sw{width:18px;height:11px;border:1px solid rgba(255,255,255,.25)}
+
+/* Tagline */
+.i-tagline{position:absolute;bottom:168px;left:50%;transform:translateX(-50%) translateY(28px);text-align:center;z-index:5;opacity:0;transition:opacity .9s var(--ease),transform .9s var(--ease);white-space:nowrap}
+.i-tagline.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.i-tgl-main{font-family:var(--font-d);font-size:clamp(22px,3.5vw,48px);font-weight:300;color:var(--white);letter-spacing:2px}
+.i-tgl-main em{font-style:italic;color:var(--gold-light)}
+.i-tgl-sub{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:rgba(109,165,165,.38);margin-top:10px}
+
+/* Enter CTA */
+.i-enter-wrap{position:absolute;bottom:76px;left:50%;transform:translateX(-50%) translateY(20px);z-index:5;opacity:0;transition:opacity .9s var(--ease),transform .9s var(--ease);display:flex;flex-direction:column;align-items:center;gap:12px}
+.i-enter-wrap.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.i-enter{display:inline-flex;align-items:center;gap:14px;padding:15px 42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border:none;transition:transform .3s,box-shadow .3s}
+.i-enter:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(185,144,74,.5)}
+.i-skip{background:rgba(9,22,22,.45);border:1px solid rgba(255,255,255,.16);padding:11px 22px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.72);cursor:pointer;transition:color .3s,border-color .3s,background .3s}
+.i-skip:hover{color:var(--gold-light);border-color:rgba(185,144,74,.55);background:rgba(9,22,22,.72)}
+
+/* Progress bar */
+.i-progress{position:absolute;bottom:0;left:0;right:0;height:2px;background:rgba(255,255,255,.06);z-index:6}
+.i-prog-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-light));transition:width linear}
+
+/* ── PAGE TRANSITION ── */
+.pt{position:fixed;inset:0;z-index:99999;background:var(--green);transform:scaleY(0);transform-origin:bottom;pointer-events:none}
+.pt.in{animation:ptIn .6s var(--ease2) forwards}
+.pt.out{animation:ptOut .8s var(--ease) forwards}
+@keyframes ptIn{to{transform:scaleY(1)}}
+@keyframes ptOut{0%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(0);transform-origin:top}}
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 52px;transition:background .5s,padding .4s}
+nav.scrolled{background:rgba(9,22,22,.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(185,144,74,.12)}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:90px;transition:height .4s}
+nav.scrolled .nav-inner{height:68px}
+.logo{display:flex;align-items:center;gap:13px;cursor:pointer;transition:opacity .3s}.logo:hover{opacity:.85}
+.logo-mark{width:42px;height:42px;flex-shrink:0;overflow:hidden}.logo-mark img{width:100%;height:100%;object-fit:contain}
+.logo-words{color:var(--white)}.logo-name{font-family:var(--font-d);font-size:17px;font-weight:600;line-height:1.1}.logo-tag{font-size:8px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold-light);margin-top:3px;opacity:.8}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:5px;padding:8px 16px;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);position:relative;transition:color .3s;white-space:nowrap}
+.nav-link::after{content:'';position:absolute;bottom:4px;left:16px;right:16px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-link:hover,.nav-item.active .nav-link{color:var(--gold)}.nav-link:hover::after,.nav-item.active .nav-link::after{transform:scaleX(1)}
+.nav-link svg{width:9px;height:9px;opacity:.5;transition:transform .3s}.nav-item:hover .nav-link svg{transform:rotate(180deg)}
+.nav-dd{position:absolute;top:calc(100% + 8px);left:0;min-width:240px;background:rgba(9,22,22,.98);backdrop-filter:blur(20px);border:1px solid rgba(185,144,74,.14);padding:10px 0;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .3s var(--ease);z-index:100}
+.nav-item:hover .nav-dd{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dd a{display:block;padding:10px 22px;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .25s,padding .25s,background .25s}
+.nav-dd a:hover{color:var(--gold);background:rgba(185,144,74,.05);padding-left:28px}
+.nav-dd .sep{height:1px;background:rgba(255,255,255,.06);margin:6px 0}
+.nav-dd .dim{opacity:.35;pointer-events:none;font-style:italic}
+.nav-dd .dd-head{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:rgba(185,144,74,.5);padding:10px 22px 4px;font-weight:600;pointer-events:none}
+.nav-util{display:flex;align-items:center;gap:10px}
+.btn-portal{padding:10px 22px;border:1px solid rgba(185,144,74,.5);color:rgba(185,144,74,.9);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:all .3s}.btn-portal:hover{border-color:var(--gold);color:var(--gold);background:rgba(185,144,74,.06)}
+.btn-cta{padding:11px 26px;background:var(--gold);color:var(--green);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.btn-cta::before{content:'';position:absolute;inset:0;background:var(--gold-light);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}.btn-cta:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(185,144,74,.4)}.btn-cta:hover::before{transform:scaleX(1)}.btn-cta span{position:relative;z-index:1}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{width:26px;height:1.5px;background:var(--white);transition:all .4s var(--ease);display:block}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+.mob-menu{position:fixed;inset:0;background:var(--green);z-index:998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transform:translateX(100%);transition:transform .6s var(--ease);overflow-y:auto;padding:88px 32px 48px}
+.mob-menu.open{transform:translateX(0)}.mob-menu .m-link{font-family:var(--font-d);font-size:38px;color:var(--white);transition:color .3s;opacity:.9}.mob-menu .m-link:hover{color:var(--gold)}
+.m-div{width:48px;height:1px;background:rgba(185,144,74,.35)}.m-sub{display:flex;flex-direction:column;align-items:center;gap:12px}.m-sub a{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .3s}.m-sub a:hover{color:var(--gold)}
+.m-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.m-btn{padding:13px 26px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}.m-btn.gold{background:var(--gold);color:var(--green)}.m-btn.out{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
+
+/* ═══════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════ */
+.sec{padding:120px 52px}.ctn{max-width:1280px;margin:0 auto}
+.tag{display:inline-flex;align-items:center;gap:14px;margin-bottom:18px}.tl{width:40px;height:1px;background:var(--gold)}.tt{font-size:9px;letter-spacing:4.5px;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.sh{font-family:var(--font-d);font-size:clamp(34px,4.5vw,60px);font-weight:500;line-height:1.1;color:var(--green)}.sh.dk{color:var(--white)}.sh em{font-style:italic;color:var(--gold-light)}
+.r{opacity:0;transform:translateY(44px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.r.v{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-52px);transition:opacity .95s var(--ease),transform .95s var(--ease)}.rl.v{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(52px);transition:opacity .95s var(--ease),transform .95s var(--ease)}.rr.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}.d6{transition-delay:.58s}
+/* Buttons */
+.btn-p{display:inline-flex;align-items:center;gap:14px;padding:17px 38px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:transform .35s,box-shadow .35s}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(185,144,74,.45)}.btn-p .arr{transition:transform .35s}.btn-p:hover .arr{transform:translateX(5px)}
+.btn-s{display:inline-flex;align-items:center;gap:12px;padding:17px 38px;background:var(--green);color:var(--white);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s}.btn-s:hover{background:var(--green-rich);transform:translateY(-2px);box-shadow:0 14px 44px rgba(9,22,22,.28)}
+.btn-g{display:inline-flex;align-items:center;gap:10px;padding:17px 38px;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s}.btn-g:hover{border-color:var(--gold);color:var(--gold)}
+.btn-lk{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);transition:gap .35s}.btn-lk:hover{gap:16px}
+
+/* ═══════════════════════════════════════
+   HERO
+═══════════════════════════════════════ */
+#home{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--green)}
+.h-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,22,22,.6) 0%,rgba(9,22,22,.45) 40%,rgba(9,22,22,.9) 100%),url(https://i.ibb.co/nN8TJpkw/luxury-home-hero.jpg) center/cover no-repeat;animation:hzoom 22s ease-in-out infinite alternate}
+.h-slide{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,22,22,.93) 0%,rgba(9,22,22,.72) 45%,rgba(9,22,22,.28) 100%),var(--slide-img) center/cover no-repeat;opacity:0;transform:scale(1.06);transition:opacity 1.1s var(--ease),transform 7s ease}
+.h-slide.active{opacity:1;transform:scale(1)}
+.h-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,22,22,.1) 0%,rgba(9,22,22,.35) 55%,rgba(9,22,22,.92) 100%)}
+@keyframes hzoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+.h-grid{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.012) 80px,rgba(255,255,255,.012) 81px);pointer-events:none}
+.hvl{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(185,144,74,.15),transparent);pointer-events:none}
+.px{position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;opacity:0;animation:pfloat var(--pd,9s) var(--pdelay,0s) infinite}
+@keyframes pfloat{0%{transform:translateY(105vh);opacity:0}8%{opacity:.7}92%{opacity:.15}100%{transform:translateY(-60px) translateX(18px);opacity:0}}
+.h-wrap{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:0 52px;padding-top:90px;width:100%}
+.h-over{display:inline-flex;align-items:center;gap:14px;margin-bottom:36px;opacity:0;animation:fin .8s .3s forwards}
+@keyframes fin{to{opacity:1}}
+.h-over-rule{width:56px;height:1px;background:var(--gold)}.h-over-txt{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-light);font-weight:500}
+.h-hl{font-family:var(--font-d);font-size:clamp(48px,8.5vw,104px);font-weight:500;line-height:1;color:var(--white)}
+.h-line{display:block;overflow:hidden;height:1.12em;padding-bottom:.04em}.h-inner{display:block;transform:translateY(110%);animation:hlin 1.1s var(--ease) var(--hd,.3s) forwards}
+@keyframes hlin{to{transform:translateY(0)}}.h-em{font-style:italic;color:var(--gold-light)}
+.h-sub{max-width:600px;margin-top:28px;font-size:15.5px;line-height:2;color:rgba(255,255,255,.6);font-weight:450;opacity:0;animation:fin .9s 2.3s forwards}
+.h-actions{display:flex;align-items:center;gap:18px;margin-top:44px;flex-wrap:wrap;opacity:0;animation:fin .9s 2.55s forwards}
+.h-stats{display:flex;gap:0;margin-top:80px;border-top:1px solid rgba(185,144,74,.18);opacity:0;animation:fin .9s 2.8s forwards}
+.h-stat{padding:28px 56px 28px 0;margin-right:56px;border-right:1px solid rgba(255,255,255,.07)}.h-stat:last-child{border-right:none;margin-right:0;padding-right:0}
+.h-sn{font-family:var(--font-d);font-size:52px;font-weight:500;line-height:1;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.h-sl{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:6px}
+.hero-panel{max-width:760px}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 14px;border:1px solid rgba(185,144,74,.24);background:rgba(9,22,22,.46);backdrop-filter:blur(10px);color:rgba(255,255,255,.74);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.hero-kicker strong{color:var(--gold-light);font-weight:700}
+.hero-progress{position:absolute;right:52px;bottom:72px;z-index:3;display:flex;align-items:center;gap:12px}
+.hero-dot{width:34px;height:3px;background:rgba(255,255,255,.18);cursor:pointer;position:relative;overflow:hidden}
+.hero-dot::after{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.hero-dot.active::after{transform:scaleX(1)}
+.hero-arrows{position:absolute;right:52px;top:50%;z-index:3;display:flex;flex-direction:column;gap:10px;transform:translateY(-50%)}
+.hero-arrow{width:44px;height:44px;border:1px solid rgba(185,144,74,.38);background:rgba(9,22,22,.42);color:var(--gold-light);font-size:20px;display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s}
+.hero-arrow:hover{background:var(--gold);color:var(--green);transform:translateX(-2px)}
+.scue{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,.3);font-size:8px;letter-spacing:4px;text-transform:uppercase;animation:spulse 2.5s ease-in-out infinite}
+.sw{width:22px;height:36px;border:1px solid rgba(255,255,255,.22);border-radius:11px;position:relative}
+.sw::after{content:'';position:absolute;top:7px;left:50%;transform:translateX(-50%);width:2px;height:6px;background:var(--gold);border-radius:1px;animation:sdot 1.9s ease-in-out infinite}
+@keyframes sdot{0%{top:7px;opacity:1}80%{top:22px;opacity:0}100%{top:7px;opacity:0}}@keyframes spulse{0%,100%{opacity:.4}50%{opacity:.9}}
+
+/* ── TICKER ── */
+.ticker{background:var(--gold);padding:14px 0;overflow:hidden}
+.tk-track{display:flex;animation:tkrun 34s linear infinite;white-space:nowrap}
+.tk-item{flex-shrink:0;display:flex;align-items:center;gap:22px;padding:0 44px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--green)}
+.tk-dot{width:4px;height:4px;background:var(--green);border-radius:50%;opacity:.4}
+@keyframes tkrun{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════════
+   VISION
+═══════════════════════════════════════ */
+#vision{background:var(--ink);padding:120px 52px;position:relative;overflow:hidden}
+#vision::before{content:'';position:absolute;top:-300px;left:-300px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(185,144,74,.05) 0%,transparent 68%);pointer-events:none}
+.vis-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}
+.vis-num{font-family:var(--font-u);font-size:min(260px,22vw);font-weight:300;color:rgba(185,144,74,.05);line-height:1;user-select:none;transition:color .5s}.vis-grid:hover .vis-num{color:rgba(185,144,74,.09)}
+.vis-quote{font-family:var(--font-d);font-size:clamp(22px,3vw,40px);font-weight:300;color:var(--white);line-height:1.4;font-style:italic;margin-bottom:28px;padding-left:28px;border-left:3px solid var(--gold)}
+.vis-sub{font-size:14.5px;line-height:2;color:rgba(255,255,255,.42);font-weight:300;max-width:440px}
+.vis-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.vis-pill{padding:8px 18px;border:1px solid rgba(185,144,74,.22);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;transition:all .3s}.vis-pill:hover{background:rgba(185,144,74,.08);border-color:var(--gold)}
+
+/* ═══════════════════════════════════════
+   MASTERPLAN TEASER
+═══════════════════════════════════════ */
+#masterplan{background:var(--green-mid);padding:120px 52px;position:relative;overflow:hidden}
+#masterplan::before{content:'';position:absolute;bottom:-300px;right:-300px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(185,144,74,.06) 0%,transparent 68%);pointer-events:none}
+.mp-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
+.mp-lead{font-size:15px;line-height:2;color:rgba(255,255,255,.52);margin:18px 0 36px;font-weight:300}
+.mp-img-box{position:relative;overflow:hidden;cursor:crosshair}
+.mp-img-box img{width:100%;display:block;transition:transform .7s var(--ease)}.mp-img-box:hover img{transform:scale(1.04)}
+.mp-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(9,22,22,.18),transparent);pointer-events:none}
+/* Hotspots */
+.hs{position:absolute;cursor:pointer;z-index:2}
+.hs-btn{width:26px;height:26px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--green);box-shadow:0 0 0 6px rgba(185,144,74,.2);animation:hsp 2.5s ease-in-out infinite;transition:transform .3s}
+.hs:hover .hs-btn{transform:scale(1.25)}@keyframes hsp{0%,100%{box-shadow:0 0 0 6px rgba(185,144,74,.2)}50%{box-shadow:0 0 0 14px rgba(185,144,74,.04)}}
+.hs-tip{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:rgba(9,22,22,.96);border:1px solid rgba(185,144,74,.3);backdrop-filter:blur(8px);padding:8px 14px;white-space:nowrap;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s}
+.hs:hover .hs-tip{opacity:1}
+/* Zone legend */
+.mp-legend{display:flex;gap:24px;margin-top:18px;flex-wrap:wrap}
+.mpl{display:flex wrap;align-items:center;gap:8px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.52)}
+.mpl-sw{width:16px;height:10px;border:1px solid rgba(255,255,255,.2)}
+.mpl-y{background:rgba(255,220,50,.3)}.mpl-p{background:rgba(140,100,200,.3)}.mpl-b{background:rgba(50,130,200,.3)}
+/* Phase list */
+.ph-list{display:flex;flex-direction:column;margin-top:40px}
+.ph-item{display:flex;align-items:flex-start;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:padding .3s}
+.ph-item:first-child{border-top:1px solid rgba(255,255,255,.06)}.ph-item:hover{padding-left:6px}
+.ph-num{font-family:var(--font-d);font-size:44px;font-weight:400;color:rgba(185,144,74,.18);flex-shrink:0;line-height:1;width:60px;transition:color .3s}.ph-item:hover .ph-num{color:var(--gold)}
+.ph-name{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:4px}
+.ph-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7}
+.ph-tag{display:inline-flex;margin-top:8px;padding:3px 10px;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border:1px solid}
+.ph-a{border-color:rgba(185,144,74,.5);color:var(--gold)}.ph-pr{border-color:rgba(50,200,120,.4);color:#60dc90}.ph-ft{border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.28)}
+
+/* ═══════════════════════════════════════
+   GLANCE
+═══════════════════════════════════════ */
+#glance{background:var(--green);padding:0 52px 96px}
+.gl-head{max-width:1280px;margin:0 auto;padding:80px 0 52px}
+.gl-copy{max-width:620px;margin-top:18px;font-size:15px;line-height:1.95;color:rgba(255,255,255,.48);font-weight:300}
+.gl-portfolio{max-width:1280px;margin:0 auto 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gl-card{position:relative;background:rgba(255,255,255,.965);padding:34px 32px 30px;border:1px solid rgba(185,144,74,.28);border-left:7px solid var(--gold);min-height:245px;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,border-color .35s}
+.gl-card::after{content:'';position:absolute;inset:auto -30% -45% auto;width:220px;height:220px;background:radial-gradient(circle,rgba(185,144,74,.14),transparent 68%);pointer-events:none}
+.gl-card:hover{transform:translateY(-7px);box-shadow:0 30px 80px rgba(0,0,0,.24);border-color:rgba(185,144,74,.52)}
+.gl-card-kicker{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+.gl-card-title{font-family:var(--font-d);font-size:clamp(23px,2.2vw,30px);line-height:1.16;color:var(--green);font-weight:600;margin-bottom:18px}
+.gl-card-body{font-size:15.5px;line-height:1.8;color:var(--text);font-weight:300}
+.gl-card-body strong{font-weight:800;color:var(--ink)}
+.gl-card-status{display:inline-flex;margin-top:22px;padding:9px 13px;background:rgba(9,22,22,.07);color:var(--green-mid);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+.gl-stats{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:rgba(255,255,255,.04);border-top:3px solid var(--gold)}
+.gs{padding:38px 30px;border-right:1px solid rgba(255,255,255,.05);text-align:center;transition:background .35s}.gs:last-child{border-right:none}.gs:hover{background:rgba(185,144,74,.05)}
+.gs-n{font-family:var(--font-d);font-size:56px;font-weight:500;line-height:1;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.gs-l{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.36);margin-top:8px}
+.gl-infra{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(255,255,255,.04)}
+.gi{background:var(--green);padding:32px 24px;text-align:center;transition:background .35s}.gi:hover{background:rgba(185,144,74,.06)}
+.gi-ic{font-size:28px;margin-bottom:10px}.gi-nm{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500}
+
+/* ═══════════════════════════════════════
+   PROPERTIES
+═══════════════════════════════════════ */
+#props{background:var(--cream);padding:120px 52px}
+.props-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;gap:20px;flex-wrap:wrap}
+/* Featured layout */
+.prop-fg{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.prop-big{position:relative;overflow:hidden;min-height:520px}
+.pb-img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}.prop-big:hover .pb-img{transform:scale(1.05)}
+.pb-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(9,22,22,.9) 0%,rgba(9,22,22,.3) 55%,transparent 100%)}
+.pb-badge{position:absolute;top:20px;left:20px;background:var(--gold);color:var(--green);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px}
+.pb-body{position:absolute;bottom:0;left:0;right:0;padding:36px}
+.pb-cat{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.pb-name{font-family:var(--font-d);font-size:32px;color:var(--white);margin-bottom:10px}
+.pb-desc{font-size:13px;color:rgba(255,255,255,.52);line-height:1.7;margin-bottom:20px}
+.pb-price{font-family:var(--font-d);font-size:28px;color:var(--gold-light);margin-bottom:18px}
+/* Small cards */
+.prop-sm-col{display:flex;flex-direction:column;gap:24px}
+.psm{background:var(--white);display:grid;grid-template-columns:150px 1fr;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s}
+.psm:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.1)}
+.psm-img{width:150px;height:100%;object-fit:cover;transition:transform .6s var(--ease)}.psm:hover .psm-img{transform:scale(1.07)}
+.psm-body{padding:20px 20px}
+.psm-cat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:3px}
+.psm-name{font-family:var(--font-d);font-size:18px;color:var(--green);margin-bottom:4px}
+.psm-loc{font-size:12px;color:var(--text-muted);margin-bottom:10px}
+.psm-price{font-family:var(--font-d);font-size:22px;color:var(--green)}
+.psm-badge{display:inline-block;padding:3px 10px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.psb-s{background:var(--gold);color:var(--green)}.psb-l{background:var(--green);color:var(--white)}.psb-c{border:1px solid rgba(185,144,74,.4);color:var(--gold)}
+.psm-cta{display:block;text-align:center;padding:10px;background:var(--green);color:var(--white);font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:background .3s}.psm-cta:hover{background:var(--green-rich)}
+/* Park strip */
+.park-strip{margin-top:28px;background:var(--green);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.park-strip img{width:100%;height:220px;object-fit:cover}
+.park-body{padding:44px 48px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.pk-cat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.pk-title{font-family:var(--font-d);font-size:26px;color:var(--white)}
+.pk-title em{font-style:italic;color:var(--gold-light)}
+.pk-desc{font-size:13px;color:rgba(255,255,255,.42);line-height:1.75}
+
+/* ═══════════════════════════════════════
+   INVESTMENT SNAPSHOT
+═══════════════════════════════════════ */
+#invest{background:var(--ink);padding:120px 52px;position:relative;overflow:hidden}
+#invest::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(185,144,74,.06) 0%,transparent 68%);pointer-events:none}
+.inv-g{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.inv-lead{font-size:15px;line-height:2;color:rgba(255,255,255,.48);margin:18px 0 36px;font-weight:300}
+.inv-nums{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px}
+.inc{padding:28px 24px;border:1px solid rgba(185,144,74,.15);transition:border-color .35s,background .35s}
+.inc:hover{border-color:rgba(185,144,74,.4);background:rgba(185,144,74,.04)}
+.inc-n{font-family:var(--font-d);font-size:40px;font-weight:500;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.inc-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:8px}
+.inv-opts{display:flex;flex-direction:column;gap:12px}
+.inv-opt{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid rgba(185,144,74,.12);transition:all .3s}
+.inv-opt:hover{border-color:rgba(185,144,74,.4);background:rgba(185,144,74,.04)}
+.io-ic{font-size:22px;flex-shrink:0}.io-tit{font-family:var(--font-d);font-size:17px;color:var(--white);margin-bottom:3px}.io-desc{font-size:12px;color:rgba(255,255,255,.38)}
+.io-arr{margin-left:auto;color:var(--gold);font-size:18px;transition:transform .3s}.inv-opt:hover .io-arr{transform:translateX(5px)}
+.inv-opportunity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+.inv-opportunity-card{padding:22px 20px;border:1px solid rgba(185,144,74,.16);background:rgba(255,255,255,.025);transition:background .35s,border-color .35s,transform .35s var(--ease)}
+.inv-opportunity-card:hover{background:rgba(185,144,74,.055);border-color:rgba(185,144,74,.42);transform:translateY(-3px)}
+.inv-opportunity-card.wide{grid-column:1/-1}
+.inv-opportunity-kicker{font-size:9px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:10px}
+.inv-opportunity-title{font-family:var(--font-d);font-size:19px;color:var(--white);font-weight:600;margin-bottom:8px;line-height:1.25}
+.inv-opportunity-copy{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.52)}
+.inv-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.inv-visual{position:relative}
+.inv-img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(.82)}
+.inv-pull{position:absolute;bottom:-24px;right:-24px;background:var(--gold);padding:28px 32px;max-width:230px}
+.inv-pull-n{font-family:var(--font-d);font-size:48px;font-weight:600;color:var(--green);line-height:1}
+.inv-pull-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(9,22,22,.55);margin-top:5px}
+
+/* ═══════════════════════════════════════
+   SUSTAINABILITY BANNER
+═══════════════════════════════════════ */
+#sus{position:relative;overflow:hidden}
+.sus-wrap{background:linear-gradient(135deg,rgba(9,22,22,.95),rgba(45,128,128,.9)),url('https://i.ibb.co/Y7K6GDm3/greenland-house.jpg') center/cover;padding:120px 52px;position:relative}
+.sus-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sus-g{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.sus-p{font-size:15px;line-height:2;color:rgba(255,255,255,.52);margin-top:16px;font-weight:300}
+.sus-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(185,144,74,.15);margin-top:40px}
+.sm{background:rgba(9,22,22,.6);padding:28px 24px;transition:background .35s}.sm:hover{background:rgba(185,144,74,.05)}
+.sm-ic{font-size:26px;margin-bottom:10px}.sm-tit{font-family:var(--font-d);font-size:17px;color:var(--white);margin-bottom:5px}.sm-desc{font-size:12.5px;color:rgba(255,255,255,.38);line-height:1.7}
+.esg-rows{display:flex;flex-direction:column;gap:18px}
+.esg-row{display:flex;align-items:center;gap:18px;padding:20px 24px;border:1px solid rgba(185,144,74,.15);transition:all .35s}
+.esg-row:hover{border-color:rgba(185,144,74,.4);background:rgba(185,144,74,.04)}
+.esg-gr{font-family:var(--font-d);font-size:40px;font-weight:400;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex-shrink:0;width:50px}
+.esg-tit{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:4px}
+.esg-desc{font-size:12.5px;color:rgba(255,255,255,.38)}
+
+/* ═══════════════════════════════════════
+   NEWS / BLOG
+═══════════════════════════════════════ */
+#news{background:var(--white);padding:120px 52px}
+.news-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;gap:20px;flex-wrap:wrap}
+.news-hd-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.news-sub-btn{padding:13px 26px}
+.news-cats{display:flex;gap:0;border-bottom:1px solid rgba(185,144,74,.14);margin-bottom:44px;overflow-x:auto}
+.nc{padding:15px 24px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .3s;white-space:nowrap}
+.nc:hover{color:var(--green)}.nc.active{color:var(--green);border-color:var(--gold)}
+.news-g{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px}
+.nf-img{width:100%;height:320px;object-fit:cover;transition:transform .7s var(--ease)}.nf:hover .nf-img{transform:scale(1.04)}
+.nf-body{padding:28px 0 0}
+.nf-cat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.nf-tit{font-family:var(--font-d);font-size:24px;color:var(--green);margin-bottom:10px;cursor:pointer;line-height:1.3;transition:color .3s}.nf-tit:hover{color:var(--green-rich)}
+.nf-exc{font-size:13.5px;line-height:1.8;color:var(--text-mid);margin-bottom:14px}
+.nf-meta{display:flex;align-items:center;gap:14px;font-size:11px;color:var(--text-muted)}
+.nf-dot{width:3px;height:3px;background:var(--text-muted);border-radius:50%}
+/* Small news */
+.ns-col{display:flex;flex-direction:column;gap:24px}
+.ns{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start}
+.ns-img{width:96px;height:68px;object-fit:cover;flex-shrink:0;transition:transform .6s}.ns:hover .ns-img{transform:scale(1.06)}
+.ns-cat{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px}
+.ns-tit{font-family:var(--font-d);font-size:14px;color:var(--green);line-height:1.35;cursor:pointer;transition:color .3s}.ns-tit:hover{color:var(--green-rich)}
+.ns-date{font-size:11px;color:var(--text-muted);margin-top:4px}
+
+/* ═══════════════════════════════════════
+   TESTIMONIALS + PARTNERS
+═══════════════════════════════════════ */
+#testi{background:var(--cream-dark);padding:120px 52px}
+.tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:72px}
+.tc{background:var(--white);padding:38px 30px;position:relative;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s}
+.tc::before{content:'\201C';font-family:var(--font-d);font-size:110px;color:rgba(185,144,74,.07);position:absolute;top:-10px;left:14px;line-height:1}
+.tc:hover{transform:translateY(-6px);box-shadow:0 28px 72px rgba(0,0,0,.08)}
+.tc-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:16px}
+.tc-txt{font-family:var(--font-d);font-size:16px;font-style:italic;color:var(--green);line-height:1.65;margin-bottom:22px;position:relative;z-index:1}
+.tc-auth{display:flex;align-items:center;gap:14px}
+.tc-av{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.tc-av img{width:100%;height:100%;object-fit:cover}
+.tc-name{font-size:13.5px;font-weight:600;color:var(--green)}.tc-role{font-size:11px;color:var(--text-muted);margin-top:2px}
+.partners-panel{margin-top:72px;padding-top:46px 0 0;border-top:1px solid rgba(185,144,74,.18);overflow:hidden}
+.partners-panel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:28px;flex-wrap:wrap}
+.partner-hd{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:10px}
+.partner-copy{max-width:560px;font-size:13.5px;line-height:1.85;color:var(--text-mid)}
+.partner-cta{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid rgba(185,144,74,.34);color:var(--green);font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;transition:background .3s,color .3s,border-color .3s}
+.partner-cta:hover{background:var(--green);border-color:var(--green);color:var(--white)}
+.partner-cta svg{width:14px;height:14px;transition:transform .3s}.partner-cta:hover svg{transform:translateX(3px)}
+.partners-row{display:flex;gap:1px;background:rgba(185,144,74,.18);border:1px solid rgba(185,144,74,.18);overflow:hidden}
+.partners-track{display:flex;min-width:max-content;animation:partnerMarquee 28s linear infinite}
+.partners-row:hover .partners-track{animation-play-state:paused}
+@keyframes partnerMarquee{to{transform:translateX(-50%)}}
+.pl{min-height:118px;padding:22px;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .3s}
+.partners-track .pl{width:210px;flex:0 0 210px}
+.pl:hover{background:var(--white);transform:translateY(-2px)}
+.pl img{display:block;max-width:145px;max-height:58px;width:auto;height:auto;object-fit:contain;filter:grayscale(1) contrast(.95);opacity:.82;transition:filter .35s,opacity .35s,transform .35s}
+.pl:hover img{filter:none;opacity:1;transform:scale(1.04)}
+.pl.more{background:var(--green);color:var(--white);flex-direction:column;gap:8px;text-align:center;text-decoration:none}
+.pl.more span{font-family:var(--font-d);font-size:18px;color:var(--white)}
+.pl.more small{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-light);font-weight:700}
+/* ═══════════════════════════════════════
+   NEWSLETTER + CTA
+═══════════════════════════════════════ */
+#nl{position:relative;overflow:hidden;background:var(--green)}
+.nl-wrap{background:linear-gradient(135deg,rgba(9,22,22,.98),rgba(45,128,128,.95)),url('https://i.ibb.co/ycXYFpjS/skyscraper-build.jpg') center/cover;padding:120px 52px;position:relative}
+.nl-wrap::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(185,144,74,.06) 0%,transparent 68%);animation:nlglow 7s ease-in-out infinite}
+@keyframes nlglow{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.15)}}
+.nl-g{max-width:1280px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.nl-h{font-family:var(--font-d);font-size:clamp(30px,4.5vw,58px);font-weight:500;color:var(--white);line-height:1.1;margin-bottom:14px}.nl-h em{font-style:italic;color:var(--gold-light)}
+.nl-p{font-size:14.5px;color:rgba(255,255,255,.52);line-height:1.9;margin-bottom:32px;font-weight:300}
+.nl-form{display:flex;width:100%}
+.nl-in{flex:1;padding:16px 20px;background:rgba(255,255,255,.05);border:1px solid rgba(185,144,74,.3);border-right:none;color:var(--white);font-family:var(--font-b);font-size:14px;outline:none;transition:background .3s,border-color .3s}
+.nl-in::placeholder{color:rgba(255,255,255,.28)}.nl-in:focus{background:rgba(185,144,74,.07);border-color:rgba(185,144,74,.6)}
+.nl-btn{padding:16px 32px;background:var(--gold);color:var(--green);font-family:var(--font-b);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;border:none;white-space:nowrap;transition:background .3s}.nl-btn:hover{background:var(--gold-light)}
+.nl-note{margin-top:12px;font-size:11px;color:rgba(255,255,255,.28)}
+.nl-cards{display:flex;flex-direction:column;gap:18px}
+.nl-card{padding:32px;background:rgba(255,255,255,.04);border:1px solid rgba(185,144,74,.15);transition:border-color .35s,background .35s}
+.nl-card:hover{border-color:rgba(185,144,74,.35);background:rgba(185,144,74,.05)}
+.nlc-ic{font-size:26px;margin-bottom:10px}.nlc-tit{font-family:var(--font-d);font-size:19px;color:var(--white);margin-bottom:8px}.nlc-desc{font-size:12.5px;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer{background:var(--ink);color:rgba(255,255,255,.45);padding:88px 52px 0}
+.ft{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.9fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:68px;border-bottom:1px solid rgba(255,255,255,.05)}
+.flr{display:flex;align-items:center;gap:12px}.flm{width:38px;height:38px;overflow:hidden}.flm img{width:100%;height:100%;object-fit:contain}
+.fln{font-family:var(--font-d);font-size:17px;font-weight:600;color:var(--white)}.flt{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-top:2px;opacity:.75}
+.fdesc{font-size:12.5px;line-height:1.95;margin-top:18px;max-width:255px}
+.fsoc{display:flex;gap:10px;margin-top:28px}.fsl{width:36px;height:36px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .3s;cursor:pointer}.fsl:hover{border-color:var(--gold);background:rgba(185,144,74,.1)}.fsl img{width:16px;height:16px;object-fit:contain}
+.fct{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:12px}.flinks a{font-size:12.5px;color:rgba(255,255,255,.42);transition:color .25s,transform .25s;display:inline-block}.flinks a:hover{color:var(--gold-light);transform:translateX(5px)}.flinks .dim{opacity:.28;pointer-events:none;font-style:italic}
+.fb{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-size:10.5px;gap:12px;flex-wrap:wrap}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media(max-width:1100px){
+  .vis-grid,.mp-grid,.inv-g,.sus-g,.nl-g{grid-template-columns:1fr;gap:56px}
+  .vis-num{font-size:100px}
+  .gl-portfolio{grid-template-columns:1fr 1fr}.gl-stats{grid-template-columns:repeat(3,1fr)}
+  .prop-fg{grid-template-columns:1fr}
+  .prop-big{min-height:380px}
+  .news-g{grid-template-columns:1fr}
+  .ns-col{flex-direction:row;flex-wrap:wrap}
+  .ns{flex:1;min-width:200px}
+  .tc-grid{grid-template-columns:1fr 1fr}
+  .ft{grid-template-columns:1fr 1fr 1fr}
+  .ft>:first-child{grid-column:1/-1}
+  .park-strip{grid-template-columns:1fr}
+}
+@media(max-width:1024px){
+  .nav-links,.nav-util{display:none}.hamburger{display:flex}
+  nav,nav.scrolled{padding:0 24px}
+  .sec,#vision,#masterplan,#invest,#news,#testi{padding:80px 24px}
+  .sus-wrap,.nl-wrap{padding:80px 24px}
+  .h-wrap{padding:0 24px;padding-top:90px}
+  .h-stats{flex-direction:column}.h-stat{padding:16px 0;margin:0;border:none;border-bottom:1px solid rgba(255,255,255,.06)}
+  .gl-infra{grid-template-columns:repeat(3,1fr)}
+  #glance{padding:0 24px 80px}.gl-head{padding:60px 0 42px}
+  .gl-portfolio{grid-template-columns:1fr}
+  .gl-stats{grid-template-columns:1fr 1fr}
+  .sus-metrics{grid-template-columns:1fr 1fr}
+  .tc-grid{grid-template-columns:1fr}
+  .partners-row{grid-template-columns:repeat(3,1fr)}
+  .i-legend{display:none}
+  .i-enter-wrap{bottom:44px;width:min(88vw,360px)}
+  .i-enter{width:100%;justify-content:center;padding:15px 24px}
+  .i-skip,#skip-btn{width:min(82vw,280px)}
+  .nl-form{flex-direction:column}
+  .nl-in{border-right:1px solid rgba(185,144,74,.3);border-bottom:none}
+}
+@media(max-width:640px){
+  .inv-nums,.sus-metrics,.inv-opportunity-grid{grid-template-columns:1fr}
+  .ns-col{flex-direction:column}
+  .partners-panel-head{align-items:flex-start}
+  .partners-row{grid-template-columns:1fr 1fr}
+  .pl{min-height:104px}
+  .ft{grid-template-columns:1fr;gap:28px}
+  .fb{flex-direction:column;text-align:center}
+  footer{padding:60px 24px 0}
+  .inv-pull{right:0;bottom:0}
+  .gl-infra{grid-template-columns:repeat(2,1fr)}
+  #props{padding:80px 24px}
+}
+@media(max-width:400px){
+  .h-hl{font-size:clamp(32px,11vw,42px)}
+  .h-sub{font-size:14px}
+  .h-actions{flex-direction:column;align-items:stretch}
+  .h-actions .btn-p,.h-actions .btn-g{justify-content:center;width:100%}
+  .sh{font-size:clamp(25px,8vw,32px)}
+  .sec{padding:64px 18px}
+  nav{padding:0 16px}
+  .nav-inner{height:64px}
+  .logo-mark{width:36px;height:36px}
+  .logo-name{font-size:15px}
+  .h-stat{padding-right:0}
+  .btn-cta,.btn-portal{padding:9px 16px}
+}
+/* ── social icons: disabled state until a real link is added ── */
+.fsl[aria-disabled="true"]{opacity:.32;pointer-events:none;cursor:default}
+/* ── perf / reduced-motion (driven by assets/site-enhance.js) ── */
+html.fx-lite .px{animation-play-state:paused;opacity:.12}
+html.fx-lite .h-bg{animation:none}
+@media(hover:none){.nav-item.dd-open>.nav-dd{opacity:1;visibility:visible;transform:translateY(0)}}
+</style>
+<link rel="stylesheet" href="assets/responsive.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="pt" id="pt"></div>
+
+<!-- ═══════════════════════════════════════════
+     MASTERPLAN INTRO
+═══════════════════════════════════════════ -->
+<div id="intro">
+  <!-- Phase 1 - Logo -->
+  <div class="i-logo" id="iLogo">
+    <div class="i-logo-name">Fish Valley</div>
+    <div class="i-logo-rule"></div>
+    <div class="i-logo-sub">Investments & Property Ltd.</div>
+  </div>
+
+  <!-- 1. INTRO VIDEO LAYER (WITH SKIP BUTTON) -->
+    <div id="intro-container">
+        <button id="skip-btn">Skip Intro</button>
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="https://www.image2url.com/r2/default/videos/1782315071849-c42d1ed9-4660-417a-a8ae-958db43e361e.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    
+<!-- Legend -->
+  <div class="i-legend" id="iLeg">
+    <div class="leg"><div class="leg-sw" style="background:rgba(255,220,50,.3);border-color:rgba(255,220,50,.5)"></div>Residential - Max. 6 Floors</div>
+    <div class="leg"><div class="leg-sw" style="background:rgba(140,100,200,.3);border-color:rgba(140,100,200,.5)"></div>Commercial - Max. 10 Floors</div>
+    <div class="leg"><div class="leg-sw" style="background:rgba(50,130,200,.3);border-color:rgba(50,130,200,.5)"></div>Mixed Use - Max. 10 Floors</div>
+  </div>
+
+  <!-- Enter CTA 
+  <div class="i-enter-wrap" id="iEnter">
+    <button class="i-enter" onclick="dismissIntro()">Enter Fish Valley →</button>
+  </div>-->
+
+  <!-- Progress bar -->
+  <div class="i-progress"><div class="i-prog-fill" id="iProg"></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Go to homepage">
+      <div class="logo-mark"><img src="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png" alt="FVIP Logo" loading="eager" decoding="async" fetchpriority="high"></div>
+      <div class="logo-words"><div class="logo-name">Fish Valley</div><div class="logo-tag">Investments & Property Ltd.</div></div>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item active">
+        <a href="#home" class="nav-link">Home <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a>
+        <div class="nav-dd">
+          <!--<div class="dd-head">Masterplans</div>-->
+          <a href="#masterplan">Fish Valley Project</a>
+          <!--<a href="#masterplan">Interactive Masterplan</a>
+          <a href="#masterplan">Phases & Timeline</a>
+          <a href="#masterplan">Zoning & Land Use</a>
+          <div class="sep"></div>
+          <div class="dd-head">News & Updates</div>-->
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <div class="sep"></div>
+          <a href="news.html">News & Updates</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About FVIP <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a>
+        <div class="nav-dd">
+          <a href="about.html#story">Our Story & Purpose</a>
+          <!--<a href="about.html#development">The Development</a>-->
+          <a href="about.html#team">Leadership & Team</a>
+          <a href="about.html#partners">Partners & Stakeholders</a>
+          <div class="sep"></div>
+          <!--<a href="about.html#awards">Awards & Recognition</a>-->
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="properties.html" class="nav-link">Fish Valley Project <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a>
+        <div class="nav-dd">
+          <a href="properties.html#development">The Development</a>
+          <a href="properties.html#available-properties">Land</a>
+          <a href="properties.html#available-properties">Residential</a>
+          <a href="properties.html#available-properties">Commercial</a>
+          <a href="properties.html#park">Neighborhood Park</a>
+          <div class="sep"></div>
+          <a href="properties.html#hospitality">Hospitality - Coming Soon</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Services <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a>
+        <div class="nav-dd">
+          <a href="services.html#investment">Investment Opportunities</a>
+          <a href="services.html#sustainability">Sustainability</a>
+          <div class="sep"></div>
+          <a href="services.html#faq">Process & FAQ</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-util">
+      <a href="contact.html#investor" class="btn-portal">Investor Portal</a>
+      <a href="news.html" class="btn-cta"><span>News & Updates</span></a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+
+  <a href="#home" class="m-link">Home</a>
+  <a href="about.html" class="m-link">About FVIP</a>
+  <a href="properties.html" class="m-link">Fish Valley Project</a>
+  <!--<div class="m-sub">
+    <a href="properties.html#available-properties">Land</a>
+    <a href="properties.html#available-properties">Residential</a>
+    <a href="properties.html#commercial">Commercial</a>
+  </div>-->
+  <div class="m-div"></div>
+  <a href="services.html" class="m-link">Services</a>
+  <a href="contact.html" class="m-link">Contact</a>
+  <div class="m-btns">
+    <a href="contact.html#investor" class="m-btn out">Investor Portal</a>
+    <a href="news.html" class="m-btn gold">News & Updates</a>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <div class="h-bg"></div>
+  <div class="h-grid"></div>
+  <div class="hvl" style="left:25%"></div><div class="hvl" style="left:50%"></div><div class="hvl" style="left:75%"></div>
+  <div class="px" style="left:6%;--pd:10s;--pdelay:0s"></div>
+  <div class="px" style="left:19%;--pd:12s;--pdelay:2.5s"></div>
+  <div class="px" style="left:38%;--pd:9s;--pdelay:4s"></div>
+  <div class="px" style="left:57%;--pd:13s;--pdelay:1.2s"></div>
+  <div class="px" style="left:73%;--pd:11s;--pdelay:3.5s"></div>
+  <div class="px" style="left:88%;--pd:10s;--pdelay:6s"></div>
+  <div class="h-wrap">
+    <div class="h-over"><div class="h-over-rule"></div><span class="h-over-txt">FVIP Real Estate Development Company · Lagos, Nigeria</span></div>
+    <h1 class="h-hl">
+      <span class="h-line"><span class="h-inner" style="--hd:1.4s">Enriching Lives</span></span>
+      <span class="h-line"><span class="h-inner h-em" style="--hd:1.65s">Through</span></span>
+      <span class="h-line"><span class="h-inner" style="--hd:1.9s">Intentional Living</span></span>
+    </h1>
+    <p class="h-sub">Fish Valley Investments & Property Ltd. is the property development subsidiary company behind Fish Valley, our current flagship mixed-use project in Ikeja GRA. The project brings together masterplan infrastructure, land, residential, commercial, hospitality and investment opportunities.</p>
+    <div class="h-actions">
+      <a href="properties.html" class="btn-p magnetic">View Fish Valley Project <span class="arr">→</span></a>
+      <a href="contact.html" class="btn-g magnetic">Book a Consultation</a>
+    </div>
+    <div class="h-stats">
+      <!--<div class="h-stat"><div class="h-sn" data-target="200">0</div><div class="h-sl">Property Transactions</div></div>-->
+      <div class="h-stat"><div class="h-sn" data-target="10">0</div><div class="h-sl">Years Excellence</div></div>
+      <!--<div class="h-stat"><div class="h-sn" data-target="500">0</div><div class="h-sl">Happy Clients</div></div>-->
+      <div class="h-stat"><div class="h-sn" data-target="6">0</div><div class="h-sl">Hectares in Fish Valley</div></div>
+    </div>
+  </div>
+  <div class="scue"><div class="sw"></div><span>Scroll</span></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker"><div class="tk-track">
+  <div class="tk-item"><div class="tk-dot"></div>FVIP Portfolio</div><div class="tk-item"><div class="tk-dot"></div>Fish Valley Project</div><div class="tk-item"><div class="tk-dot"></div>Affordable Luxury</div><div class="tk-item"><div class="tk-dot"></div>Commercial Spaces</div><div class="tk-item"><div class="tk-dot"></div>Investment Advisory</div><div class="tk-item"><div class="tk-dot"></div>PPP · FRCN Partnership</div><div class="tk-item"><div class="tk-dot"></div>Neighborhood Park</div><div class="tk-item"><div class="tk-dot"></div>55-Year Land Tenure</div><div class="tk-item"><div class="tk-dot"></div>Ikeja GRA · Lagos</div>
+  <div class="tk-item"><div class="tk-dot"></div>FVIP Portfolio</div><div class="tk-item"><div class="tk-dot"></div>Fish Valley Project</div><div class="tk-item"><div class="tk-dot"></div>Affordable Luxury</div><div class="tk-item"><div class="tk-dot"></div>Commercial Spaces</div><div class="tk-item"><div class="tk-dot"></div>Investment Advisory</div><div class="tk-item"><div class="tk-dot"></div>PPP · FRCN Partnership</div><div class="tk-item"><div class="tk-dot"></div>Neighborhood Park</div><div class="tk-item"><div class="tk-dot"></div>55-Year Land Tenure</div><div class="tk-item"><div class="tk-dot"></div>Ikeja GRA · Lagos</div>
+</div></div>
+
+<!-- VISION STATEMENT -->
+<section id="vision">
+  <div class="vis-grid ctn">
+    <img src="https://i.ibb.co/KpWrR68h/mission.jpg" alt="mission" border="0" loading="lazy" decoding="async"></a>
+    <div class="rr">
+      <div class="tag"><div class="tl"></div><span class="tt">FVIP Vision & Value Proposition</span></div>
+      <blockquote class="vis-quote">"To build trusted real estate projects that combine clear documentation, durable infrastructure, sustainable communities, and long-term investor value."</blockquote>
+      <p class="vis-sub">FVIP is the company. Fish Valley is our current flagship project: a carefully masterplanned, infrastructure-first community engineered to deliver value across land, residential, commercial, hospitality, and investor-focused asset classes. Past projects inform our track record; future projects will continue the same disciplined development standard.</p>
+      <div class="vis-pills">
+        <a href="about.html#vision" class="vis-pill magnetic">🏗 Infrastructure First</a>
+        <a href="about.html#vision" class="vis-pill magnetic">🤝 Trust & Transparency</a>
+        <a href="about.html#vision" class="vis-pill magnetic">🌿 ESG Aligned</a>
+        <a href="about.html#vision" class="vis-pill magnetic">📈 Investor Grade</a>
+        <a href="about.html#vision" class="vis-pill magnetic">🏗 Current & Future Projects</a>
+      </div>
+      <div class="h-actions">
+        <a href="about.html#story" class="btn-p magnetic">Read more <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTERPLAN TEASER -->
+<section id="masterplan">
+  <div class="mp-grid">
+    <div class="rl">
+      <div class="tag"><div class="tl"></div><span class="tt">The Fish Valley Project</span></div>
+      <h2 class="sh dk" style="margin-bottom:0">The Masterplan<br><em>Unveiled</em></h2>
+      <p class="mp-lead">A 6-hectare mixed-use development in Ikeja GRA; masterplanned across three phases with residential (max 6 floors), commercial and mixed-use zones (max 10 floors), an estate park, and a utility building, all underpinned by world-class infrastructure.</p>
+      <div class="ph-list">
+        <div class="ph-item r d1"><span class="ph-tag ph-a">Phase</span><div class="ph-num">I</div><div><div class="ph-name">Site & Services</div><p class="ph-desc">Security, Power, Telecoms (Internet), Roads, Water,  Drainage, the Central Neighborhood Park; the full foundation on which Fish Valley is built.</p><span class="ph-tag ph-a">Active</span></div></div>
+        <div class="ph-item r d2"><span class="ph-tag ph-pr">Phase</span><div class="ph-num">II</div><div><div class="ph-name">Residential & Commercial (Vertical Contruction)</div><p class="ph-desc">Villas, Apartments, Town Houses, Office Suites, and Retail Units.</p><span class="ph-tag ph-pr">In Progress</span></div></div>
+        <div class="ph-item r d3"><span class="ph-tag ph-ft">Phase</span><div class="ph-num">III</div><div><div class="ph-name">Hospitality & Investor Portal</div><p class="ph-desc">Multipurpose Development, Hotel/Aparthotel, and an Investor Management Platform.</p><span class="ph-tag ph-ft">Coming soon...</span></div></div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+        <a href="contact.html" class="btn-p">Request Masterplan <span class="arr">→</span></a>
+        <a href="properties.html#development" class="btn-g">View Development</a>
+      </div>
+    </div>
+    <!-- Interactive masterplan -->
+    <div class="rr">
+      <div class="mp-img-box">
+        <img src="https://i.ibb.co/DfLx3j01/Masterplan-3-D.png" alt="Masterplan-3-D" border="0" loading="lazy" decoding="async"></a>
+        <div class="mp-overlay"></div>
+        <div class="hs" style="top:42%;left:28%"><div class="hs-btn">R</div><div class="hs-tip">Residential Zone - Max. 6 Floors</div></div>
+        <div class="hs" style="top:28%;left:57%"><div class="hs-btn">C</div><div class="hs-tip">Commercial - Max. 10 Floors</div></div>
+        <div class="hs" style="top:36%;left:67%"><div class="hs-btn">M</div><div class="hs-tip">Mixed Use - Max. 10 Floors</div></div>
+        <div class="hs" style="top:45%;left:16%"><div class="hs-btn">P</div><div class="hs-tip">Neighborhood Park</div></div>
+        <div class="hs" style="top:28%;left:38%"><div class="hs-btn">U</div><div class="hs-tip">Utility Building</div></div>
+      </div>
+      <div class="mp-legend">
+        <div class="mpl"><div class="mpl-sw mpl-y"></div>Residential (6F)</div>
+        <div class="mpl"><div class="mpl-sw mpl-p"></div>Commercial (10F)</div>
+        <div class="mpl"><div class="mpl-sw mpl-b"></div>Mixed Use (10F)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPMENT AT A GLANCE -->
+<div id="glance">
+  <div class="gl-head">
+    <div class="tag r"><div class="tl"></div><span class="tt">Development at a Glance</span></div>
+    <h2 class="sh dk r">FVIP's Active<br><em>Development Portfolio</em></h2>
+    <p class="gl-copy r d1">A quick view of the live residential, commercial, and company-owned development interests currently shaping the FVIP pipeline.</p>
+  </div>
+  <div class="gl-portfolio">
+    <article class="gl-card r d1">
+      <div class="gl-card-kicker">Residential JV</div>
+      <h3 class="gl-card-title">Melrose Residential JV</h3>
+      <p class="gl-card-body"><strong>10,000 sqm</strong> joint-venture residential development with MGE Realty, comprising a mix of two, three and four-bedroom apartments.</p>
+      <div class="gl-card-status">Status: Ongoing</div>
+    </article>
+    <article class="gl-card r d2">
+      <div class="gl-card-kicker">Commercial Land</div>
+      <h3 class="gl-card-title">Commercial Development</h3>
+      <p class="gl-card-body"><strong>2,000 sqm</strong> outright commercial land sale to KFA, with the agreement finalised and design of the commercial spaces underway.</p>
+      <div class="gl-card-status">Status: Agreement Finalised</div>
+    </article>
+    <article class="gl-card r d3">
+      <div class="gl-card-kicker">Mixed-Use</div>
+      <h3 class="gl-card-title">Centrepiece Development</h3>
+      <p class="gl-card-body"><strong>8,000 sqm</strong> FVN-owned residential development planned to comprise a mix of apartments, townhouses, penthouses, leisure spaces and boutique hospitality offerings.</p>
+      <div class="gl-card-status">Status: Design Stage</div>
+    </article>
+  </div>
+  <div class="gl-stats center">
+    <div class="gs r d1"><div class="gs-n" data-target="6">0</div><div class="gs-l">Hectares Total</div></div>
+    <div class="gs r d4"><div class="gs-n" data-target="3">0</div><div class="gs-l">Active Development</div></div>
+    <div class="gs r d4"><div class="gs-n" data-target="5">0</div><div class="gs-l">Asset Classes</div></div>
+    <div class="gs r d2"><div class="gs-n">FRCN <div class="gi-ic">PPP</div></div><div class="gs-l"> A 55yr Land Tenure</div></div>
+    <div class="gs r d5"><div class="gs-n">LSDPC</div><div class="gs-l">Government Partner</div></div>
+  </div>
+  <div class="gl-infra">
+    <div class="gi r d5"><div class="gi-ic">🛡️</div><div class="gi-nm">Security</div></div>
+    <div class="gi r d2"><div class="gi-ic">⚡</div><div class="gi-nm">Power</div></div>
+    <div class="gi r d4"><div class="gi-ic">📡</div><div class="gi-nm">Telecoms</div></div>
+    <div class="gi r d1"><div class="gi-ic">🛣️</div><div class="gi-nm">Roads</div></div>
+    <div class="gi r d3"><div class="gi-ic">💧</div><div class="gi-nm">Water</div></div>
+    <div class="gi r d6"><div class="gi-ic">🌳</div><div class="gi-nm">Parks</div></div>
+  </div>
+</div>
+
+<!-- PROPERTY HIGHLIGHTS -->
+<section id="props">
+  <div class="ctn">
+    <div class="props-hd">
+      <div><div class="tag r"><div class="tl"></div><span class="tt">Property Highlights</span></div><h2 class="sh r">Explore Our <em>Portfolio</em></h2></div>
+      <a href="properties.html" class="btn-lk r">View Fish Valley Details →</a>
+    </div>
+    <div class="prop-fg">
+      <!-- Featured: Land -->
+      <div class="prop-big rl">
+        <img class="pb-img" src="https://i.ibb.co/0pthSj3V/LAND-CL-2.png" alt="Land View" loading="lazy" decoding="async">
+        <div class="pb-ov"></div>
+        <div class="pb-badge">For Sale Now</div>
+        <div class="pb-body">
+          <div class="pb-cat">Land</div>
+          <div class="pb-name">Residential Land</div>
+          <p class="pb-desc">2000sq meters Prime Residential Area ready for development.</p>
+          <!--<div class="pb-price">From ₦255M</div>-->
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px"><span class="psm-badge psb-s" style="margin-bottom:0">Available Now</span></div>
+          <a href="properties.html#available-properties" class="btn-p">Enquire Now <span class="arr">→</span></a>
+        </div>
+      </div>
+      <!-- Small cards -->
+      <div class="prop-sm-col rr">
+        <div class="psm">
+          <img class="psm-img" src="https://i.ibb.co/zHSwW9rh/Residence-1.png" alt="Apartment" loading="lazy" decoding="async">
+          <div class="psm-body">
+            <div class="psm-cat">Residential</div>
+            <div class="psm-name">2-4 Bed Apartments & TownHouses</div>
+            <div class="psm-loc"> Fish Valley Residential, Ikeja GRA</div>
+            <span class="psm-badge psb-s">For Sale</span>
+            <div class="psm-badge">Under Construction</div>
+            <!--<div class="psm-price">From ₦85M</div>-->
+            <a href="properties.html#available-properties" class="psm-cta">Register Interest →</a>
+          </div>
+        </div>
+        <div class="psm">
+          <img class="psm-img" src="https://i.ibb.co/JhqvjLB/Commercial-2.png" alt="Commercial buildings" loading="lazy" decoding="async">
+          <div class="psm-body">
+            <div class="psm-cat">Commercial</div>
+            <div class="psm-name">Office & Retail Spaces</div>
+            <div class="psm-loc"> Fish Valley Business Commercial</div>
+            <span class="psm-badge psb-l">For Sale</span>
+            <div class="psm-badge">Under Development</div>
+            <!--<div class="psm-price">From ₦4.2M p.a.</div>-->
+            <a href="properties.html#available-properties" class="psm-cta">Join Waitlist →</a>
+          </div>
+        </div>
+        <div class="psm">
+          <img class="psm-img" src="https://i.ibb.co/qMdMqx5q/leisure-2.jpg" alt="Hotel" loading="lazy" decoding="async">
+          <div class="psm-body">
+            <div class="psm-cat">Hospitality</div>
+            <div class="psm-name">Hotel & Aparthotel Apartments</div>
+            <div class="psm-loc"> Fish Valley Hospitality Zone</div>
+            <span class="psm-badge psb-c">Coming Soon</span>
+            <div class="psm-price" style="font-size:16px;color:var(--text-muted)">Phase III</div>
+            <a href="properties.html#hospitality" class="psm-cta">Register Interest →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Park strip -->
+    <div class="park-strip r">
+      <img src="https://i.ibb.co/8gD1RZ0d/3-D-Neighborhood-P.png" alt="Neighborhood Park" loading="lazy" decoding="async">
+      <div class="park-body">
+        <div class="pk-cat">Neighborhood Park</div>
+        <div class="pk-title">Community Living<br><em>Reimagined</em></div>
+        <p class="pk-desc">Sports courts, green spaces, children's play areas, and a community hub; the park is the beating heart of Fish Valley life, enhancing wellbeing and property values.</p>
+        <a href="properties.html#park" class="btn-p">Explore the Park <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT SNAPSHOT -->
+<section id="invest">
+  <div class="inv-g ctn">
+    <div class="rl">
+      <div class="tag"><div class="tl"></div><span class="tt">Investment Snapshot</span></div>
+      <h2 class="sh dk">Invest in <em>Nigeria's Future</em></h2>
+      <p class="inv-lead">FVIP offers structured opportunities across Fish Valley and future projects for investors, developers, commercial operators, and strategic partners. Register interest to receive current availability, documentation, and advisory guidance.</p>
+      <div class="inv-nums">
+        <div class="inc r d1"><div class="inc-n">2,000</div><div class="inc-l">sqm Land Sale</div></div>
+        <div class="inc r d2"><div class="inc-n">Phase I</div><div class="inc-l">Infrastructure Fundraising</div></div>
+        <div class="inc r d3"><div class="inc-n">JV</div><div class="inc-l">Partnership Opportunities</div></div>
+        <div class="inc r d4"><div class="inc-n">Mixed</div><div class="inc-l">Commercial & Hospitality</div></div>
+      </div>
+      <div class="inv-opportunity-grid">
+        <div class="inv-opportunity-card r d1"><div class="inv-opportunity-kicker">Land Sale</div><div class="inv-opportunity-title">2,000 sqm Residential Plot</div><p class="inv-opportunity-copy">A defined Fish Valley land sale opportunity for buyers seeking serviced residential land with clear advisory support.</p></div>
+        <div class="inv-opportunity-card r d2"><div class="inv-opportunity-kicker">Funding</div><div class="inv-opportunity-title">Infrastructure Fundraising</div><p class="inv-opportunity-copy">Funding participation for Phase I site services including roads, drainage, power, water, telecoms, and utilities.</p></div>
+        <div class="inv-opportunity-card r d3"><div class="inv-opportunity-kicker">Partnership</div><div class="inv-opportunity-title">Joint Venture Partnerships</div><p class="inv-opportunity-copy">Residential JV pathways for aligned development partners with execution capacity and long-term value orientation.</p></div>
+        <div class="inv-opportunity-card r d4"><div class="inv-opportunity-kicker">Commercial</div><div class="inv-opportunity-title">Retail, Office & Mixed-Use</div><p class="inv-opportunity-copy">Commercial development partnerships for operators and investors within the Fish Valley masterplan.</p></div>
+        <div class="inv-opportunity-card wide r d5"><div class="inv-opportunity-kicker">Hospitality</div><div class="inv-opportunity-title">Hotel & Aparthotel Opportunities</div><p class="inv-opportunity-copy">Hospitality and aparthotel interest for investors seeking exposure to Fish Valley's future destination-led asset class.</p></div>
+      </div>
+      <div class="inv-actions">
+        <a href="services.html#investment" class="btn-p">Explore Options <span class="arr">→</span></a>
+        <a href="contact.html?interest=investment#contact-main" class="btn-g">Register Now</a>
+      </div>
+    </div>
+    <div class="inv-visual rr">
+      <img class="inv-img" src="https://i.ibb.co/sdQrkdTX/house-piggy.jpg" alt="Investment" loading="lazy" decoding="async">
+      <div class="inv-pull"><div class="inv-pull-n">ROI</div><div class="inv-pull-l">Contact advisors for current projected returns by asset class.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUSTAINABILITY COMMITMENT BANNER -->
+<div id="sus">
+  <div class="sus-wrap">
+    <div class="sus-g ctn">
+      <div class="rl">
+        <div class="tag"><div class="tl"></div><span class="tt">Sustainability Commitment</span></div>
+        <h2 class="sh dk">Built for <em>Planet & People</em></h2>
+        <p class="sus-p">Every decision at FVIP considers its environmental and social impact; from green building standards and solar energy to biodiversity preservation and community employment. Our ESG commitment runs through every phase of the masterplan.</p>
+        <div class="sus-metrics">
+          <div class="sm"><div class="sm-ic">🌱</div><div class="sm-tit">Green Building</div><p class="sm-desc">Energy-efficient systems, low-carbon materials, and green certification targets across all structures.</p></div>
+          <div class="sm"><div class="sm-ic">☀️</div><div class="sm-tit">Solar Energy</div><p class="sm-desc">Hybrid solar integration providing clean, reliable backup power across the entire estate.</p></div>
+          <div class="sm"><div class="sm-ic">💧</div><div class="sm-tit">Water Management</div><p class="sm-desc">Borehole management, drainage systems, and responsible water recycling infrastructure.</p></div>
+          <div class="sm"><div class="sm-ic">👥</div><div class="sm-tit">Social Impact</div><p class="sm-desc">Local employment, community programmes, and social investment in surrounding neighbourhoods.</p></div>
+        </div>
+        <div style="margin-top:36px"><a href="services.html#sustainability" class="btn-p">Read Our ESG Report <span class="arr">→</span></a></div>
+      </div>
+      <div class="rr">
+        <h3 style="font-family:var(--font-d);font-size:24px;color:var(--white);margin-bottom:28px">ESG Commitment Framework</h3>
+        <div class="esg-rows">
+          <div class="esg-row"><div class="esg-gr">E</div><div><div class="esg-tit">Environmental</div><div class="esg-desc">Carbon monitoring, biodiversity preservation, green certifications, and renewable energy targets across all buildings.</div></div></div>
+          <div class="esg-row"><div class="esg-gr">S</div><div><div class="esg-tit">Social</div><div class="esg-desc">Local hiring policy, skills training, community engagement, and impact reporting aligned with UN SDG frameworks.</div></div></div>
+          <div class="esg-row"><div class="esg-gr">G</div><div><div class="esg-tit">Governance</div><div class="esg-desc">Transparent reporting, regulatory compliance, SEC-aligned investor documentation, and quarterly ESG disclosures.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWS / BLOG OVERVIEW (full articles live on the standalone News & Updates page) -->
+<section id="news">
+  <div class="ctn">
+    <div class="news-hd">
+      <div><div class="tag r"><div class="tl"></div><span class="tt">News & Updates</span></div><h2 class="sh r">News, Insights<br>& <em>Events</em></h2></div>
+      <div class="news-hd-actions r">
+        <a href="news.html" class="btn-lk">View All Articles →</a>
+        <a href="#nl" class="btn-s news-sub-btn">Subscribe</a>
+      </div>
+    </div>
+    <div class="news-g">
+      <a href="news.html#phase-ii-launch" class="nf rl">
+        <img class="nf-img" src="https://i.ibb.co/ycXYFpjS/skyscraper-build.jpg" alt="News" loading="lazy" decoding="async">
+        <div class="nf-body">
+          <div class="nf-cat">📰 Press Release</div>
+          <div class="nf-tit">Fish Valley Launches Phase II: Off-Plan Residential Units Now Open for Reservation</div>
+          <p class="nf-exc">FVIP announces the official launch of Phase II residential units - off-plan villas, apartments, and town houses now open at pre-launch pricing with flexible payment plans.</p>
+          <div class="nf-meta"><span>June 2026</span><div class="nf-dot"></div><span>4 min read</span><div class="nf-dot"></div><span style="color:var(--gold);font-weight:600">Read More →</span></div>
+        </div>
+      </a>
+      <div class="ns-col rr">
+        <a class="ns" href="news.html#land-65-percent"><img class="ns-img" src="https://i.ibb.co/m5LXGPRj/house-keys.jpg" alt="Land" loading="lazy" decoding="async"><div><div class="ns-cat">🌍 News</div><div class="ns-tit">Serviced Land Plots Now 65% Sold - Secure Yours Before Phase II Closes</div><div class="ns-date">May 2026</div></div></a>
+        <a class="ns" href="news.html#ikeja-gra-outperform"><img class="ns-img" src="https://i.ibb.co/ZRWwFwfD/insight-interior.jpg" alt="Investment" loading="lazy" decoding="async"><div><div class="ns-cat">📈 Insights</div><div class="ns-tit">Why Ikeja GRA Continues to Outperform the Lagos Real Estate Market</div><div class="ns-date">April 2026</div></div></a>
+        <a class="ns" href="news.html#park-community-day"><img class="ns-img" src="https://i.ibb.co/8gD1RZ0d/3-D-Neighborhood-P.png" alt="Park" loading="lazy" decoding="async"><div><div class="ns-cat">🎪 Event</div><div class="ns-tit">Community Day: Estate Park Grand Reveal - All Welcome</div><div class="ns-date">July 2026</div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS + PARTNERS -->
+<section id="testi">
+  <div class="ctn">
+    <div style="text-align:center;max-width:580px;margin:0 auto 56px">
+      <div class="tag r" style="justify-content:center"><div class="tl"></div><span class="tt">Client Testimonials</span><div class="tl"></div></div>
+      <h2 class="sh r" style="text-align:center;margin-top:14px">What Our Clients<br><em>Say About Us</em></h2>
+    </div>
+    <div class="tc-grid">
+      <div class="tc r d1">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-txt">"Fish Valley's transparency was refreshing. From initial enquiry to plot handover, every step was documented and every promise was kept. I couldn't recommend them more highly."</p>
+        <div class="tc-auth"><div class="tc-av"><img src="https://images.unsplash.com/photo-1560250097-0dc05ae3cd7b?w=100&q=80" alt="Client" loading="lazy" decoding="async"></div><div><div class="tc-name">Emeka Okafor</div><div class="tc-role">Land Investor · Lagos</div></div></div>
+      </div>
+      <div class="tc r d2">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-txt">"As a diaspora investor from the UK, I was cautious about Nigerian real estate. FVIP's documentation process and video site tours gave me total confidence. Excellent team."</p>
+        <div class="tc-auth"><div class="tc-av"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="Client" loading="lazy" decoding="async"></div><div><div class="tc-name">Adaeze Williams</div><div class="tc-role">Residential Investor · London, UK</div></div></div>
+      </div>
+      <div class="tc r d3">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-txt">"The commercial space we leased is perfectly positioned within the business district. Infrastructure quality is world-class and estate management is highly professional."</p>
+        <div class="tc-auth"><div class="tc-av"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Client" loading="lazy" decoding="async"></div><div><div class="tc-name">Tunde Adeyemi</div><div class="tc-role">Commercial Tenant · Ikeja</div></div></div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="partners-panel r">
+      <div class="partners-panel-head">
+        <div>
+          <p class="partner-hd">Trusted Partners & Stakeholders</p>
+          <p class="partner-copy">FVIP is strengthened by public sector institutions, professional advisers, technical consultants, and delivery partners who support governance, design quality, infrastructure thinking, and long-term project value.</p>
+        </div>
+        <a class="partner-cta" href="about.html#partners">Read more <svg viewBox="0 0 18 18" fill="none"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="partners-row" aria-label="Selected FVIP partners">
+        <div class="partners-track">
+          <div class="pl"><img src="https://i.ibb.co/nMzKkmfz/FRCN-New-2.png" alt="FRCN logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/LzYNxYNP/LSDPC-N.png" alt="LSDPC logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/GfXc8nYG/ARUP-N.png" alt="ARUP logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/hFKB6n7R/bqc.png" alt="BQC logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/1fFVRD9Y/koa-consultants.png" alt="KOA Consultants logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/WN87YWFC/apd-project-management.jpg" alt="APD Project Management logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/C341vWVV/DELANO-N.png" alt="Delano Architects logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/6RDfTyXQ/DEZYNCYCLE-N.png" alt="Dezyncycle logo" loading="lazy" decoding="async"></div>
+          <a class="pl more" href="about.html#partners"><span>View</span><small>all partners</small></a>
+          <div class="pl"><img src="https://i.ibb.co/nMzKkmfz/FRCN-New-2.png" alt="FRCN logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/LzYNxYNP/LSDPC-N.png" alt="LSDPC logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/GfXc8nYG/ARUP-N.png" alt="ARUP logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/hFKB6n7R/bqc.png" alt="BQC logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/1fFVRD9Y/koa-consultants.png" alt="KOA Consultants logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/WN87YWFC/apd-project-management.jpg" alt="APD Project Management logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/C341vWVV/DELANO-N.png" alt="Delano Architects logo" loading="lazy" decoding="async"></div>
+          <div class="pl"><img src="https://i.ibb.co/6RDfTyXQ/DEZYNCYCLE-N.png" alt="Dezyncycle logo" loading="lazy" decoding="async"></div>
+          <a class="pl more" href="about.html#partners"><span>View</span><small>all partners</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER + CONTACT CTA -->
+<div id="nl">
+  <div class="nl-wrap">
+    <div class="nl-g ctn">
+      <div class="rl">
+        <div class="tag"><div class="tl"></div><span class="tt">Newsletter & Contact CTA</span></div>
+        <h2 class="nl-h">Get the Latest<br><em>FVIP & Fish Valley Updates</em></h2>
+        <p class="nl-p">Subscribe to receive FVIP project news, Fish Valley listings, investment insights, and early access to upcoming development opportunities delivered straight to your inbox.</p>
+        <div class="nl-form">
+          <input class="nl-in" type="email" id="nlEmail" placeholder="Enter your email address">
+          <button class="nl-btn" onclick="subNL()">Subscribe →</button>
+        </div>
+        <p class="nl-note">No spam, ever. Unsubscribe at any time.</p>
+      </div>
+      <div class="nl-cards rr">
+        <div class="nl-card">
+          <div class="nlc-ic">📞</div>
+          <div class="nlc-tit">Book a Free Consultation</div>
+          <p class="nlc-desc">Speak with a dedicated sales advisor in person, by phone, or via WhatsApp. We'll find your perfect property or investment package.</p>
+          <a href="contact.html" class="btn-p" style="display:inline-flex">Book Now <span class="arr">→</span></a>
+        </div>
+        <div class="nl-card">
+          <div class="nlc-ic">📄</div>
+          <div class="nlc-tit">Request Investment Brochure</div>
+          <p class="nlc-desc">Get our full investment prospectus with property specs, pricing, ROI projections, and payment plan options.</p>
+          <a href="contact.html" class="btn-g" style="display:inline-flex">Request Brochure →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="flr"><div class="flm"><img src="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png" alt="FVIP" loading="lazy" decoding="async"></div><div><div class="fln">Fish Valley</div><div class="flt">Investments & Property Ltd.</div></div></div>
+      <p class="fdesc">A registered Nigerian real estate company delivering trusted property investment and development solutions. Developing Fish Valley today and preparing the next generation of FVIP projects.</p>
+    </div>
+    <div><div class="fct">Home</div><ul class="flinks"><li><a href="#masterplan">Fish Valley Project</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="news.html">News & Updates</a></li></ul></div>
+    <div><div class="fct">Fish Valley Project</div><ul class="flinks"><li><a href="properties.html#development">The Development</a></li><li><a href="properties.html#available-properties">Land</a></li><li><a href="properties.html#available-properties">Residential</a></li><li><a href="properties.html#available-properties">Commercial</a></li><li><a href="properties.html#park">Neighborhood Park</a></li><li><a href="properties.html#hospitality" class="dim">Hospitality</a></li></ul></div>
+    <div><div class="fct">Investor Resources</div><ul class="flinks"><li><a href="services.html#services-overview">Why Invest</a></li><li><a href="contact.html#investor">Investor Portal</a></li></ul></div>
+    <div><div class="fct">Support</div><ul class="flinks"><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#contact-main">Enquiries</a></li><li><a href="services.html#faq">FAQs</a></li><li><a href="contact.html">Privacy Policy</a></li><li><a href="contact.html">Terms & Conditions</a></li></ul></div>
+  </div>
+  <div class="fb">
+    <span>© 2026 Fish Valley Investments & Property Ltd. All rights reserved.</span>
+    <!--<span style="color:rgba(255,255,255,.2)">Designed by Ayomide Samuel</span>-->
+      <div class="fsoc">
+        <a class="fsl" data-social="linkedin" aria-label="FVIP on LinkedIn"><img src="https://i.ibb.co/YBYz2jGm/linkedin.png" alt="LinkedIn" loading="lazy" decoding="async" width="16" height="16"></a>
+        <a class="fsl" data-social="instagram" aria-label="FVIP on Instagram"><img src="https://i.ibb.co/Z1p60C13/instagram.png" alt="Instagram" loading="lazy" decoding="async" width="16" height="16"></a>
+        <a class="fsl" data-social="facebook" aria-label="FVIP on Facebook"><img src="https://i.ibb.co/x8BTkHSm/facebook.png" alt="Facebook" loading="lazy" decoding="async" width="16" height="16"></a>
+        <a class="fsl" data-social="whatsapp" aria-label="FVIP on WhatsApp"><img src="https://i.ibb.co/VcdzV7pX/whatsapp.png" alt="WhatsApp" loading="lazy" decoding="async" width="16" height="16"></a>
+      </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+/* ── INTRO ── */
+const DURATION = 10200;
+let done = false;
+let introEnabled = false;
+
+(function runIntro(){
+  const intro = document.getElementById('intro');
+  let hasSeenIntro = false;
+  try { hasSeenIntro = sessionStorage.getItem('fvip-intro-seen') === 'true'; } catch (e) {}
+  if (!intro || hasSeenIntro) {
+    if (intro) intro.style.display = 'none';
+    done = true;
+    requestAnimationFrame(() => { initCounters(); initReveal(); });
+    return;
+  }
+  introEnabled = true;
+  try { sessionStorage.setItem('fvip-intro-seen', 'true'); } catch (e) {}
+  const prog = document.getElementById('iProg');
+  const introContainer = document.getElementById('intro-container');
+  const introVideo = document.getElementById('intro-video');
+  const skipBtn = document.getElementById('skip-btn');
+
+  if (prog) {
+    prog.style.transition = `width ${DURATION}ms linear`;
+    requestAnimationFrame(() => prog.style.width = '100%');
+  }
+
+  if (skipBtn) skipBtn.addEventListener('click', dismissIntro);
+  if (introVideo) {
+    introVideo.addEventListener('ended', dismissIntro);
+    introVideo.addEventListener('error', () => document.getElementById('iEnter')?.classList.add('show'));
+  }
+
+  // Phase 2: fade logo and show the intro video.
+  setTimeout(() => {
+    document.getElementById('iLogo')?.classList.add('fade');
+    introContainer?.classList.add('show');
+    if (introVideo) introVideo.play().catch(() => document.getElementById('iEnter')?.classList.add('show'));
+  }, 1800);
+
+  // Phase 3: annotations, only when those elements exist.
+  setTimeout(() => {
+    document.getElementById('iAnnots')?.classList.add('show');
+    document.getElementById('iLeg')?.classList.add('show');
+    const ids = ['a-ent','a-com','a-mix','a-res','a-park','a-util','a-exit','zc-r','zc-c','zc-m'];
+    ids.forEach((id, i) => setTimeout(() => document.getElementById(id)?.classList.add('v'), i * 280));
+  }, 4800);
+
+  // Phase 4: show a clear manual entry and skip control beneath the video.
+  setTimeout(() => {
+    document.getElementById('iTgl')?.classList.add('show');
+    document.getElementById('iEnter')?.classList.add('show');
+  }, 5200);
+
+  // Auto dismiss if the visitor does not interact.
+  setTimeout(() => { if (!done) dismissIntro(); }, DURATION + 400);
+})();
+
+function dismissIntro() {
+  if (done) return;
+  done = true;
+  document.getElementById('intro-container')?.classList.add('fade-out');
+  document.getElementById('intro-video')?.pause();
+  document.getElementById('intro').classList.add('out');
+  document.body.style.overflowY = 'auto';
+  setTimeout(() => {
+    const intro = document.getElementById('intro');
+    if (intro) intro.style.display = 'none';
+    initCounters();
+    initReveal();
+  }, 1000);
+}
+
+if (introEnabled) document.body.style.overflowY = 'hidden';
+
+/* ── PAGE TRANSITION ── */
+function navTo(e, href) {
+  if (e) e.preventDefault();
+  const pt = document.getElementById('pt');
+  pt.classList.remove('out');
+  pt.classList.add('in');
+  setTimeout(() => window.location = href, 640);
+}
+document.querySelectorAll('a[href]').forEach(a => {
+  const h = a.getAttribute('href');
+  if (h && h.endsWith('.html') && !h.startsWith('http') && !a.getAttribute('onclick')) {
+    a.addEventListener('click', e => navTo(e, a.href));
+  }
+});
+
+/* ── CURSOR ── */
+if (window.matchMedia('(hover:hover)').matches) {
+  const cur = document.getElementById('cursor'), ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });
+  (function tick() { rx += (mx - rx) * .12; ry += (my - ry) * .12; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(tick); })();
+  document.querySelectorAll('a,button,.prop-big,.psm,.tc,.inv-opt,.nl-card,.hs,.ph-item').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.style.width = '18px'; cur.style.height = '18px'; ring.style.width = '60px'; ring.style.height = '60px'; });
+    el.addEventListener('mouseleave', () => { cur.style.width = '10px'; cur.style.height = '10px'; ring.style.width = '38px'; ring.style.height = '38px'; });
+  });
+}
+
+/* ── MAGNETIC ── */
+document.querySelectorAll('.magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    btn.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px,${(e.clientY - r.top - r.height / 2) * .18}px)`;
+  });
+  btn.addEventListener('mouseleave', () => btn.style.transform = '');
+});
+
+/* ── NAV ── */
+const nb = document.getElementById('navbar');
+window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 60), { passive: true });
+const ham = document.getElementById('hamburger'), mob = document.getElementById('mobMenu');
+if (ham && mob) ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open'); });
+document.querySelectorAll('.mob-menu a').forEach(link => {
+  link.addEventListener('click', () => { ham?.classList.remove('open'); mob?.classList.remove('open'); });
+});
+
+/* ── REVEAL ── */
+let ro;
+function initReveal() {
+  ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('v'); ro.unobserve(e.target); } });
+  }, { threshold: .1, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.r,.rl,.rr').forEach(el => ro.observe(el));
+}
+
+/* ── COUNTERS ── */
+function initCounters() {
+  const co = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(e.target.dataset.target);
+        let v = 0; const step = 16, inc = target / (2200 / step);
+        const iv = setInterval(() => { v = Math.min(v + inc, target); e.target.textContent = Math.floor(v) + (v >= target ? '+' : ''); if (v >= target) clearInterval(iv); }, step);
+        co.unobserve(e.target);
+      }
+    });
+  }, { threshold: .5 });
+  document.querySelectorAll('[data-target]').forEach(el => co.observe(el));
+}
+
+/* ── HERO PARALLAX ── */
+window.addEventListener('scroll', () => {
+  const bg = document.querySelector('.h-bg');
+  if (bg) bg.style.transform = `scale(1.07) translateY(${window.scrollY * .08}px)`;
+}, { passive: true });
+
+/* ── NEWS TABS ── */
+function setTab(el) {
+  document.querySelectorAll('.nc').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+/* ── NEWSLETTER ── */
+function subNL() {
+  const em = document.getElementById('nlEmail').value.trim();
+  if (!em || !em.includes('@')) { alert('Please enter a valid email address.'); return; }
+  const btn = document.querySelector('.nl-btn');
+  btn.textContent = '✓ Subscribed!';
+  document.getElementById('nlEmail').value = '';
+  setTimeout(() => btn.textContent = 'Subscribe →', 3500);
+}
+</script>
+<script src="assets/social-links.js" defer></script>
+<script src="assets/site-enhance.js" defer></script>
+</body>
+</html>

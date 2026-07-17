@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FVIP | Contact - Fish Valley Investments & Property Ltd.</title>
+<meta name="description" content="Get in touch with Fish Valley Investments & Property Ltd. for company enquiries, Fish Valley project sales, investor portal access, and office locations in Lagos, Nigeria.">
+<meta name="theme-color" content="#091616">
+<link rel="icon" type="image/png" href="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png">
+<link rel="apple-touch-icon" href="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ibb.co">
+<link rel="dns-prefetch" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#091616;--green-mid:#164040;--green-rich:#2D8080;--gold:#B9904A;--gold-light:#D8BE7A;--gold-pale:#EFE3C2;--cream:#F3F2F0;--cream-dark:#C0DDDD;--white:#fff;--ink:#091616;--text:#091616;--text-mid:#315F5F;--text-muted:#6DA5A5;--font-display:'Playfair Display',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--ease2:cubic-bezier(.65,0,.35,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--cream);color:var(--text);overflow-x:hidden;cursor:none}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button,input,select,textarea{font-family:var(--font-body)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--green)}::-webkit-scrollbar-thumb{background:var(--gold)}
+.page-transition{position:fixed;inset:0;z-index:99999;background:var(--green);transform-origin:bottom;animation:ptReveal 1s var(--ease) .1s forwards;pointer-events:none}.page-transition.out{transform-origin:top;animation:ptOut .6s var(--ease2) forwards}
+@keyframes ptReveal{0%{transform:scaleY(1)}100%{transform:scaleY(0)}}@keyframes ptOut{0%{transform:scaleY(0)}100%{transform:scaleY(1)}}
+.cursor{position:fixed;width:10px;height:10px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .25s,height .25s}
+.cursor-ring{position:fixed;width:38px;height:38px;border:1px solid rgba(185,144,74,.45);border-radius:50%;pointer-events:none;z-index:99997;transform:translate(-50%,-50%);transition:width .38s,height .38s}
+@media(hover:none){.cursor,.cursor-ring{display:none}}
+#loader{position:fixed;inset:0;z-index:9999;background:var(--green);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .9s var(--ease)}
+.loader-logo{font-family:var(--font-display);font-size:40px;font-weight:500;color:var(--gold);opacity:0;letter-spacing:3px;animation:lIn 1s var(--ease) .4s forwards}
+.loader-sub{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:rgba(185,144,74,.5);opacity:0;animation:lIn .7s .85s forwards}
+.loader-bar{width:180px;height:1px;background:rgba(185,144,74,.15);overflow:hidden;opacity:0;animation:lIn .5s 1s forwards}
+.loader-fill{height:100%;width:0;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:lFill 1.4s var(--ease2) 1.1s forwards}
+@keyframes lIn{to{opacity:1}}@keyframes lFill{to{width:100%;margin-left:100%}}#loader.hidden{opacity:0;pointer-events:none}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 52px;transition:background .5s,padding .4s}
+nav.scrolled{background:rgba(9,22,22,.97);backdrop-filter:blur(24px);border-bottom:1px solid rgba(185,144,74,.12)}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:90px;transition:height .4s}nav.scrolled .nav-inner{height:68px}
+.logo{display:flex;align-items:center;gap:13px;cursor:pointer;transition:opacity .3s}.logo:hover{opacity:.85}.logo-mark{width:42px;height:42px;flex-shrink:0;overflow:hidden}.logo-mark img{width:100%;height:100%;object-fit:contain}.logo-words{color:var(--white)}.logo-name{font-family:var(--font-display);font-size:17px;font-weight:600;line-height:1.1}.logo-tag{font-size:8px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold-light);margin-top:3px;opacity:.8}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}.nav-item{position:relative}
+.nav-link{display:flex;align-items:center;gap:5px;padding:8px 16px;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);position:relative;transition:color .3s;white-space:nowrap}
+.nav-link::after{content:'';position:absolute;bottom:4px;left:16px;right:16px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-link:hover,.nav-item.active .nav-link{color:var(--gold)}.nav-link:hover::after,.nav-item.active .nav-link::after{transform:scaleX(1)}.nav-link svg{width:9px;height:9px;opacity:.5;transition:transform .3s}.nav-item:hover .nav-link svg{transform:rotate(180deg)}
+.nav-dropdown{position:absolute;top:calc(100% + 8px);left:0;min-width:230px;background:rgba(9,22,22,.98);backdrop-filter:blur(20px);border:1px solid rgba(185,144,74,.12);padding:10px 0;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .3s var(--ease);z-index:100}.nav-item:hover .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown a{display:block;padding:11px 22px;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .25s,padding .25s,background .25s}.nav-dropdown a:hover{color:var(--gold);background:rgba(185,144,74,.05);padding-left:28px}.nav-dropdown .sep{height:1px;background:rgba(255,255,255,.06);margin:6px 0}.nav-dropdown .dim{opacity:.35;pointer-events:none;font-style:italic}
+.nav-util{display:flex;align-items:center;gap:10px}
+.btn-portal{padding:10px 22px;border:1px solid rgba(185,144,74,.5);color:rgba(185,144,74,.9);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:all .3s}.btn-portal:hover{border-color:var(--gold);color:var(--gold)}
+.btn-cta{padding:11px 26px;background:var(--gold);color:var(--green);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}.btn-cta::before{content:'';position:absolute;inset:0;background:var(--gold-light);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}.btn-cta:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(185,144,74,.4)}.btn-cta:hover::before{transform:scaleX(1)}.btn-cta span{position:relative;z-index:1}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}.hamburger span{width:26px;height:1.5px;background:var(--white);transition:all .4s var(--ease);display:block}.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+.mobile-menu{position:fixed;inset:0;background:var(--green);z-index:998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .6s var(--ease);overflow-y:auto;padding:88px 32px 48px}.mobile-menu.open{transform:translateX(0)}.mobile-menu>.m-link{font-family:var(--font-display);font-size:38px;color:var(--white);transition:color .3s;opacity:.9}.mobile-menu>.m-link:hover{color:var(--gold)}.m-divider{width:48px;height:1px;background:rgba(185,144,74,.35)}.m-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.m-btn{padding:13px 26px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}.m-btn.gold{background:var(--gold);color:var(--green)}.m-btn.outline{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
+/* UTILS */
+.section{padding:120px 52px}.container{max-width:1280px;margin:0 auto}
+.tag{display:inline-flex;align-items:center;gap:14px;margin-bottom:18px}.tag-line{width:40px;height:1px;background:var(--gold)}.tag-text{font-size:9px;letter-spacing:4.5px;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.section-h{font-family:var(--font-display);font-size:clamp(34px,4.5vw,60px);font-weight:500;line-height:1.1;color:var(--green)}.section-h.on-dark{color:var(--white)}.section-h em{font-style:italic;color:var(--gold-light)}
+.r{opacity:0;transform:translateY(44px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.r.v{opacity:1;transform:none}
+.r-l{opacity:0;transform:translateX(-52px);transition:opacity .95s var(--ease),transform .95s var(--ease)}.r-l.v{opacity:1;transform:none}
+.r-r{opacity:0;transform:translateX(52px);transition:opacity .95s var(--ease),transform .95s var(--ease)}.r-r.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}
+.btn-primary{display:inline-flex;align-items:center;gap:14px;padding:18px 40px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:transform .35s,box-shadow .35s;cursor:pointer}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(185,144,74,.45)}
+.btn-solid{display:inline-flex;align-items:center;gap:12px;padding:17px 38px;background:var(--green);color:var(--white);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s;cursor:pointer}.btn-solid:hover{background:var(--green-rich);transform:translateY(-2px);box-shadow:0 14px 44px rgba(9,22,22,.28)}
+.btn-ghost-w{display:inline-flex;align-items:center;gap:10px;padding:17px 38px;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s}.btn-ghost-w:hover{border-color:var(--gold);color:var(--gold)}
+
+/* PAGE HERO */
+.page-hero{position:relative;min-height:60vh;display:flex;align-items:center;overflow:hidden;background:var(--green);padding:150px 52px 92px}
+.page-hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,22,22,.95) 0%,rgba(9,22,22,.76) 48%,rgba(9,22,22,.25) 100%),url('https://i.ibb.co/DDjW5W02/interior-house.jpg') center/cover;animation:hZoom 22s ease-in-out infinite alternate}
+@keyframes hZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+.page-hero-inner{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:28px}.breadcrumb a{color:rgba(255,255,255,.4);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{color:rgba(185,144,74,.7)}
+.ph-tag{display:inline-flex;align-items:center;gap:14px;margin-bottom:24px}.ph-rule{width:48px;height:1px;background:var(--gold)}.ph-txt{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-light);font-weight:500}
+.page-hero-h{font-family:var(--font-display);font-size:clamp(44px,7vw,90px);font-weight:500;color:var(--white);line-height:1.05}.page-hero-h em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{max-width:560px;margin-top:18px;font-size:16px;line-height:1.9;color:rgba(255,255,255,.72);font-weight:300}
+/* Quick contact pills in hero */
+.hero-quick{display:flex;gap:12px;margin-top:44px;flex-wrap:wrap}
+.hero-quick-icon{width:100px;height:60px;}
+.hq{display:flex;align-items:center;gap:10px;padding:2px 20px;border:1px solid rgba(185,144,74,.3);color:rgba(255,255,255,.7);font-size:15px;font-weight:500;transition:all .35s}
+.hq:hover{border-color:var(--gold);color:var(--gold);background:rgba(185,144,74,.06)}.hq-icon{font-size:30px}
+
+/* ═══ CONTACT CARDS (top strip) ═══ */
+.contact-cards{background:var(--green);padding:0}
+.cc-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--gold)}
+.cc{padding:44px 36px;border-right:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;transition:background .4s}
+.cc:last-child{border-right:none}
+.cc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .55s var(--ease)}
+.cc:hover{background:rgba(185,144,74,.04)}.cc:hover::after{width:100%}
+.cc-icon{font-size:32px;margin-bottom:18px}
+.cc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.cc-val{font-family:var(--font-display);font-size:18px;color:var(--white);margin-bottom:5px;line-height:1.3}
+.cc-sub{font-size:12.5px;color:rgba(255,255,255,.38);line-height:1.6}
+.cc-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;transition:gap .3s}
+.cc:hover .cc-link{gap:12px}
+
+/* ═══ MAIN CONTACT FORM ═══ */
+#contact-main{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:.82fr 1.45fr;gap:64px;align-items:start}
+/* Left info */
+.ci-body{}
+.ci-blurb{font-size:15px;line-height:2;color:var(--text-mid);margin-top:16px;margin-bottom:44px;font-weight:300}
+.ci-blocks{display:flex;flex-direction:column;gap:28px}
+.ci-block{display:flex;align-items:flex-start;gap:22px;padding:0;background:transparent;border-left:none;box-shadow:none;transition:transform .35s}
+.ci-block:hover{transform:translateX(6px)}
+.ci-block-icon{width:64px;height:64px;border-radius:50%;background:var(--green);color:var(--gold-light);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:24px;transition:background .3s}
+.ci-block:hover .ci-block-icon{background:var(--green-rich)}
+.ci-block-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:5px}
+.ci-block-val{font-size:14px;color:var(--text);font-weight:500;line-height:1.5}
+.ci-block-sub{font-size:12px;color:var(--text-muted);margin-top:3px}
+/* Hours */
+.hours-grid{display:flex;flex-direction:column;gap:4px;margin-top:32px}
+.hour-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(185,144,74,.1);font-size:13px}
+.hour-day{color:var(--text-mid);font-weight:500}.hour-time{color:var(--text);font-weight:600}
+.hour-row.closed .hour-time{color:var(--text-muted);font-weight:400}
+/* Form */
+.contact-form-wrap{background:var(--white);padding:46px 44px;box-shadow:0 18px 70px rgba(9,22,22,.08);border:1px solid rgba(9,22,22,.06)}
+.form-heading{font-family:var(--font-display);font-size:30px;font-weight:500;color:var(--green);margin-bottom:6px}
+.form-sub{font-size:13.5px;color:var(--text-mid);margin-bottom:36px;line-height:1.7}
+/* Type selector */
+.enquiry-select-wrap{margin-bottom:24px}
+.enquiry-select-wrap label{display:block;margin-bottom:8px;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;color:var(--green)}
+.enquiry-select{width:100%;padding:15px 16px;border:1px solid #D6E3E3;background:var(--cream);font-size:13.5px;color:var(--text);outline:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23091616' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px;transition:border-color .3s,background .3s,box-shadow .3s}
+.enquiry-select:focus{border-color:var(--gold);background:var(--white);box-shadow:0 0 0 3px rgba(185,144,74,.08)}
+.enquiry-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:28px}
+.eq-type{padding:14px 12px;border:1px solid #D6E3E3;text-align:center;cursor:pointer;transition:all .3s;position:relative}
+.eq-type input{position:absolute;opacity:0;pointer-events:none}
+.eq-type-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;color:var(--text-muted);display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;transition:color .3s}
+.eq-type-icon{font-size:22px}
+.eq-type.selected,.eq-type:hover{border-color:var(--gold);background:rgba(185,144,74,.04)}.eq-type.selected .eq-type-label,.eq-type:hover .eq-type-label{color:var(--green)}
+/* Fields */
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.fg{display:flex;flex-direction:column;gap:7px}.fg.full{grid-column:1/-1}
+.fg label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;color:var(--green)}
+.fg input,.fg select,.fg textarea{padding:14px 16px;border:1px solid #D6E3E3;background:var(--cream);font-family:var(--font-body);font-size:13.5px;color:var(--text);outline:none;transition:border-color .3s,background .3s,box-shadow .3s;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:var(--white);box-shadow:0 0 0 3px rgba(185,144,74,.08)}
+.fg textarea{resize:vertical;min-height:120px;line-height:1.7}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a9e90' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.privacy-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;font-size:12.5px;color:var(--text-muted);line-height:1.6}
+.privacy-row input[type="checkbox"]{width:18px;height:18px;flex-shrink:0;accent-color:var(--gold);margin-top:2px;cursor:pointer}
+.btn-submit{width:100%;padding:18px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green);font-family:var(--font-body);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border:none;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.btn-submit::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--green-rich),var(--gold));opacity:0;transition:opacity .45s}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(9,22,22,.32)}.btn-submit:hover::before{opacity:1}
+.btn-submit span{position:relative;z-index:1}
+.success-msg{display:none;margin-top:20px;padding:20px 24px;background:rgba(36,94,58,.07);border-left:4px solid var(--green-rich)}
+.success-msg .sm-title{font-family:var(--font-display);font-size:18px;color:var(--green);margin-bottom:6px}
+.success-msg p{font-size:13.5px;color:var(--text-mid);line-height:1.7}
+
+/* ═══ SALES ENQUIRY ═══ */
+#sales{background:var(--green);position:relative;overflow:hidden}
+#sales::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(185,144,74,.06) 0%,transparent 70%);pointer-events:none}
+.sales-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.sales-left{}
+.sales-p{font-size:15px;line-height:2;color:rgba(255,255,255,.55);margin-top:16px;margin-bottom:40px;font-weight:300}
+.sales-perks{display:flex;flex-direction:column;gap:16px}
+.sp-item{display:flex;align-items:center;gap:16px;padding:20px 24px;border:1px solid rgba(185,144,74,.15);transition:border-color .35s,background .35s}
+.sp-item:hover{border-color:rgba(185,144,74,.4);background:rgba(185,144,74,.04)}
+.sp-icon{font-size:24px;flex-shrink:0}.sp-text{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.6}
+.sp-text strong{color:var(--white);display:block;margin-bottom:2px;font-family:var(--font-display);font-size:16px;font-weight:500}
+/* Sales form */
+.sales-form-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(185,144,74,.15);padding:44px 40px}
+.sf-heading{font-family:var(--font-display);font-size:26px;color:var(--white);margin-bottom:6px}
+.sf-sub{font-size:13px;color:rgba(255,255,255,.4);margin-bottom:32px}
+.sf-field{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+.sf-field label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.sf-field input,.sf-field select,.sf-field textarea{padding:13px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(185,144,74,.2);color:var(--white);font-family:var(--font-body);font-size:13.5px;outline:none;transition:border-color .3s,background .3s;-webkit-appearance:none}
+.sf-field input::placeholder,.sf-field textarea::placeholder{color:rgba(255,255,255,.2)}
+.sf-field input:focus,.sf-field select:focus,.sf-field textarea:focus{border-color:var(--gold);background:rgba(185,144,74,.05)}
+.sf-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c8963e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;color:rgba(255,255,255,.6)}
+.sf-field select option{background:var(--green);color:var(--white)}
+.sf-field textarea{resize:vertical;min-height:100px}
+.sf-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.btn-submit-gold{width:100%;padding:16px;background:var(--gold);color:var(--green);font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border:none;position:relative;overflow:hidden;margin-top:8px;transition:transform .35s,box-shadow .35s}
+.btn-submit-gold::before{content:'';position:absolute;inset:0;background:var(--gold-light);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.btn-submit-gold:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(185,144,74,.4)}.btn-submit-gold:hover::before{transform:scaleX(1)}
+.btn-submit-gold span{position:relative;z-index:1}
+.sf-success{display:none;margin-top:20px;padding:18px 22px;background:rgba(185,144,74,.08);border-left:4px solid var(--gold)}
+.sf-success p{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.7}
+
+/* ═══ INVESTOR PORTAL ═══ */
+#investor{background:var(--cream-dark)}
+.investor-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.investor-body{}
+.investor-p{font-size:14.5px;line-height:2;color:var(--text-mid);margin-top:16px;margin-bottom:40px;font-weight:300}
+.investor-perks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
+.ip-perk{padding:24px;background:var(--white);border-top:3px solid var(--gold);transition:transform .35s,box-shadow .35s}
+.ip-perk:hover{transform:translateY(-4px);box-shadow:0 18px 52px rgba(0,0,0,.09)}
+.ip-icon{font-size:26px;margin-bottom:12px}
+.ip-title{font-family:var(--font-display);font-size:17px;color:var(--green);margin-bottom:6px}
+.ip-desc{font-size:12.5px;color:var(--text-muted);line-height:1.7}
+/* Login form */
+.investor-form-wrap{background:var(--white);padding:52px 44px;box-shadow:0 4px 48px rgba(0,0,0,.07)}
+.if-heading{font-family:var(--font-display);font-size:30px;color:var(--green);margin-bottom:6px}
+.if-sub{font-size:13px;color:var(--text-muted);margin-bottom:36px}
+.if-field{margin-bottom:20px}
+.if-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;color:var(--green);display:block;margin-bottom:7px}
+.if-input{width:100%;padding:14px 16px;border:1px solid #D6E3E3;background:var(--cream);font-family:var(--font-body);font-size:13.5px;color:var(--text);outline:none;transition:border-color .3s,background .3s,box-shadow .3s}
+.if-input:focus{border-color:var(--gold);background:var(--white);box-shadow:0 0 0 3px rgba(185,144,74,.08)}
+.if-forgot{display:block;text-align:right;font-size:11.5px;color:var(--gold);margin-top:6px;cursor:pointer;transition:color .3s}.if-forgot:hover{color:var(--green-rich)}
+.if-divider{display:flex;align-items:center;gap:16px;margin:24px 0;color:var(--text-muted);font-size:12px}
+.if-divider::before,.if-divider::after{content:'';flex:1;height:1px;background:#D6E3E3}
+.if-request{display:block;width:100%;padding:15px;text-align:center;border:1px solid rgba(185,144,74,.35);color:var(--gold);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;background:transparent}
+.if-request:hover{background:var(--gold);color:var(--green);border-color:var(--gold)}
+.if-note{text-align:center;font-size:11.5px;color:var(--text-muted);margin-top:20px;line-height:1.6}
+.if-note a{color:var(--gold);cursor:pointer}.if-note a:hover{text-decoration:underline}
+
+/* ═══ MAP / LOCATION ═══ */
+#location{background:var(--white);padding:0}
+.location-grid{display:grid;grid-template-columns:1fr 1fr}
+.map-side{position:relative;min-height:500px;background:var(--green)}
+.map-placeholder{width:100%;height:100%;min-height:500px;background:linear-gradient(135deg,rgba(9,22,22,.95),rgba(45,128,128,.9)),url('https://i.ibb.co/bjYrmyqG/chess-map.jpg') center/cover;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;padding:44px}
+.map-pin{font-size:48px;animation:pinBounce 2.5s ease-in-out infinite}
+@keyframes pinBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.map-address{font-family:var(--font-display);font-size:22px;color:var(--white);text-align:center;line-height:1.3}
+.map-address-sub{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);text-align:center;margin-top:8px}
+.map-btn{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border:1px solid rgba(185,144,74,.45);color:var(--gold);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-top:20px;transition:all .3s;cursor:pointer}
+.map-btn:hover{background:var(--gold);color:var(--green);border-color:var(--gold)}
+.location-info-side{padding:80px 60px;background:var(--cream-dark)}
+.li-heading{font-family:var(--font-display);font-size:36px;font-weight:500;color:var(--green);margin-bottom:8px}
+.li-heading em{font-style:italic;color:var(--gold-light)}
+.li-sub{font-size:14px;color:var(--text-mid);margin-bottom:44px;line-height:1.7}
+.li-blocks{display:flex;flex-direction:column;gap:20px}
+.lib{display:flex;align-items:flex-start;gap:16px}
+.lib-icon{width:46px;height:46px;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:background .3s}
+.lib:hover .lib-icon{background:var(--green-rich)}
+.lib-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px}
+.lib-val{font-size:14px;color:var(--text);font-weight:500;line-height:1.5}
+.lib-extra{font-size:12px;color:var(--text-muted);margin-top:3px}
+/* Directions */
+.directions-box{background:var(--green);padding:28px 32px;margin-top:36px;border-top:3px solid var(--gold)}
+.dir-title{font-family:var(--font-display);font-size:18px;color:var(--white);margin-bottom:14px}
+.dir-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.dir-list li{display:flex;align-items:center;gap:12px;font-size:13px;color:rgba(255,255,255,.55)}
+.dir-list li::before{content:'→';color:var(--gold);font-weight:700;flex-shrink:0}
+
+/* ═══ NEWSLETTER BAND ═══ */
+.newsletter-band{background:var(--gold);padding:72px 52px}
+.nl-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap}
+.nl-left{}
+.nl-heading{font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);font-weight:500;color:var(--green);line-height:1.15}
+.nl-sub{font-size:14px;color:rgba(9,22,22,.6);margin-top:8px}
+.nl-form{display:flex;gap:0;flex:0 0 auto;max-width:500px;width:100%}
+.nl-input{flex:1;padding:16px 20px;background:rgba(9,22,22,.08);border:1px solid rgba(9,22,22,.15);border-right:none;color:var(--green);font-family:var(--font-body);font-size:14px;outline:none;transition:background .3s}
+.nl-input::placeholder{color:rgba(9,22,22,.4)}.nl-input:focus{background:rgba(9,22,22,.14)}
+.nl-btn{padding:16px 32px;background:var(--green);color:var(--white);font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;border:none;white-space:nowrap;transition:background .3s}
+.nl-btn:hover{background:var(--green-mid)}
+
+/* ═══ FOOTER ═══ */
+footer{background:var(--ink);color:rgba(255,255,255,.45);padding:88px 52px 0}
+.footer-top{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.9fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:68px;border-bottom:1px solid rgba(255,255,255,.05)}
+.f-logo-row{display:flex;align-items:center;gap:12px}.f-logo-mark{width:38px;height:38px;overflow:hidden}.f-logo-mark img{width:100%;height:100%;object-fit:contain}.f-logo-name{font-family:var(--font-display);font-size:17px;font-weight:600;color:var(--white)}.f-logo-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-top:2px;opacity:.75}
+.f-desc{font-size:12.5px;line-height:1.95;margin-top:18px;max-width:255px}.f-socials{display:flex;gap:10px;margin-top:28px}.social-link{width:36px;height:36px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .3s;cursor:pointer}.social-link:hover{border-color:var(--gold);background:rgba(185,144,74,.1)}.social-link img{width:16px;height:16px;object-fit:contain}
+.f-col-title{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:13px}.f-links a{font-size:12.5px;color:rgba(255,255,255,.42);transition:color .25s,transform .25s;display:inline-block}.f-links a:hover{color:var(--gold-light);transform:translateX(5px)}.f-links .dim{opacity:.28;pointer-events:none;font-style:italic}
+.footer-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-size:10.5px;gap:12px;flex-wrap:wrap}
+
+@media(max-width:1100px){.contact-grid,.sales-grid,.investor-grid{grid-template-columns:1fr;gap:56px}.location-grid{grid-template-columns:1fr}.map-side{min-height:360px}.location-info-side{padding:56px 40px}.cc-grid{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr 1fr 1fr}.footer-top>:first-child{grid-column:1/-1}.investor-perks{grid-template-columns:1fr 1fr}}
+@media(max-width:1024px){.nav-links,.nav-util{display:none}.hamburger{display:flex}nav,nav.scrolled{padding:0 24px}.section{padding:80px 24px}.page-hero{padding:140px 24px 100px}.newsletter-band{padding:52px 24px}.nl-inner{flex-direction:column;gap:28px}.nl-form{max-width:100%;width:100%}.enquiry-type-grid{grid-template-columns:repeat(3,1fr)}.contact-form-wrap{padding:36px 28px}}
+@media(max-width:400px){.section{padding:64px 18px}.page-hero{padding:120px 18px 64px}nav,nav.scrolled{padding:0 16px}.nav-inner{height:64px}.logo-mark{width:36px;height:36px}.logo-name{font-size:15px}.contact-form-wrap{padding:26px 18px}.enquiry-type-grid{grid-template-columns:1fr}}
+.social-link[aria-disabled="true"]{opacity:.32;pointer-events:none;cursor:default}
+html.fx-lite .px{animation-play-state:paused;opacity:.12}
+@media(hover:none){.nav-item.dd-open>.nav-dd{opacity:1;visibility:visible;transform:translateY(0)}}
+@media(max-width:640px){.cc-grid{grid-template-columns:1fr}.field-grid{grid-template-columns:1fr}.enquiry-type-grid{grid-template-columns:1fr 1fr}.sf-row{grid-template-columns:1fr}.investor-perks{grid-template-columns:1fr}.investor-form-wrap{padding:36px 28px}.sales-form-wrap{padding:36px 28px}.location-info-side{padding:44px 24px}.footer-top{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;text-align:center}footer{padding:60px 24px 0}.hero-quick{flex-direction:column}.cta-btns{flex-direction:column}.nl-form{flex-direction:column}.nl-input{border-right:1px solid rgba(9,22,22,.15);border-bottom:none}}
+</style>
+<link rel="stylesheet" href="assets/responsive.css">
+</head>
+<body>
+<div class="page-transition" id="pageTransition"></div>
+<div class="cursor" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="home.html" class="logo"><div class="logo-mark"><img src="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png" alt="FVIP logo" loading="eager" decoding="async" fetchpriority="high"></div><div class="logo-words"><div class="logo-name">Fish Valley</div><div class="logo-tag">Investments & Property Ltd.</div></div></a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="home.html" class="nav-link">Home <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><!--<div class="dropdown-head">Masterplans</div>--><a href="home.html#masterplan">Fish Valley Project</a><a href="services.html">Services</a><a href="contact.html">Contact</a><div class="sep"></div><!--<div class="dropdown-head">News & Updates</div>--><a href="news.html">News & Updates</a></div></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About FVIP <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="about.html#story">Our Story & Purpose</a><!--<a href="about.html#development">The Development</a>--><a href="about.html#team">Leadership & Team</a><a href="about.html#partners">Partners & Stakeholders</a><div class="sep"></div><!--<a href="about.html#awards">Awards</a>--></div></li>
+      <li class="nav-item"><a href="properties.html" class="nav-link">Fish Valley Project <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="properties.html#development">The Development</a><a href="properties.html#available-properties">Land</a><a href="properties.html#available-properties">Residential</a><a href="properties.html#available-properties">Commercial</a><a href="properties.html#park">Neighborhood Park</a><div class="sep"></div><a href="properties.html#hospitality">Hospitality -> Coming Soon</a></div></li>
+      <li class="nav-item"><a href="services.html" class="nav-link">Services <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="services.html#investment">Investment Opportunities</a><a href="services.html#sustainability">Sustainability</a><div class="sep"></div><a href="services.html#faq">Process & FAQ</a></div></li>
+      <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-util"><a href="#investor" class="btn-portal" onclick="smoothScroll(event,'#investor')">Investor Portal</a><a href="#contact-main" class="btn-cta" onclick="smoothScroll(event,'#contact-main')"><span>Sales Enquiry</span></a></div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="home.html" class="m-link">Home</a><a href="about.html" class="m-link">About FVIP</a><a href="properties.html" class="m-link">Fish Valley Project</a>
+  <div class="m-divider"></div>
+  <a href="services.html" class="m-link">Services</a><a href="contact.html" class="m-link">Contact</a>
+  <div class="m-btns"><a href="#investor" class="m-btn outline" onclick="closeMob();smoothScroll(null,'#investor')">Investor Portal</a><a href="#contact-main" class="m-btn gold" onclick="closeMob();smoothScroll(null,'#contact-main')">Sales Enquiry</a></div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="home.html">Home</a> <span>/</span> Contact</div>
+    <div class="ph-tag"><div class="ph-rule"></div><span class="ph-txt">Contact Us</span></div>
+    <h1 class="page-hero-h">Speak to Our <br><em>Team</em></h1>
+    <p class="page-hero-sub">Contact us about land purchases, development opportunities, project investment, strategic partnerships or general enquiries.</p>
+    <div class="hero-quick">
+      <!--<a href="tel:+2349117415120" class="hq"><span class="hq-icon">📞</span> +234 911 741 5120</a>-->
+      <a href="https://wa.me/2349117415120" class="hq" target="_blank"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/cSMvyX9g/whatsapp-gold.png" alt="WhatsApp" loading="lazy" decoding="async"></span> Chat on WhatsApp <br>+234 911 741 5120</br></a>
+      <a href="mailto:info@fvipng.com" class="hq"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/bwvSnFk/email-gold.png" alt="Email" loading="lazy" decoding="async"></span> info@fvipng.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT CARDS STRIP -->
+<div class="contact-cards">
+  <div class="cc-grid">
+    <div class="cc r d1">
+      <div class="cc-icon">💬</div>
+      <div class="cc-label">WhatsApp</div>
+      <div class="cc-val">+234 911 741 5120</div>
+      <div class="cc-sub">WhatsApp anytime</div>
+      <a href="https://wa.me/2349117415120" class="cc-link">Message Now →</a>
+    </div>
+    <div class="cc r d2">
+      <div class="cc-icon">✉️</div>
+      <div class="cc-label">Email Address</div>
+      <div class="cc-val">info@fvipng.com</div>
+      <div class="cc-sub">We respond within 24 hours<br>Mon-Fri business days</div>
+      <a href="mailto:info@fvipng.com" class="cc-link">Send Email →</a>
+    </div>
+    <div class="cc r d3">
+      <div class="cc-icon">📍</div>
+      <div class="cc-label">Site Address</div>
+      <div class="cc-val">320 Adekunle Fajuyi Way</div>
+      <div class="cc-sub">GRA Ikeja, Lagos, Nigeria<br>Fish Valley Estate</div>
+      <a href="#location" class="cc-link" onclick="smoothScroll(event,'#location')">Get Directions →</a>
+    </div>
+    <!--<div class="cc r d4">
+      <div class="cc-icon">🕐</div>
+      <div class="cc-label">Office Hours</div>
+      <div class="cc-val">Mon-Fri: 8am-5pm</div>
+      <div class="cc-sub">Saturday: 9am-2pm<br>Sunday: Closed</div>
+      <a href="#general enquiry" class="cc-link" onclick="smoothScroll(event,'#send us a message')">Book Appointment →</a>
+    </div>-->
+  </div>
+</div>
+
+<!-- GENERAL ENQUIRY FORM -->
+<section id="contact-main" class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left: Info -->
+      <div class="r-l">
+        <div class="tag"><div class="tag-line"></div><span class="tag-text">General Enquiries</span></div>
+        <h2 class="section-h" style="margin-bottom:0">How Can We<br><em>Help You?</em></h2>
+        <p class="ci-blurb">From your first question to the final handover; our team brings expertise, transparency, and genuine care to every client interaction. We're here to guide you.</p>
+        <div class="ci-blocks">
+          <div class="ci-block">
+            <div class="ci-block-icon"><img src="https://i.ibb.co/zVJgmJzt/infradev-icon.png" alt="Property" loading="lazy" decoding="async"></div>
+            <div><div class="ci-block-label">Property Buyers</div><div class="ci-block-val">Find your perfect property</div><div class="ci-block-sub">Land, residential, or commercial; we'll match you to the right unit.</div></div>
+          </div>
+          <div class="ci-block">
+            <div class="ci-block-icon"><img src="https://i.ibb.co/cS5Z8J37/funding.png" alt="Investment" loading="lazy" decoding="async"></div>
+            <div><div class="ci-block-label">Investors</div><div class="ci-block-val">Explore investment packages</div><div class="ci-block-sub">Structured investment options with full ROI projections and legal documentation.</div></div>
+          </div>
+          <div class="ci-block">
+            <div class="ci-block-icon"><img src="https://i.ibb.co/35NM2pzs/partnership.png" alt="partnerships" loading="lazy" decoding="async"></div>
+            <div><div class="ci-block-label">Business & Partners</div><div class="ci-block-val">Commercial sale & partnerships</div><div class="ci-block-sub">Office, retail, and hospitality opportunities plus institutional co-investment.</div></div>
+          </div>
+          <div class="ci-block">
+            <div class="ci-block-icon"><img src="https://i.ibb.co/fVWxh2P2/investors-icon.png" alt="Invest from anywhere" loading="lazy" decoding="async"></div>
+            <div><div class="ci-block-label">Diaspora Investors</div><div class="ci-block-val">Invest from anywhere in the world</div><div class="ci-block-sub">Virtual tours, remote documentation, and international payment options supported.</div></div>
+          </div>
+        </div>
+        <!-- Hours -->
+        <div style="margin-top:44px">
+          <div style="font-family:var(--font-display);font-size:20px;color:var(--green);margin-bottom:18px">Office Hours</div>
+          <div class="hours-grid">
+            <div class="hour-row"><span class="hour-day">Monday-Friday</span><span class="hour-time">8:00am - 5:00pm</span></div>
+            <div class="hour-row"><span class="hour-day">Saturday</span><span class="hour-time">9:00am - 2:00pm</span></div>
+            <div class="hour-row closed"><span class="hour-day">Sunday</span><span class="hour-time">Closed</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="r-r">
+        <div class="contact-form-wrap">
+          <div class="form-heading">Send Us a Message</div>
+          <p class="form-sub">Complete the form below and one of our team members will get back to you within 24 business hours.</p>
+
+          <!-- Enquiry type selector -->
+          <div class="enquiry-select-wrap">
+            <label for="enquiryTypeVal">I am interested in</label>
+            <select id="enquiryTypeVal" class="enquiry-select">
+              <option value="">Select an option</option>
+              <option value="Land Purchase">Land Purchase (Serviced Plot)</option>
+              <option value="Residential Apartment Sale">Residential Apartment</option>
+              <option value="Centrepiece Mixed Use Enquiry">Centrepiece Mixed Use</option>
+              <option value="Hotel/Aparthotel Funding Enquiry">Hotel/Aparthotel Funding</option>
+              <option value="Future Residential JV Opportunity">Residential JV Opportunity</option>
+              <option value="Investment and Funding Opportunities">Investment and Funding Opportunities</option>
+              <option value="Strategic Partnership">Strategic Partnership</option>
+              <option value="Site Visit">Book a Site Visit</option>
+              <option value="General Enquiry">Other Enquiry</option>
+            </select>
+          </div>
+          <div class="field-grid">
+            <div class="fg"><label for="gfn">First Name *</label><input type="text" id="gfn" placeholder="Samuel"></div>
+            <div class="fg"><label for="gln">Last Name *</label><input type="text" id="gln" placeholder="Doe"></div>
+          </div>
+          <div class="field-grid">
+            <div class="fg"><label for="gem">Email Address *</label><input type="email" id="gem" placeholder="samuel@email.com"></div>
+            <div class="fg"><label for="gph">Phone / WhatsApp *</label><input type="tel" id="gph" placeholder="+234 800 000 0000"></div>
+          </div>
+          <div class="field-grid">
+            <div class="fg"><label for="gcountry">Country of Residence</label>
+              <select id="gcountry">
+                <option value="">— Select country —</option>
+                  <option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua&Deps">Antigua & Deps</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="BosniaHerzegovina">Bosnia & Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina">Burkina</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="CapeVerde">Cape Verde</option><option value="CentralAfricanRep">Central African Rep</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Congo(DemocraticRep)">Congo (Democratic Rep)</option><option value="CostaRica">Costa Rica</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="CzechRepublic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="DominicanRepublic">Dominican Republic</option><option value="EastTimor">East Timor</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="ElSalvador">El Salvador</option><option value="EquatorialGuinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland(Republic)">Ireland (Republic)</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="IvoryCoast">Ivory Coast</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="KoreaNorth">Korea North</option><option value="KoreaSouth">Korea South</option><option value="Kosovo">Kosovo</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="MarshallIslands">Marshall Islands</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="NewZealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="PapuaNewGuinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="RussianFederation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="StKitts&Nevis">St Kitts & Nevis</option><option value="StLucia">St Lucia</option><option value="SaintVincent&theGrenadines">Saint Vincent & the Grenadines</option><option value="Samoa">Samoa</option><option value="SanMarino">San Marino</option><option value="SaoTome&Principe">Sao Tome & Principe</option><option value="SaudiArabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="SierraLeone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="SolomonIslands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="SouthAfrica">South Africa</option><option value="SouthSudan">South Sudan</option><option value="Spain">Spain</option><option value="SriLanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad&Tobago">Trinidad & Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="UnitedArabEmirates">United Arab Emirates</option><option value="UnitedKingdom">United Kingdom</option><option value="UnitedStates">United States</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="VaticanCity">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>
+              </select>
+            </div>
+            <div class="fg"><label for="gbudget">Budget Range</label>
+              <select id="gbudget">
+                <option value="">— Select budget —</option>
+                <option>Below ₦50M</option><option>₦50M - ₦100M</option><option>₦100M - ₦250M</option><option>₦250M - ₦500M</option><option>Above ₦500M</option><option>Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg full" style="margin-bottom:20px"><label for="gmsg">Your Message *</label><textarea id="gmsg" placeholder="Tell us more about what you're looking for, your timeline, and any specific requirements..."></textarea></div>
+          <div class="fg full" style="margin-bottom:0">
+            <label for="ghow">How did you hear about us?</label>
+            <select id="ghow">
+              <option value="">— Select an option —</option>
+              <option>Social Media (Instagram / Facebook)</option><option>LinkedIn</option><option>Google Search</option><option>Referral / Word of Mouth</option><option>News / Media</option><option>Billboard / Outdoor</option><option>Other</option>
+            </select>
+          </div>
+          <div class="privacy-row" style="margin-top:20px">
+            <input type="checkbox" id="gprivacy">
+            <label for="gprivacy">I agree to FVIP's <a href="contact.html" style="color:var(--gold);text-decoration:underline">Privacy Policy</a> and consent to being contacted regarding my enquiry. We will never share your data with third parties.</label>
+          </div>
+          <button class="btn-submit" onclick="submitGeneral()"><span>Send Message →</span></button>
+          <div class="success-msg" id="gSuccess">
+            <div class="sm-title">✅ Message Received!</div>
+            <p>Thank you for reaching out. One of our team members will contact you within 24 business hours. You'll receive a confirmation to your email shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SALES ENQUIRY 
+<section id="sales" class="section">
+  <div class="container">
+    <div class="sales-grid">
+      <div class="sales-left r-l">
+        <div class="tag"><div class="tag-line"></div><span class="tag-text">Sales Enquiry</span></div>
+        <h2 class="section-h on-dark">Ready to <em>Buy or Invest?</em></h2>
+        <p class="sales-p">Our dedicated sales team is here to walk you through every available property and investment option - from pricing and payment plans to site tours and documentation.</p>
+        <div class="sales-perks">
+          <div class="sp-item r d1"><div class="sp-icon">🏡</div><div class="sp-text"><strong>Free Site Tour</strong>We offer complimentary guided site tours of the Fish Valley estate, Monday to Saturday by appointment.</div></div>
+          <div class="sp-item r d2"><div class="sp-icon">📊</div><div class="sp-text"><strong>Personalised Investment Report</strong>Receive a tailored report covering your preferred property type, payment options, and projected returns.</div></div>
+          <div class="sp-item r d3"><div class="sp-icon">⚖️</div><div class="sp-text"><strong>Legal Advisory Included</strong>Our in-house legal team verifies all documentation and guides you through the full transaction process.</div></div>
+          <div class="sp-item r d4"><div class="sp-icon">💳</div><div class="sp-text"><strong>Flexible Payment Plans</strong>We work with your budget. 6–24 month instalment plans available across all property types.</div></div>
+        </div>
+      </div>
+      <div class="r-r">
+        <div class="sales-form-wrap">
+          <div class="sf-heading">Sales Enquiry Form</div>
+          <p class="sf-sub">Submit your details and a dedicated sales advisor will contact you within 4 business hours.</p>
+          <div class="sf-row">
+            <div class="sf-field"><label>First Name *</label><input type="text" id="sfn" placeholder="First name"></div>
+            <div class="sf-field"><label>Last Name *</label><input type="text" id="sln" placeholder="Last name"></div>
+          </div>
+          <div class="sf-field"><label>Email Address *</label><input type="email" id="sem" placeholder="your@email.com"></div>
+          <div class="sf-field"><label>Phone / WhatsApp *</label><input type="tel" id="sph" placeholder="+234 800 000 0000"></div>
+          <div class="sf-field">
+            <label>Property Type Interested In</label>
+            <select id="sprop">
+              <option value="">— Select a property type —</option>
+              <option>Land (Serviced Plot)</option>
+              <option>Residential - Apartment</option>
+              <option>Residential - Villa</option>
+              <option>Residential - Town House</option>
+              <option>Commercial - Office Suite</option>
+              <option>Commercial - Retail Unit</option>
+              <option>Neighborhood Park</option>
+              <option>Hospitality - Register Interest</option>
+              <option>Multiple / Portfolio</option>
+            </select>
+          </div>
+          <div class="sf-row">
+            <div class="sf-field">
+              <label>Budget Range</label>
+              <select id="sbudget">
+                <option value="">— Select range —</option>
+                <option>Below ₦50M</option><option>₦50M – ₦100M</option><option>₦100M – ₦250M</option><option>₦250M – ₦500M</option><option>Above ₦500M</option>
+              </select>
+            </div>
+            <div class="sf-field">
+              <label>Preferred Contact Time</label>
+              <select id="stime">
+                <option value="">— Select time —</option>
+                <option>Morning (8am – 12pm)</option><option>Afternoon (12pm – 3pm)</option><option>Late Afternoon (3pm – 5pm)</option><option>Anytime</option>
+              </select>
+            </div>
+          </div>
+          <div class="sf-field"><label>Additional Notes</label><textarea id="snotes" placeholder="Any specific requirements, questions, or information about your purchase timeline..."></textarea></div>
+          <button class="btn-submit-gold" onclick="submitSales()"><span>Submit Sales Enquiry →</span></button>
+          <div class="sf-success" id="sfSuccess"><p>✅ <strong style="color:var(--gold)">Enquiry received!</strong> A dedicated sales advisor will contact you within 4 business hours. Check your email for confirmation.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- INVESTOR PORTAL -->
+<section id="investor" class="section">
+  <div class="container">
+    <div class="investor-grid">
+      <div class="investor-body r-l">
+        <div class="tag"><div class="tag-line"></div><span class="tag-text">Investor Portal</span></div>
+        <h2 class="section-h" style="margin-bottom:0">Your <em>Investment</em><br>Dashboard</h2>
+        <p class="investor-p">The FVIP Investor Portal gives verified investors secure access to their portfolio documents, payment schedules, development updates, financial reports, and direct communication with the FVIP management team.</p>
+        <div class="investor-perks">
+          <div class="ip-perk r d1"><div class="ip-icon">📂</div><div class="ip-title">Document Vault</div><p class="ip-desc">Secure access to all your title documents, purchase agreements, payment receipts, and legal paperwork.</p></div>
+          <div class="ip-perk r d2"><div class="ip-icon">📊</div><div class="ip-title">Portfolio Overview</div><p class="ip-desc">Real-time view of your property holdings, estimated values, and development stage updates.</p></div>
+          <div class="ip-perk r d3"><div class="ip-icon">💰</div><div class="ip-title">Payment Tracker</div><p class="ip-desc">Track your instalment payments, upcoming due dates, and generate official receipts on demand.</p></div>
+          <div class="ip-perk r d4"><div class="ip-icon">📰</div><div class="ip-title">Investor Reports</div><p class="ip-desc">Quarterly ESG reports, financial statements, masterplan progress updates, and market insights.</p></div>
+        </div>
+        <div style="padding:24px 28px;background:rgba(185,144,74,.08);border-left:4px solid var(--gold)">
+          <p style="font-size:13.5px;color:var(--text-mid);line-height:1.75"><strong style="color:var(--green)">Note:</strong> Portal access is granted to verified FVIP investors only. If you have purchased a property with us, contact our team to activate your account. <strong>New to FVIP?</strong> <a href="#contact-main" onclick="smoothScroll(event,'#contact-main')" style="color:var(--gold);font-weight:600">Start with a sales enquiry →</a></p>
+        </div>
+      </div>
+      <div class="r-r">
+        <div class="investor-form-wrap">
+          <div class="if-heading">Investor Login</div>
+          <p class="if-sub">Access your FVIP Investor Portal using your registered email and password.</p>
+          <div class="if-field"><label class="if-label" for="iemail">Email Address</label><input class="if-input" type="email" id="iemail" placeholder="your@email.com"></div>
+          <div class="if-field"><label class="if-label" for="ipass">Password</label><input class="if-input" type="password" id="ipass" placeholder="••••••••••">
+            <a class="if-forgot" onclick="alert('Password reset link will be sent to your registered email.')">Forgot password?</a>
+          </div>
+          <button class="btn-submit" onclick="investorLogin()" style="margin-top:4px"><span>Access Portal →</span></button>
+          <div class="if-divider">or</div>
+          <a class="if-request" onclick="alert('Please contact info@fvipng.com or chat on WhatsApp +234 911 741 5120 to request portal access.')">Request Portal Access</a>
+          <p class="if-note">Don't have an account? <a onclick="smoothScroll(null,'#contact-main')">Contact our team</a> to verify your investment and activate your portal access.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<div id="location">
+    <div class="map-side">
+      <div class="map-placeholder">
+        <div class="map-pin">📍</div>
+        <div class="map-address">320 Adekunle Fajuyi Way<br>GRA Ikeja, Lagos</div>
+        <div class="map-address-sub">Fish Valley · Nigeria</div>
+        <a href="https://www.google.com/maps/search/320+Adekunle+Fajuyi+Way+GRA+Ikeja+Lagos" target="_blank" class="map-btn">
+          Open in Google Maps →
+        </a>
+      </div>
+    </div>
+    <div class="location-info-side">
+      <div class="li-heading">Our <em>Location</em></div>
+      <p class="li-sub">Strategically positioned in one of Lagos' most prestigious addresses (Ikeja GRA) Fish Valley is accessible from all major routes across the city.</p>
+      <!--<div class="li-blocks">
+        <div class="lib"><div class="lib-icon">🏢</div><div><div class="lib-label">Site Office</div><div class="lib-val">320 Adekunle Fajuyi Way, GRA Ikeja</div><div class="lib-extra">Lagos, Nigeria</div></div></div>
+        <div class="lib"><div class="lib-icon">💬</div><div><div class="lib-label">WhatsApp</div><div class="lib-val">+234 911 741 5120</div><div class="lib-extra">Available Mon–Sat, 8am–5pm</div></div></div>
+        <div class="lib"><div class="lib-icon">✉️</div><div><div class="lib-label">Email</div><div class="lib-val">info@fvipng.com</div><div class="lib-extra">Response within 24 business hours</div></div></div>
+        <div class="lib"><div class="lib-icon">🕐</div><div><div class="lib-label">Office Hours</div><div class="lib-val">Mon–Fri: 8:00am – 5:00pm</div><div class="lib-extra">Saturday: 9:00am – 2:00pm</div></div></div>
+      </div>-->
+      <div class="directions-box">
+        <div class="dir-title">Getting Here</div>
+        <ul class="dir-list">
+          <li>From Lagos Island via Carter Bridge — 25-35 mins</li>
+          <li>From Lekki via Third Mainland Bridge — 30-45 mins</li>
+          <li>From Murtala Muhammed Airport — 10-15 mins</li>
+          <li>Bus routes: Ikeja GRA stop on Awolowo Way</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-band">
+  <div class="nl-inner">
+    <div class="nl-left">
+      <div class="nl-heading">Stay Informed.<br>Stay Invested.</div>
+      <p class="nl-sub">Subscribe to receive FVIP project news, Fish Valley updates, listings, and investment information straight to your inbox.</p>
+    </div>
+    <div class="nl-form">
+      <input class="nl-input" type="email" id="nlEmail" placeholder="Enter your email address">
+      <button class="nl-btn" onclick="submitNewsletter()">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="f-brand"><div class="f-logo-row"><div class="f-logo-mark"><img src="https://i.ibb.co/ZzdbKJy9/FVIP-LOGO-4-Bigger.png" alt="FVIP logo" loading="lazy" decoding="async"></div><div><div class="f-logo-name">Fish Valley</div><div class="f-logo-tag">Investments & Property Ltd.</div></div></div><p class="f-desc">A registered Nigerian real estate company delivering trusted property investment and development solutions.</p><div class="f-socials">
+        <a class="social-link" data-social="linkedin" aria-label="FVIP on LinkedIn"><img src="https://i.ibb.co/YBYz2jGm/linkedin.png" alt="LinkedIn" loading="lazy" decoding="async" width="16" height="16"></a>
+        <a class="social-link" data-social="instagram" aria-label="FVIP on Instagram"><img src="https://i.ibb.co/Z1p60C13/instagram.png" alt="Instagram" loading="lazy" decoding="async" width="16" height="16"></a>
+        <a class="social-link" data-social="facebook" aria-label="FVIP on Facebook"><img src="https://i.ibb.co/x8BTkHSm/facebook.png" alt="Facebook" loading="lazy" decoding="async" width="16" height="16"></a>
+        <a class="social-link" data-social="whatsapp" aria-label="FVIP on WhatsApp"><img src="https://i.ibb.co/VcdzV7pX/whatsapp.png" alt="WhatsApp" loading="lazy" decoding="async" width="16" height="16"></a>
+      </div></div>
+    <div><div class="f-col-title">Company</div><ul class="f-links"><li><a href="about.html">About FVIP</a></li><li><a href="about.html#team">Leadership</a></li><li><a href="about.html#partners">Partners</a></li></ul></div>
+    <div><div class="f-col-title">Fish Valley Project</div><ul class="f-links"><li><a href="properties.html#development">The Development</a></li><li><a href="properties.html#available-properties">Land</a></li><li><a href="properties.html#available-properties">Residential</a></li><li><a href="properties.html#available-properties">Commercial</a></li><li><a href="properties.html#park">Neighborhood Park</a></li><!--<li><a href="properties.html#hospitality" class="dim">Hospitality</a></li>--></ul></div>
+    <div><div class="f-col-title">Investor Resources</div><ul class="f-links"><li><a href="services.html#investment">Why Invest</a></li><li><a href="#investor">Investor Portal</a></li><li><a href="services.html#faq">FAQs</a></li></ul></div>
+    <div><div class="f-col-title">Support</div><ul class="f-links"><li><a href="contact.html">Contact Us</a></li><li><a href="#contact-main">Sales Enquiries</a></li><li><a href="#location">Office Location</a></li><li><a href="contact.html">Privacy Policy</a></li><li><a href="contact.html">Terms & Conditions</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Fish Valley Investments & Property Ltd. All rights reserved. Registered in Nigeria.</span></div>
+</footer>
+
+<script>
+/* ─ Page transition ─ */
+function navTo(e,href){if(e)e.preventDefault();const pt=document.getElementById('pageTransition');pt.classList.add('out');setTimeout(()=>{window.location=href},620)}
+document.querySelectorAll('a[href]').forEach(a=>{const h=a.getAttribute('href');if(h&&h.endsWith('.html')&&!h.startsWith('http')){if(!a.getAttribute('onclick'))a.addEventListener('click',e=>navTo(e,a.href))}});
+
+/* ─ Loader ─ */
+window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('hidden')},2200)});
+
+/* ─ Cursor ─ */
+if(window.matchMedia('(hover:hover)').matches){
+  const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+  (function tick(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(tick)})();
+  document.querySelectorAll('a,button,.ci-block,.cc,.ip-perk,.sp-item,.eq-type,.lib').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='60px';ring.style.height='60px'});
+    el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='38px';ring.style.height='38px'});
+  });
+}
+
+/* ─ Navbar ─ */
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+
+/* ─ Mobile Menu ─ */
+const ham=document.getElementById('hamburger'),mob=document.getElementById('mobileMenu');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open')});
+function closeMob(){ham.classList.remove('open');mob.classList.remove('open')}
+
+/* ─ Smooth Scroll ─ */
+function smoothScroll(e,sel){if(e)e.preventDefault();const el=document.querySelector(sel);if(el){const offset=el.getBoundingClientRect().top+window.scrollY-90;window.scrollTo({top:offset,behavior:'smooth'})}}
+
+/* ─ Reveal ─ */
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.r,.r-l,.r-r').forEach(el=>ro.observe(el));
+
+/* ─ Enquiry type selector ─ */
+function selectType(el,val){
+  document.querySelectorAll('.eq-type').forEach(e=>e.classList.remove('selected'));
+  if(el)el.classList.add('selected');
+  document.getElementById('enquiryTypeVal').value=val;
+}
+
+
+/* - Contact prefill from property & investment CTAs - */
+function applyContactPrefill(){
+  const params=new URLSearchParams(window.location.search);
+  const interest=params.get('interest');
+  const typeMap={
+    investment:'Investment and Funding Opportunities',
+    land:'Land Purchase',
+    residential:'Residential Apartment Sale',
+    centrepiece:'Centrepiece Mixed Use Enquiry',
+    hospitality:'Hotel/Aparthotel Funding Enquiry',
+    jv:'Future Residential JV Opportunity',
+    partnership:'Strategic Partnership',
+    sitevisit:'Site Visit',
+    general:'General Enquiry'
+  };
+  const placeholderMap={
+    investment:'I would like to register interest in FVIP investment, land sale, or partnership opportunities...',
+    land:'I would like to enquire about the available Residential Land (2,000 sqm) for sale...',
+    residential:'I would like to register interest in the Melrose JV Apartments (2, 3 & 4 bedroom)...',
+    centrepiece:'I would like to join the waitlist for the Centrepiece Mixed-Use development...',
+    hospitality:'I would like to enquire about Hotel/Aparthotel funding opportunities in Phase III...',
+    jv:'I would like to register interest in future Residential JV land opportunities...'
+  };
+  if(interest&&typeMap[interest]){
+    const select=document.getElementById('enquiryTypeVal');
+    if(select)select.value=typeMap[interest];
+    const msg=document.getElementById('gmsg');
+    if(msg&&!msg.value&&placeholderMap[interest])msg.placeholder=placeholderMap[interest];
+  }
+}
+applyContactPrefill();
+/* ─ General Enquiry Form ─ */
+function submitGeneral(){
+  const fn=document.getElementById('gfn').value.trim();
+  const em=document.getElementById('gem').value.trim();
+  const ph=document.getElementById('gph').value.trim();
+  const msg=document.getElementById('gmsg').value.trim();
+  const priv=document.getElementById('gprivacy').checked;
+  if(!fn){alert('Please enter your first name.');return}
+  if(!em||!em.includes('@')){alert('Please enter a valid email address.');return}
+  if(!ph){alert('Please enter your phone number.');return}
+  if(!msg){alert('Please enter a message.');return}
+  if(!priv){alert('Please agree to our Privacy Policy to proceed.');return}
+  const s=document.getElementById('gSuccess');
+  s.style.display='block';
+  s.scrollIntoView({behavior:'smooth',block:'nearest'});
+  document.querySelector('.btn-submit').textContent='✓ Message Sent';
+  document.querySelector('.btn-submit').style.background='var(--green-rich)';
+}
+
+/* ─ Sales Form ─ */
+function submitSales(){
+  const fn=document.getElementById('sfn').value.trim();
+  const em=document.getElementById('sem').value.trim();
+  const ph=document.getElementById('sph').value.trim();
+  if(!fn||!em||!ph){alert('Please fill in your name, email, and phone number.');return}
+  if(!em.includes('@')){alert('Please enter a valid email address.');return}
+  const s=document.getElementById('sfSuccess');
+  s.style.display='block';
+  s.scrollIntoView({behavior:'smooth',block:'nearest'});
+  document.querySelector('.btn-submit-gold').textContent='✓ Enquiry Submitted';
+}
+
+/* ─ Investor Login ─ */
+function investorLogin(){
+  const em=document.getElementById('iemail').value.trim();
+  const pw=document.getElementById('ipass').value;
+  if(!em||!pw){alert('Please enter your email and password.');return}
+  alert('The Investor Portal is launching soon. Our team will contact you once access is activated for your account.\n\nFor immediate assistance, call +234 911 741 5120.');
+}
+
+/* ─ Newsletter ─ */
+function submitNewsletter(){
+  const em=document.getElementById('nlEmail').value.trim();
+  if(!em||!em.includes('@')){alert('Please enter a valid email address.');return}
+  document.querySelector('.nl-btn').textContent='✓ Subscribed!';
+  document.getElementById('nlEmail').value='';
+  setTimeout(()=>{document.querySelector('.nl-btn').textContent='Subscribe'},3000);
+}
+</script>
+<script src="assets/social-links.js" defer></script>
+<script src="assets/site-enhance.js" defer></script>
+</body>
+</html>
