@@ -42,7 +42,10 @@ nav.scrolled{background:rgba(9,22,22,.97);backdrop-filter:blur(24px);border-bott
 .btn-portal{padding:10px 22px;border:1px solid rgba(185,144,74,.5);color:rgba(185,144,74,.9);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:all .3s}.btn-portal:hover{border-color:var(--gold);color:var(--gold)}
 .btn-cta{padding:11px 26px;background:var(--gold);color:var(--green);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}.btn-cta::before{content:'';position:absolute;inset:0;background:var(--gold-light);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}.btn-cta:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(185,144,74,.4)}.btn-cta:hover::before{transform:scaleX(1)}.btn-cta span{position:relative;z-index:1}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}.hamburger span{width:26px;height:1.5px;background:var(--white);transition:all .4s var(--ease);display:block}.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
-.mobile-menu{position:fixed;inset:0;background:var(--green);z-index:998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .6s var(--ease);overflow-y:auto;padding:88px 32px 48px}.mobile-menu.open{transform:translateX(0)}.mobile-menu>.m-link{font-family:var(--font-display);font-size:38px;color:var(--white);transition:color .3s;opacity:.9}.mobile-menu>.m-link:hover{color:var(--gold)}.m-divider{width:48px;height:1px;background:rgba(185,144,74,.35)}.m-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.m-btn{padding:13px 26px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}.m-btn.gold{background:var(--gold);color:var(--green)}.m-btn.outline{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
+.mobile-menu{position:fixed;inset:0;background:var(--green);z-index:998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transform:translateX(100%);transition:transform .6s var(--ease);overflow-y:auto;padding:88px 32px 48px}
+.mobile-menu.open{transform:translateX(0)}.mobile-menu .m-link{font-family:var(--font-display);font-size:32px;color:var(--white);transition:color .3s;opacity:.9}.mobile-menu .m-link:hover{color:var(--gold)}
+.m-divider{width:48px;height:1px;background:rgba(185,144,74,.35)}
+.m-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.m-btn{padding:13px 26px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}.m-btn.gold{background:var(--gold);color:var(--green)}.m-btn.outline{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
 /* UTILS */
 .section{padding:120px 52px}.container{max-width:1280px;margin:0 auto}
 .tag{display:inline-flex;align-items:center;gap:14px;margin-bottom:18px}.tag-line{width:40px;height:1px;background:var(--gold)}.tag-text{font-size:9px;letter-spacing:4.5px;text-transform:uppercase;font-weight:600;color:var(--gold)}
@@ -252,7 +255,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
 @media(hover:none){.nav-item.dd-open>.nav-dd{opacity:1;visibility:visible;transform:translateY(0)}}
 @media(max-width:640px){.cc-grid{grid-template-columns:1fr}.field-grid{grid-template-columns:1fr}.enquiry-type-grid{grid-template-columns:1fr 1fr}.sf-row{grid-template-columns:1fr}.investor-perks{grid-template-columns:1fr}.investor-form-wrap{padding:36px 28px}.sales-form-wrap{padding:36px 28px}.location-info-side{padding:44px 24px}.footer-top{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;text-align:center}footer{padding:60px 24px 0}.hero-quick{flex-direction:column}.cta-btns{flex-direction:column}.nl-form{flex-direction:column}.nl-input{border-right:1px solid rgba(9,22,22,.15);border-bottom:none}}
 </style>
-<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 <div class="page-transition" id="pageTransition"></div>
@@ -274,7 +277,6 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="home.html" class="m-link">Home</a><a href="about.html" class="m-link">About FVIP</a><a href="properties.html" class="m-link">Fish Valley Project</a>
-  <div class="m-divider"></div>
   <a href="services.html" class="m-link">Services</a><a href="contact.html" class="m-link">Contact</a>
   <div class="m-btns"><a href="#investor" class="m-btn outline" onclick="closeMob();smoothScroll(null,'#investor')">Investor Portal</a><a href="#contact-main" class="m-btn gold" onclick="closeMob();smoothScroll(null,'#contact-main')">Sales Enquiry</a></div>
 </div>
@@ -724,7 +726,7 @@ function submitNewsletter(){
   setTimeout(()=>{document.querySelector('.nl-btn').textContent='Subscribe'},3000);
 }
 </script>
-<script src="assets/social-links.js" defer></script>
-<script src="assets/site-enhance.js" defer></script>
+<script src="social-links.js" defer></script>
+<script src="site-enhance.js" defer></script>
 </body>
 </html>
