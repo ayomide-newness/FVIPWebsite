@@ -53,6 +53,32 @@
     link.setAttribute("href", target === "home.html" ? "index.html" : "index.html" + target.slice("home.html".length));
   });
 
+  /* Mark the active destination in the mobile/tablet navigation. */
+  function setMobileActiveLink() {
+    var currentPage = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+    if (currentPage === "home.html") currentPage = "index.html";
+    document.querySelectorAll(".m-link").forEach(function (link) {
+      var href = (link.getAttribute("href") || "").toLowerCase();
+      var targetPage = href.split("#")[0] || "index.html";
+      if (targetPage === "home.html") targetPage = "index.html";
+      var active = targetPage === currentPage;
+      link.classList.toggle("is-active", active);
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+  setMobileActiveLink();
+  document.querySelectorAll(".m-link").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.querySelectorAll(".m-link").forEach(function (item) {
+        item.classList.remove("is-active");
+        item.removeAttribute("aria-current");
+      });
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    });
+  });
+
   /* Browsers can restore a previous page from cache with its transition
      overlay still active. Clear it each time the page becomes visible so
      navigation links and hero CTAs remain clickable. */
