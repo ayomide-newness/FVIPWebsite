@@ -53,6 +53,18 @@
     link.setAttribute("href", target === "home.html" ? "index.html" : "index.html" + target.slice("home.html".length));
   });
 
+  /* Browsers can restore a previous page from cache with its transition
+     overlay still active. Clear it each time the page becomes visible so
+     navigation links and hero CTAs remain clickable. */
+  function resetPageTransition() {
+    document.querySelectorAll("#pt, #pageTransition").forEach(function (overlay) {
+      overlay.classList.remove("in", "out");
+      overlay.style.removeProperty("animation");
+    });
+  }
+  window.addEventListener("pageshow", resetPageTransition);
+  resetPageTransition();
+
   /* Pause CSS marquees (partner logos, ticker) when off-screen to save CPU/battery */
   var marquees = document.querySelectorAll(".partners-track, .tk-track");
   if ("IntersectionObserver" in window && marquees.length) {
