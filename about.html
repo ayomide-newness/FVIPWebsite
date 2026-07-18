@@ -71,7 +71,7 @@ nav.scrolled .nav-inner{height:68px}
 .hamburger span{width:26px;height:1.5px;background:var(--white);transition:all .4s var(--ease);display:block}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
 .mobile-menu{position:fixed;inset:0;background:var(--green);z-index:998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .6s var(--ease);overflow-y:auto;padding:88px 32px 48px}
-.mobile-menu.open{transform:translateX(0)}.mobile-menu>.m-link{font-family:var(--font-display);font-size:38px;color:var(--white);transition:color .3s;opacity:.9}.mobile-menu>.m-link:hover{color:var(--gold)}
+.mobile-menu.open{transform:translateX(0)}.mobile-menu>.m-link{font-family:var(--font-display);font-size:32px;color:var(--white);transition:color .3s;opacity:.9}.mobile-menu>.m-link:hover{color:var(--gold)}
 .m-divider{width:48px;height:1px;background:rgba(185,144,74,.35)}.m-sub{display:flex;flex-direction:column;align-items:center;gap:14px}.m-sub a{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .3s}.m-sub a:hover{color:var(--gold)}
 .m-btns{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;justify-content:center}.m-btn{padding:13px 26px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}.m-btn.gold{background:var(--gold);color:var(--green)}.m-btn.outline{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7)}
 
@@ -267,7 +267,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
 @media(hover:none){.nav-item.dd-open>.nav-dd{opacity:1;visibility:visible;transform:translateY(0)}}
 @media(max-width:640px){.dev-portfolio-grid,.infra-grid,.team-grid,.awards-grid,.mission-values{grid-template-columns:1fr}.dev-stats-row{grid-template-columns:1fr}.partners-grid{grid-template-columns:1fr}.partner-feat{flex-direction:column}.partner-feat-logo{width:80px;height:80px}.footer-top{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;text-align:center}footer{padding:60px 24px 0}.cta-band{padding:88px 24px}}
 </style>
-<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 <div class="page-transition" id="pageTransition"></div>
@@ -588,7 +588,7 @@ const ham=document.getElementById('hamburger'),mob=document.getElementById('mobi
 const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.r,.r-l,.r-r').forEach(el=>ro.observe(el));
 </script>
-<script src="assets/social-links.js" defer></script>
-<script src="assets/site-enhance.js" defer></script>
+<script src="social-links.js" defer></script>
+<script src="site-enhance.js" defer></script>
 </body>
 </html>
