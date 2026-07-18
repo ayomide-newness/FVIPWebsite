@@ -528,12 +528,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);padding:88px 52px 0}
 }
 /* ── social icons: disabled state until a real link is added ── */
 .fsl[aria-disabled="true"]{opacity:.32;pointer-events:none;cursor:default}
-/* ── perf / reduced-motion (driven by assets/site-enhance.js) ── */
+/* ── perf / reduced-motion (driven by site-enhance.js) ── */
 html.fx-lite .px{animation-play-state:paused;opacity:.12}
 html.fx-lite .h-bg{animation:none}
 @media(hover:none){.nav-item.dd-open>.nav-dd{opacity:1;visibility:visible;transform:translateY(0)}}
 </style>
-<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="responsive.css">
 <script>location.replace('index.html' + location.search + location.hash);</script>
 </head>
 <body>
@@ -1245,7 +1245,7 @@ function subNL() {
   setTimeout(() => btn.textContent = 'Subscribe →', 3500);
 }
 </script>
-<script src="assets/social-links.js" defer></script>
-<script src="assets/site-enhance.js" defer></script>
+<script src="social-links.js" defer></script>
+<script src="site-enhance.js" defer></script>
 </body>
 </html>
