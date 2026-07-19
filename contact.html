@@ -55,8 +55,10 @@ nav.scrolled{background:rgba(9,22,22,.97);backdrop-filter:blur(24px);border-bott
 .r-r{opacity:0;transform:translateX(52px);transition:opacity .95s var(--ease),transform .95s var(--ease)}.r-r.v{opacity:1;transform:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}.d4{transition-delay:.38s}.d5{transition-delay:.48s}
 .btn-primary{display:inline-flex;align-items:center;gap:14px;padding:18px 40px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:transform .35s,box-shadow .35s;cursor:pointer}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(185,144,74,.45)}
+.btn-p{display:inline-flex;align-items:center;gap:14px;padding:17px 38px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:transform .35s,box-shadow .35s}
 .btn-solid{display:inline-flex;align-items:center;gap:12px;padding:17px 38px;background:var(--green);color:var(--white);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s;cursor:pointer}.btn-solid:hover{background:var(--green-rich);transform:translateY(-2px);box-shadow:0 14px 44px rgba(9,22,22,.28)}
 .btn-ghost-w{display:inline-flex;align-items:center;gap:10px;padding:17px 38px;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s}.btn-ghost-w:hover{border-color:var(--gold);color:var(--gold)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(185,144,74,.45)}.btn-p .arr{transition:transform .35s}.btn-p:hover .arr{transform:translateX(5px)}
 
 /* PAGE HERO */
 .page-hero{position:relative;min-height:60vh;display:flex;align-items:center;overflow:hidden;background:var(--green);padding:150px 52px 92px}
@@ -68,7 +70,7 @@ nav.scrolled{background:rgba(9,22,22,.97);backdrop-filter:blur(24px);border-bott
 .page-hero-h{font-family:var(--font-display);font-size:clamp(44px,7vw,90px);font-weight:500;color:var(--white);line-height:1.05}.page-hero-h em{font-style:italic;color:var(--gold-light)}
 .page-hero-sub{max-width:560px;margin-top:18px;font-size:16px;line-height:1.9;color:rgba(255,255,255,.72);font-weight:300}
 /* Quick contact pills in hero */
-.hero-quick{display:flex;gap:12px;margin-top:44px;flex-wrap:wrap}
+.hero-quick{display:flex;align-items:center;gap:12px;margin-top:44px;flex-wrap:wrap;opacity:100;animation:fin .9s 2.55s forwards}
 .hero-quick-icon{width:100px;height:60px;}
 .hq{display:flex;align-items:center;gap:10px;padding:2px 20px;border:1px solid rgba(185,144,74,.3);color:rgba(255,255,255,.7);font-size:15px;font-weight:500;transition:all .35s}
 .hq:hover{border-color:var(--gold);color:var(--gold);background:rgba(185,144,74,.06)}.hq-icon{font-size:30px}
@@ -291,8 +293,10 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
     <p class="page-hero-sub">Contact us about land purchases, development opportunities, project investment, strategic partnerships or general enquiries.</p>
     <div class="hero-quick">
       <!--<a href="tel:+2349117415120" class="hq"><span class="hq-icon">📞</span> +234 911 741 5120</a>-->
-      <a href="https://wa.me/2349117415120" class="hq" target="_blank"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/cSMvyX9g/whatsapp-gold.png" alt="WhatsApp" loading="lazy" decoding="async"></span> Chat on WhatsApp <br>+234 911 741 5120</br></a>
-      <a href="mailto:info@fvipng.com" class="hq"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/bwvSnFk/email-gold.png" alt="Email" loading="lazy" decoding="async"></span> info@fvipng.com</a>
+      <!--<a href="https://wa.me/2349117415120" class="hq" target="_blank"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/cSMvyX9g/whatsapp-gold.png" alt="WhatsApp" loading="lazy" decoding="async"></span> Chat on WhatsApp <br>+234 911 741 5120</br></a>
+      <a href="mailto:info@fvipng.com" class="hq"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/bwvSnFk/email-gold.png" alt="Email" loading="lazy" decoding="async"></span> info@fvipng.com</a>-->
+      <a href="contact.html#contact-main" class="btn-p magnetic"><span class="hq-icon">📞</span> General Enquiries <span class="arr">→</span></a>
+      <!--<a href="contact.html#contact-main" class="hq"><span class="hq-icon">📞</span> General Enquiries</a>-->
     </div>
   </div>
 </div>
@@ -418,7 +422,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
             <label for="ghow">How did you hear about us?</label>
             <select id="ghow">
               <option value="">— Select an option —</option>
-              <option>Social Media (Instagram/Facebook/WhatsApp)</option><option>Social Media (LinkedIn)</option><option>Google Search</option><option>Referral / Word of Mouth</option><option>News / Media</option><option>Billboard / Outdoor</option><option>Other</option>
+              <option>Social Media (Instagram / Facebook)</option><option>LinkedIn</option><option>Google Search</option><option>Referral / Word of Mouth</option><option>News / Media</option><option>Billboard / Outdoor</option><option>Other</option>
             </select>
           </div>
           <div class="privacy-row" style="margin-top:20px">
