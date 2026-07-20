@@ -79,6 +79,18 @@
     });
   });
 
+  /* On small screens, keep Contact focused on the message form and place
+     office hours directly after it. */
+  function arrangeContactMobile() {
+    if (!window.matchMedia("(max-width: 700px)").matches) return;
+    var officeHours = document.getElementById("office-hours");
+    var form = document.querySelector(".contact-form-wrap");
+    if (officeHours && form && officeHours.parentElement !== form.parentElement) {
+      form.parentElement.insertBefore(officeHours, form.nextSibling);
+    }
+  }
+  arrangeContactMobile();
+
   /* Browsers can restore a previous page from cache with its transition
      overlay still active. Clear it each time the page becomes visible so
      navigation links and hero CTAs remain clickable. */
