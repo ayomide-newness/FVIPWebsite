@@ -42,11 +42,11 @@ video { display: block; }
 
 /* Make the opening masterplan cinematic at every aspect ratio. */
 #intro-video {
-  width: 100%;
-  height: 100%;
+  width: 80;
+  height: 80%;
   max-width: none;
   max-height: none;
-  object-fit: cover;
+  object-fit: center;
   object-position: center;
 }
 
@@ -107,8 +107,8 @@ video { display: block; }
 @media (max-width: 700px) {
   :root { --page-gutter: 18px; }
   body { font-size: 16px; }
-  #intro-container { align-items: stretch; }
-  #intro-video { object-position: 58% center; }
+  #intro-container { align-items: center; }
+  #intro-video { object-position: 25% center; }
   #skip-btn { bottom: max(18px, env(safe-area-inset-bottom)); font-size: 9px; }
   .i-logo-name { font-size: clamp(34px, 11vw, 48px); letter-spacing: 3px; }
   .i-logo-sub { letter-spacing: 3.5px; }
@@ -122,7 +122,7 @@ video { display: block; }
   .mobile-menu, .mob-menu { padding: 86px var(--page-gutter) 30px !important; }
 
   .h-wrap { padding-top: 88px !important; }
-  .h-hl, .hero-title { font-size: clamp(38px, 12vw, 58px) !important; line-height: 1.04; }
+  .h-hl, .hero-title { font-size: clamp(38px, 12vw, 45px) !important; line-height: 1.04; }
   .h-sub, .hero-subtitle { font-size: 14px; line-height: 1.75; }
   .h-over { margin-bottom: 22px; }
   .hero-progress, .hero-arrows, .scue { display: none !important; }
