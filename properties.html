@@ -16,6 +16,7 @@
 :root{
   --green:#091616;--green-mid:#164040;--green-rich:#2D8080;--gold:#B9904A;--gold-light:#D8BE7A;--gold-pale:#EFE3C2;
   --cream:#F3F2F0;--cream-dark:#C0DDDD;--white:#fff;--ink:#091616;--text:#091616;--text-mid:#315F5F;--text-muted:#6DA5A5;
+  --red:#e40e0e;--dark-red:#580101;--light-red:#ea6262;
   --font-display:'Playfair Display',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;
   --ease:cubic-bezier(.22,1,.36,1);--ease2:cubic-bezier(.65,0,.35,1);
 }
@@ -293,7 +294,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
     <ul class="nav-links">
       <li class="nav-item"><a href="home.html" class="nav-link">Home <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><!--<div class="dropdown-head">Masterplans</div>--><a href="home.html#masterplan">Fish Valley Project</a><a href="services.html">Services</a><a href="contact.html">Contact</a><div class="sep"></div><!--<div class="dropdown-head">News & Updates</div>--><a href="news.html">News & Updates</a></div></li>
       <li class="nav-item"><a href="about.html" class="nav-link">About FVIP <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="about.html#story">Our Story & Purpose</a><!--<a href="#development">The Development</a>--><a href="about.html#team">Leadership & Team</a><a href="about.html#partners">Partners & Stakeholders</a><div class="sep"></div><!--<a href="#awards">Awards & Recognition</a>--></div></li>
-      <li class="nav-item active"><a href="properties.html" class="nav-link">Fish Valley Project <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="#development">The Development</a><a href="#available-properties">Land</a><a href="#available-properties">Residential</a><a href="#available-properties">Commercial</a><a href="#park">Neighborhood Park</a><div class="sep"></div><a href="#hospitality">Hospitality -> Coming Soon</a></div></li>
+      <li class="nav-item active"><a href="properties.html" class="nav-link">Fish Valley Project <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="#development">The Development</a><a href="#opportunities">Opportunities</a><a href="#park">Neighborhood Park</a><div class="sep"></div><a href="#hospitality">Hospitality -> Coming Soon</a></div></li>
       <li class="nav-item"><a href="services.html" class="nav-link">Services <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="services.html#investment">Investment Opportunities</a><a href="services.html#sustainability">Sustainability</a><div class="sep"></div><a href="services.html#faq">Process & FAQ</a></div></li>
       <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
@@ -314,8 +315,9 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
   <div class="page-hero-inner">
     <div class="breadcrumb"><a href="home.html">Home</a> <span>/</span> Fish Valley Project</div>
     <div class="ph-tag"><div class="ph-rule"></div><span class="ph-txt">Fish Valley Project Portfolio</span></div>
-    <h1 class="page-hero-h">Fish Valley <em>Built</em><br><em>for Living</em></h1>
-    <p class="page-hero-sub">Fish Valley is FVIP's flagship mixed-use project within a broader development portfolio that also includes residential JV, commercial, and company-owned housing interests.</p>
+    <h1 class="page-hero-h">Building <em>Communities</em><br><em>that Endure</em></h1>
+    <p class="page-hero-sub">We do this by creating exceptional places where people can live, work and connect through quality design, resilient infrastructure and responsible development.</p>
+    <a href="#development" class="btn-primary">How we're building communities that endure →</a>
     <div class="hero-stat-bar">
       <div class="hsb-item"><div class="hsb-n">5</div><div class="hsb-l">Asset Classes</div></div>
       <div class="hsb-item"><div class="hsb-n">6ha</div><div class="hsb-l">Masterplan Area</div></div>
@@ -330,16 +332,16 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
   <div class="container">
     <div class="dev-intro r">
       <div class="tag"><div class="tag-line"></div><span class="tag-text">The Development</span></div>
-      <h2 class="section-h" style="margin-bottom:14px">A Broader <em>Development Portfolio</em></h2>
-      <p class="dev-intro-p">Fish Valley development comprises land sales for development, residential & commercial projects.</p>
+      <h2 class="section-h" style="margin-bottom:14px">How we <em style="color:var(--gold)">Create Value</em></h2>
+      <!--<p class="dev-intro-p">Fish Valley development comprises land sales for development, residential & commercial projects.</p>-->
     </div>
     <div class="dev-portfolio-grid">
       <article class="dev-portfolio-card dev-infra-summary r d1">
-        <div class="dpc-kicker">Sites & Services</div>
+        <div class="dpc-kicker" style="color:var(--gold)">One</div>
         <h3 class="dpc-title">Infrastructure</h3>
         <p class="dpc-body">The essential services that make Fish Valley secure, connected and ready for living, business and investment.</p>
         <details class="infra-disclosure">
-          <summary>Explore infrastructure <span aria-hidden="true">+</span></summary>
+          <summary style="color:var(--red)">Explore infrastructure <span aria-hidden="true" style="color:var(--red)">+</span></summary>
           <ul>
             <li><strong>Security Systems</strong><span>24/7 personnel, CCTV and controlled access.</span></li>
             <li><strong>Power &; Utilities</strong><span>Substations, solar backup and underground distribution.</span></li>
@@ -351,22 +353,22 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
         </details>
       </article>
       <article class="dev-portfolio-card r d1">
-        <div class="dpc-kicker">Residential JV</div>
-        <h3 class="dpc-title">Melrose Residential JV</h3>
-        <p class="dpc-body"><strong>10,000 sqm</strong> joint-venture residential development with MGE Realty, comprising a mix of two, three and four-bedroom apartments.</p>
-        <div class="dpc-status">Status: Ongoing</div>
+        <div class="dpc-kicker" style="color:var(--green)">Two</div>
+        <h3 class="dpc-title" style="color:var(--gold)">Neighbourhood Park</h3>
+        <p class="dpc-body">Green open spaces and recreational areas designed to promote wellbeing, connection and community life.</p>
+        <div class="dpc-status" style="color:var(--red)">Status: Ongoing</div>
       </article>
       <article class="dev-portfolio-card r d2">
-        <div class="dpc-kicker">Commercial Land</div>
-        <h3 class="dpc-title">Commercial Development</h3>
-        <p class="dpc-body"><strong>2,000 sqm</strong> outright commercial land sale to KFA, with the agreement finalised and design of the commercial spaces underway.</p>
-        <div class="dpc-status">Status: Agreement Finalised</div>
+        <div class="dpc-kicker">Three</div>
+        <h3 class="dpc-title">Residential</h3>
+        <p class="dpc-body">Thoughtfully designed homes that balance quality, comfort and longterm value.</p>
+        <div class="dpc-status" style="color:var(--red)">Status: Agreement Finalised</div>
       </article>
       <article class="dev-portfolio-card r d3">
-        <div class="dpc-kicker">Mixed-Use</div>
-        <h3 class="dpc-title">Centrepiece Development</h3>
-        <p class="dpc-body"><strong>8,000 sqm</strong> FVN-owned residential development planned to comprise a mix of apartments, townhouses, penthouses, leisure spaces and boutique hospitality offerings.</p>
-        <div class="dpc-status">Status: Design Stage</div>
+        <div class="dpc-kicker" style="color:var(--green)">Four</div>
+        <h3 class="dpc-title" style="color:var(--gold)">Commercial</h3>
+        <p class="dpc-body">Offices, Hotel & Apart-hotel, retail and business spaces that support enterprise, employment and economic activity.</p>
+        <div class="dpc-status" style="color:var(--red)">Status: Design Stage</div>
       </article>
     </div>
   </div>
@@ -380,14 +382,14 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       <div class="dev-stat"><div class="ds-num">LSDPC</div><div class="ds-lbl">Government Partner</div></div>
     </div>
     
-    <div class="infra-grid infra-grid-legacy">
+    <!--<div class="infra-grid infra-grid-legacy">
       <div class="infra-card r d5"><div class="ic-icon">🛡️</div><div class="ic-title">Security Systems</div><p class="ic-desc">Perimeter fencing, 24/7 security personnel, CCTV surveillance, controlled access points, and a dedicated estate management centre.</p></div>
       <div class="infra-card r d2"><div class="ic-icon">⚡</div><div class="ic-title">Power & Utilities</div><p class="ic-desc">Dedicated substations, hybrid solar backup, and underground power distribution ensuring reliable 24/7 electricity for all residents and tenants.</p></div>
       <div class="infra-card r d4"><div class="ic-icon">📡</div><div class="ic-title">Telecommunications</div><p class="ic-desc">Fibre optic backbone, multi-operator telecommunications infrastructure, and smart estate management systems for residents, commercial tenants, and visitors.</p></div>
       <div class="infra-card r d1"><div class="ic-icon">🛣️</div><div class="ic-title">Roads & Connectivity</div><p class="ic-desc">Paved internal roads, street lighting, pedestrian walkways, and direct access points to major arterial routes ensuring seamless movement within the estate.</p></div>
       <div class="infra-card r d3"><div class="ic-icon">💧</div><div class="ic-title">Water Supply & Drainage</div><p class="ic-desc">Borehole water treatment, reticulation networks, and engineered drainage systems designed to handle Lagos rainfall and prevent flooding throughout the estate.</p></div>
       <div class="infra-card r d6"><div class="ic-icon">🌳</div><div class="ic-title">Landscape & Parks</div><p class="ic-desc">Curated green spaces, the central neighborhood park, street planting, and community recreation areas that make Fish Valley a lifestyle destination.</p></div>
-    </div>
+    </div>-->
   </div>
 </section>
 
@@ -397,7 +399,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
     <div class="dev-intro r" style="max-width:760px">
       <div class="tag"><div class="tag-line"></div><span class="tag-text">Available Now</span></div>
       <h2 class="section-h" style="margin-bottom:14px">Opportunities <em>at Fish Valley</em></h2>
-      <p class="dev-intro-p">From land ready for immediate development to joint-venture apartments and mixed-use investment; here's what's live across the FVIP portfolio right now.</p>
+      <p class="dev-intro-p">From enabling infrastructure to completed developments, explore the opportunities shaping Fish Valley.</p>
     </div>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 44px">
       <a href="contact.html#contact-main" class="btn-primary">Speak to a Sales Advisor →</a>
@@ -466,8 +468,8 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       <!-- Card 4: JV Opportunities - future / register interest -->
       <article class="avail-card avail-jv r d4">
         <div class="avail-jv-icon">🤝</div>
-        <div class="avail-cat">Future Opportunity</div>
-        <h3 class="avail-name">JV Opportunities</h3>
+        <div class="avail-cat">Future JV</div>
+        <h3 class="avail-name">Partnership Opportunities</h3>
         <p class="avail-desc">Future Joint Venture land is being lined up for release to residential, multipurpose and hotel:aparthotel development partners. <strong>Register now to find out when land will be released for the opportunity.</strong></p>
         <a href="contact.html?interest=jv#contact-main" class="btn-primary avail-cta">Partnership Opportunity →</a>
       </article>
