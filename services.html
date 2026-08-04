@@ -54,13 +54,13 @@ nav.scrolled{background:rgba(22,64,64,.97);backdrop-filter:blur(24px);border-bot
 
 /* PAGE HERO */
 .page-hero{position:relative;padding:170px 52px 92px;overflow:hidden;background:var(--green);min-height:74vh;display:flex;align-items:center}
-.page-hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,22,22,.94) 0%,rgba(9,22,22,.7) 44%,rgba(9,22,22,.24) 100%),url('https://i.ibb.co/8gD1RZ0d/3-D-Neighborhood-P.png') center/cover;animation:hZoom 22s ease-in-out infinite alternate}
+.page-hero-bg{position:absolute;inset:0;background:url('https://i.ibb.co/8gD1RZ0d/3-D-Neighborhood-P.png') center/cover;animation:hZoom 22s ease-in-out infinite alternate}
 @keyframes hZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
 .page-hero-inner{position:relative;z-index:2;max-width:1280px;margin:0 auto}
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:28px}.breadcrumb a{color:rgba(255,255,255,.4);transition:color .3s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{color:rgba(200,150,62,.7)}
 .ph-tag{display:inline-flex;align-items:center;gap:14px;margin-bottom:24px}.ph-rule{width:48px;height:1px;background:var(--gold)}.ph-txt{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-light);font-weight:500}
 .page-hero-h{font-family:var(--font-display);font-size:clamp(44px,7vw,90px);font-weight:500;color:var(--white);line-height:1.05}.page-hero-h em{font-style:italic;color:var(--gold-light)}
-.page-hero-sub{max-width:620px;margin-top:20px;font-size:16px;line-height:1.9;color:rgba(255,255,255,.72);font-weight:300}
+.page-hero-sub{max-width:500px;margin-top:20px;font-size:16px;line-height:1.9;color:rgba(255,255,255,.72);font-weight:300}
 .hero-nav-tabs{display:flex;gap:0;margin-top:52px;border-top:1px solid rgba(200,150,62,.18);overflow-x:auto}
 .hnt{padding:20px 32px 20px 0;margin-right:32px;border-top:2px solid transparent;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);cursor:pointer;transition:color .3s,border-color .3s;white-space:nowrap;flex-shrink:0}
 .hnt:hover,.hnt.active{color:var(--gold);border-color:var(--gold)}
@@ -268,13 +268,13 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
     <p class="page-hero-sub">Fish Valley Investments & Property Ltd. provides land, infrastructure and property development opportunities for buyers, developers, investors and strategic partners.</p>
     <div class="hero-actions">
       <a href="properties.html#available-properties" class="btn-primary">Explore Opportunities</a>
-      <a href="contact.html" class="btn-ghost-w">Speak to Our Team</a>
+      <a href="contact.html" class="btn-ghost-w neon-outline" style="color:var(--text)">Speak to Our Team</a>
     </div>
     <div class="hero-nav-tabs">
-      <div class="hnt active" onclick="scrollTo('#services-overview')"><a href="#services-overview">Overview</a></div>
-      <div class="hnt" onclick="scrollTo('#investment')"><a href="#investment">Investment</a></div>
-      <div class="hnt" onclick="scrollTo('#sustainability')"><a href="#sustainability">Sustainability</a></div>
-      <div class="hnt" onclick="scrollTo('#faq')"><a href="#faq">FAQ</a></div>
+      <div class="hnt active" onclick="scrollTo('#services-overview')" style="color:var(--ink)"><a href="#services-overview">Overview</a></div>
+      <div class="hnt" onclick="scrollTo('#investment')" style="color:var(--ink)"><a href="#investment">Investment</a></div>
+      <div class="hnt" onclick="scrollTo('#sustainability')" style="color:var(--ink)"><a href="#sustainability">Sustainability</a></div>
+      <div class="hnt" onclick="scrollTo('#faq')" style="color:var(--ink)"><a href="#faq">FAQ</a></div>
     </div>
   </div>
 </div>
@@ -335,7 +335,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       <div style="position:relative" class="r-r">
         <img class="invest-img" src="https://i.ibb.co/sdQrkdTX/house-piggy.jpg" alt="Investment" loading="lazy" decoding="async">
         <div class="invest-pull">
-          <div class="invest-pull-n">ROI</div>
+          <div class="invest-pull-n">Value</div>
           <div class="invest-pull-l">Speak to our advisors for current projected return figures by asset class.</div>
         </div>
       </div>
@@ -509,7 +509,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
         <a class="social-link" data-social="whatsapp" aria-label="FVIP on WhatsApp"><img src="https://i.ibb.co/VcdzV7pX/whatsapp.png" alt="WhatsApp" loading="lazy" decoding="async" width="16" height="16"></a>
       </div></div>
     <div><div class="f-col-title">Company</div><ul class="f-links"><li><a href="about.html">About FVIP</a></li><li><a href="about.html#team">Leadership</a></li><li><a href="about.html#partners">Partners</a></li><!--<li><a href="contact.html">Careers</a></li>--></ul></div>
-    <div><div class="f-col-title">Fish Valley Project</div><ul class="f-links"><li><a href="properties.html#development">The Development</a></li><li><a href="properties.html#available-properties">Land</a></li><li><a href="properties.html#available-properties">Residential</a></li><li><a href="properties.html#commercial">Commercial</a></li><li><a href="properties.html#park">Neighborhood Park</a></li></ul></div>
+    <div><div class="f-col-title">Fish Valley Project</div><ul class="f-links"><li><a href="properties.html#development">The Development</a></li><li><a href="properties.html#opportunities">Opportunities</a></li><li><a href="properties.html#park">Neighborhood Park</a></li></ul></div>
     <div><div class="f-col-title">Investor Resources</div><ul class="f-links"><li><a href="#investment">Why Invest</a></li><li><a href="contact.html#investor">Investor Portal</a></li><li><a href="#faq">FAQ</a></li></ul></div>
     <div><div class="f-col-title">Support</div><ul class="f-links"><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html#contact-main">Enquiries</a></li><li><a href="contact.html">Privacy Policy</a></li><li><a href="contact.html">Terms & Conditions</a></li></ul></div>
   </div>
