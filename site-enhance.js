@@ -53,6 +53,52 @@
     link.setAttribute("href", target === "home.html" ? "index.html" : "index.html" + target.slice("home.html".length));
   });
 
+  /* Rebuild the compact menu from the desktop navigation.  This keeps every
+     page's submenu accurate without maintaining a second set of links. */
+  function buildMobileNavigation() {
+    var desktopItems = document.querySelectorAll(".nav-links > .nav-item");
+    if (!desktopItems.length) return;
+    document.querySelectorAll(".mobile-menu, .mob-menu").forEach(function (menu) {
+      var actions = menu.querySelector(".m-btns");
+      var actionCopy = actions ? actions.cloneNode(true) : null;
+      var fragment = document.createDocumentFragment();
+
+      desktopItems.forEach(function (item) {
+        var main = item.querySelector(":scope > .nav-link");
+        if (!main) return;
+        var parent = document.createElement("a");
+        parent.className = "mobile-nav-parent m-link" + (item.classList.contains("active") ? " is-active" : "");
+        parent.href = main.getAttribute("href") || main.href;
+        parent.textContent = main.childNodes[0] ? main.childNodes[0].textContent.trim() : main.textContent.trim();
+        if (item.classList.contains("active")) parent.setAttribute("aria-current", "page");
+        fragment.appendChild(parent);
+
+        var dropdown = item.querySelector(":scope > .nav-dd, :scope > .nav-dropdown");
+        if (dropdown) {
+          var links = Array.prototype.filter.call(dropdown.querySelectorAll("a[href]"), function (link) {
+            return !link.classList.contains("dim");
+          });
+          if (links.length) {
+            var sub = document.createElement("div");
+            sub.className = "mobile-nav-sub";
+            parent.classList.add("has-sub");
+            links.forEach(function (link) {
+              var subLink = document.createElement("a");
+              subLink.href = link.getAttribute("href") || link.href;
+              subLink.textContent = link.textContent.trim();
+              sub.appendChild(subLink);
+            });
+            fragment.appendChild(sub);
+          }
+        }
+      });
+      menu.innerHTML = "";
+      menu.appendChild(fragment);
+      if (actionCopy) menu.appendChild(actionCopy);
+    });
+  }
+  buildMobileNavigation();
+
   /* Mark the active destination in the mobile/tablet navigation. */
   function setMobileActiveLink() {
     var currentPage = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -69,13 +115,41 @@
   }
   setMobileActiveLink();
   document.querySelectorAll(".m-link").forEach(function (link) {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (event) {
+      if (link.classList.contains("mobile-nav-parent") && link.classList.contains("has-sub")) {
+        var submenu = link.nextElementSibling;
+        if (submenu && submenu.classList.contains("mobile-nav-sub") && !link.classList.contains("sub-open")) {
+          event.preventDefault();
+          document.querySelectorAll(".mobile-nav-parent.sub-open").forEach(function (item) {
+            item.classList.remove("sub-open");
+            var itemSubmenu = item.nextElementSibling;
+            if (itemSubmenu) itemSubmenu.classList.remove("is-open");
+          });
+          link.classList.add("sub-open");
+          submenu.classList.add("is-open");
+          return;
+        }
+      }
       document.querySelectorAll(".m-link").forEach(function (item) {
         item.classList.remove("is-active");
         item.removeAttribute("aria-current");
       });
       link.classList.add("is-active");
       link.setAttribute("aria-current", "page");
+    });
+  });
+
+  document.querySelectorAll("#hamburger").forEach(function (toggle) {
+    toggle.setAttribute("aria-label", "Open navigation menu");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.addEventListener("click", function () {
+      window.setTimeout(function () {
+        var menu = document.getElementById("mobileMenu");
+        var isOpen = !!(menu && menu.classList.contains("open"));
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+        document.body.classList.toggle("menu-open", isOpen);
+      }, 0);
     });
   });
 
