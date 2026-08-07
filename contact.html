@@ -74,6 +74,20 @@ nav.scrolled{background:rgba(9,22,22,.97);backdrop-filter:blur(24px);border-bott
 .hero-quick-icon{width:40px;height:15px;}
 .hq{display:flex;align-items:center;gap:10px;padding:2px 20px;border:1px solid rgba(185,144,74,.3);color:rgba(255,255,255,.7);font-size:15px;font-weight:500;transition:all .35s}
 .hq:hover{border-color:var(--gold);color:var(--gold);background:rgba(185,144,74,.06)}.hq-icon{font-size:30px}
+.btn-g{display:inline-flex;align-items:center;gap:10px;padding:17px 38px;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.82);font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;transition:all .35s}.btn-g:hover{border-color:var(--gold);color:var(--gold)}
+
+
+/* Neon edging for selected secondary actions: their original surface stays intact. */
+.neon-outline { position: relative; isolation: isolate; overflow: visible !important; border-radius: 999px !important; }
+.neon-outline::after {
+  content: ''; position: absolute; pointer-events: none; z-index: 2; inset: -3px; padding: 2px;
+  border-radius: inherit; background: conic-gradient(from var(--neon-angle, 0deg), #00e5ff, #6577ff, #e64cff, #ff4f85, #ffbd45, #53f4b1, #00e5ff);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  filter: drop-shadow(0 0 5px rgba(0,229,255,.52)); animation: fvip-neon-flow 3.8s linear infinite;
+}
+.neon-outline:hover::after { animation-duration: 1.25s; filter: drop-shadow(0 0 8px rgba(230,76,255,.7)); }
+.neon-outline:active::after { animation-play-state: paused; }
 
 /* ═══ CONTACT CARDS (top strip) ═══ */
 .contact-cards{background:var(--green);padding:0}
@@ -273,14 +287,14 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       <li class="nav-item"><a href="services.html" class="nav-link">Services <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></a><div class="nav-dropdown"><a href="services.html#investment">Investment Opportunities</a><a href="services.html#sustainability">Sustainability</a><div class="sep"></div><a href="services.html#faq">Process & FAQ</a></div></li>
       <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
-    <div class="nav-util"><a href="#investor" class="btn-portal" onclick="smoothScroll(event,'#investor')">Investor Portal</a><a href="#contact-main" class="btn-cta" onclick="smoothScroll(event,'#contact-main')"><span>Sales Enquiry</span></a></div>
+    <!--div class="nav-util"><a href="#investor" class="btn-portal" onclick="smoothScroll(event,'#investor')">Investor Portal</a><a href="#contact-main" class="btn-cta" onclick="smoothScroll(event,'#contact-main')"><span>Sales Enquiry</span></a></div-->
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="home.html" class="m-link">Home</a><a href="about.html" class="m-link">About FVIP</a><a href="properties.html" class="m-link">Fish Valley Project</a>
   <a href="services.html" class="m-link">Services</a><a href="contact.html" class="m-link">Contact</a>
-  <div class="m-btns"><a href="#investor" class="m-btn outline" onclick="closeMob();smoothScroll(null,'#investor')">Investor Portal</a><a href="#contact-main" class="m-btn gold" onclick="closeMob();smoothScroll(null,'#contact-main')">Sales Enquiry</a></div>
+  <!--div class="m-btns"><a href="#investor" class="m-btn outline" onclick="closeMob();smoothScroll(null,'#investor')">Investor Portal</a><a href="#contact-main" class="m-btn gold" onclick="closeMob();smoothScroll(null,'#contact-main')">Sales Enquiry</a></div-->
 </div>
 
 <!-- PAGE HERO -->
@@ -293,45 +307,11 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
     <p class="page-hero-sub">Contact us about land purchases, development opportunities, project investment, strategic partnerships or general enquiries.</p>
     <div class="hero-quick">
       <!--<a href="tel:+2349117415120" class="hq"><span class="hq-icon">📞</span> +234 911 741 5120</a>-->
-      <!--<a href="https://wa.me/2349117415120" class="hq" target="_blank"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/cSMvyX9g/whatsapp-gold.png" alt="WhatsApp" loading="lazy" decoding="async"></span> Chat on WhatsApp <br>+234 911 741 5120</br></a>
-      <a href="mailto:info@fvipng.com" class="hq"><span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/bwvSnFk/email-gold.png" alt="Email" loading="lazy" decoding="async"></span> info@fvipng.com</a>-->
-      <a href="contact.html#contact-main" class="btn-p magnetic"><span class="hq-icon">📞</span> General Enquiries <span class="arr">→</span></a>
+      <a href="https://wa.me/2349117415120" class="btn-p magnetic" target="_blank"><!--span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/cSMvyX9g/whatsapp-gold.png" alt="WhatsApp" loading="lazy" decoding="async"></span--> Chat on WhatsApp →<!--br>+234 911 741 5120</br--></a>
+      <a href="mailto:info@fvipng.com" class="btn-g magnetic neon-outline" style="color:var(--ink)"><!--span class="hq-icon hero-quick-icon"><img src="https://i.ibb.co/bwvSnFk/email-gold.png" alt="Email" loading="lazy" decoding="async"></span--> <strong>Email Us →</strong></a>
+      <a href="contact.html#contact-main" class="btn-p magnetic"> Contact Form <span class="arr">→</span></a>
       <!--<a href="contact.html#contact-main" class="hq"><span class="hq-icon">📞</span> General Enquiries</a>-->
     </div>
-  </div>
-</div>
-
-<!-- CONTACT CARDS STRIP -->
-<div class="contact-cards">
-  <div class="cc-grid">
-    <div class="cc r d1">
-      <div class="cc-icon">💬</div>
-      <div class="cc-label">WhatsApp</div>
-      <div class="cc-val">+234 911 741 5120</div>
-      <div class="cc-sub">WhatsApp anytime</div>
-      <a href="https://wa.me/2349117415120" class="cc-link">Message Now →</a>
-    </div>
-    <div class="cc r d2">
-      <div class="cc-icon">✉️</div>
-      <div class="cc-label">Email Address</div>
-      <div class="cc-val">info@fvipng.com</div>
-      <div class="cc-sub">We respond within 24 hours<br>Mon-Fri business days</div>
-      <a href="mailto:info@fvipng.com" class="cc-link">Send Email →</a>
-    </div>
-    <div class="cc r d3">
-      <div class="cc-icon">📍</div>
-      <div class="cc-label">Site Address</div>
-      <div class="cc-val">320 Adekunle Fajuyi Way</div>
-      <div class="cc-sub">GRA Ikeja, Lagos, Nigeria<br>Fish Valley Estate</div>
-      <a href="#location" class="cc-link" onclick="smoothScroll(event,'#location')">Get Directions →</a>
-    </div>
-    <!--<div class="cc r d4">
-      <div class="cc-icon">🕐</div>
-      <div class="cc-label">Office Hours</div>
-      <div class="cc-val">Mon-Fri: 8am-5pm</div>
-      <div class="cc-sub">Saturday: 9am-2pm<br>Sunday: Closed</div>
-      <a href="#general enquiry" class="cc-link" onclick="smoothScroll(event,'#send us a message')">Book Appointment →</a>
-    </div>-->
   </div>
 </div>
 
@@ -342,8 +322,8 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       <!-- Left: Info -->
       <div class="r-l">
         <div class="tag"><div class="tag-line"></div><span class="tag-text">General Enquiries</span></div>
-        <h2 class="section-h" style="margin-bottom:0">How Can We<br><em>Help You?</em></h2>
-        <p class="ci-blurb">From your first question to the final handover; our team brings expertise, transparency, and genuine care to every client interaction. We're here to guide you.</p>
+        <!--<h2 class="section-h" style="margin-bottom:0">How Can We<br><em>Help You?</em></h2>
+        <p class="ci-blurb">From your first question to the final handover; our team brings expertise, transparency, and genuine care to every client interaction. We're here to guide you.</p>-->
         <div class="ci-blocks">
           <div class="ci-block">
             <div class="ci-block-icon"><img src="https://i.ibb.co/zVJgmJzt/infradev-icon.png" alt="Property" loading="lazy" decoding="async"></div>
@@ -362,21 +342,13 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
             <div><div class="ci-block-label">Diaspora Investors</div><div class="ci-block-val">Invest from anywhere in the world</div><div class="ci-block-sub">Virtual tours, remote documentation, and international payment options supported.</div></div>
           </div>
         </div>
-        <!-- Hours -->
-        <div id="office-hours" style="margin-top:44px">
-          <div style="font-family:var(--font-display);font-size:20px;color:var(--green);margin-bottom:18px">Office Hours</div>
-          <div class="hours-grid">
-            <div class="hour-row"><span class="hour-day">Monday-Friday</span><span class="hour-time">8:00am - 5:00pm</span></div>
-            <div class="hour-row"><span class="hour-day">Saturday</span><span class="hour-time">9:00am - 2:00pm</span></div>
-            <div class="hour-row closed"><span class="hour-day">Sunday</span><span class="hour-time">Closed</span></div>
-          </div>
-        </div>
+        
       </div>
 
       <!-- Right: Form -->
       <div class="r-r">
         <div class="contact-form-wrap">
-          <div class="form-heading">Send Us a Message</div>
+          <div class="form-heading">Contact Form</div>
           <p class="form-sub">Complete the form below and one of our team members will get back to you within 24 business hours.</p>
 
           <!-- Enquiry type selector -->
@@ -435,10 +407,54 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
             <p>Thank you for reaching out. One of our team members will contact you within 24 business hours. You'll receive a confirmation to your email shortly.</p>
           </div>
         </div>
+
+        <!-- Hours 
+        <div id="office-hours" style="margin-top:44px">
+          <div style="font-family:var(--font-display);font-size:20px;color:var(--green);margin-bottom:18px">Office Hours</div>
+          <div class="hours-grid">
+            <div class="hour-row"><span class="hour-day">Monday-Friday</span><span class="hour-time">8:00am - 5:00pm</span></div>
+            <div class="hour-row"><span class="hour-day">Saturday</span><span class="hour-time">9:00am - 2:00pm</span></div>
+            <div class="hour-row closed"><span class="hour-day">Sunday</span><span class="hour-time">Closed</span></div>
+          </div>
+        </div>-->
       </div>
     </div>
   </div>
 </section>
+
+<!-- CONTACT CARDS STRIP -->
+<div class="contact-cards">
+  <div class="cc-grid">
+    <div class="cc r d1">
+      <div class="cc-icon">💬</div>
+      <div class="cc-label">WhatsApp</div>
+      <div class="cc-val">+234 911 741 5120</div>
+      <div class="cc-sub">We will respond within 24 hours</div>
+      <a href="https://wa.me/2349117415120" class="cc-link">Message Now →</a>
+    </div>
+    <div class="cc r d2">
+      <div class="cc-icon">✉️</div>
+      <div class="cc-label">Email Address</div>
+      <div class="cc-val">info@fvipng.com</div>
+      <div class="cc-sub">We respond within 24 hours<br>Mon-Fri business days</div>
+      <a href="mailto:info@fvipng.com" class="cc-link">Send Email →</a>
+    </div>
+    <div class="cc r d3">
+      <div class="cc-icon">📍</div>
+      <div class="cc-label">Site Address</div>
+      <div class="cc-val">320 Adekunle Fajuyi Way</div>
+      <div class="cc-sub">GRA Ikeja, Lagos, Nigeria<br>Fish Valley Estate</div>
+      <a href="#location" class="cc-link" onclick="smoothScroll(event,'#location')">Get Directions →</a>
+    </div>
+    <div class="cc r d4">
+      <div class="cc-icon">🕐</div>
+      <div class="cc-label">Office Hours</div>
+      <div class="cc-val">Mon-Fri: 8am-5pm</div>
+      <div class="cc-sub">Saturday: 9am-2pm<br>Sunday: Closed</div>
+      <a href="#contact-main" class="cc-link" onclick="smoothScroll(event,'#contact-main')">Book Appointment →</a>
+    </div>
+  </div>
+</div>
 
 <!-- SALES ENQUIRY 
 <section id="sales" class="section">
@@ -505,7 +521,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
   </div>
 </section>-->
 
-<!-- INVESTOR PORTAL -->
+<!-- INVESTOR PORTAL 
 <section id="investor" class="section">
   <div class="container">
     <div class="investor-grid">
@@ -539,7 +555,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       </div>
     </div>
   </div>
-</section>
+</section>-->
 
 <!-- LOCATION -->
 <div id="location">
@@ -600,7 +616,7 @@ html.fx-lite .px{animation-play-state:paused;opacity:.12}
       </div></div>
     <div><div class="f-col-title">Company</div><ul class="f-links"><li><a href="about.html">About FVIP</a></li><li><a href="about.html#team">Leadership</a></li><li><a href="about.html#partners">Partners</a></li></ul></div>
     <div><div class="f-col-title">Fish Valley Project</div><ul class="f-links"><li><a href="properties.html#development">The Development</a></li><li><a href="properties.html#opportunities">Opportunities</a></li><li><a href="properties.html#park">Neighborhood Park</a></li><!--<li><a href="properties.html#hospitality" class="dim">Hospitality</a></li>--></ul></div>
-    <div><div class="f-col-title">Investor Resources</div><ul class="f-links"><li><a href="services.html#investment">Why Invest</a></li><li><a href="#investor">Investor Portal</a></li><li><a href="services.html#faq">FAQs</a></li></ul></div>
+    <div><div class="f-col-title">Investor Resources</div><ul class="f-links"><li><a href="services.html#investment">Why Invest</a></li><!--li><a href="#investor">Investor Portal</a></li--><li><a href="services.html#faq">FAQs</a></li></ul></div>
     <div><div class="f-col-title">Support</div><ul class="f-links"><li><a href="contact.html">Contact Us</a></li><li><a href="#contact-main">Sales Enquiries</a></li><li><a href="#location">Office Location</a></li><li><a href="contact.html">Privacy Policy</a></li><li><a href="contact.html">Terms & Conditions</a></li></ul></div>
   </div>
   <div class="footer-bottom"><span>© 2026 Fish Valley Investments & Property Ltd. All rights reserved. Registered in Nigeria.</span></div>
