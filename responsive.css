@@ -552,7 +552,7 @@ nav .hamburger span { background: #102322 !important; }
 .properties-page .hsb-item { min-width: 0; padding: 0 24px; }
 .properties-page .hsb-n { font-size: clamp(20px, 3.4vw, 20px); }
 .properties-page .hsb-l { line-height: 1.45; }
-#glance .gl-portfolio { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+#glance .gl-portfolio { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
 @media (max-width: 1100px) {
   #glance .gl-portfolio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
