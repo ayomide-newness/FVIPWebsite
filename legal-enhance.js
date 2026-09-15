@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
       '<footer class="legal-footer"><div class="legal-footer-top">' +
       '<div class="legal-footer-brand"><div class="legal-footer-logo"><img src="' + favicon + '" alt="FVIP logo"><div><strong>Fish Valley</strong><span>Investments &amp; Property Ltd.</span></div></div><p>A registered Nigerian real estate company delivering trusted property investment and development solutions.</p></div>' +
       '<div><h2>Company</h2><a href="about.html">About FVIP</a><a href="about.html#team">Leadership</a><a href="about.html#partners">Partners</a></div>' +
-      '<div><h2>Fish Valley Project</h2><a href="fish_valley_properties.html">Project Overview</a><a href="fish_valley_properties.html#development">Development</a><a href="contact.html#contact-main">Sales Enquiries</a></div>'
-      '<div><h2>Support</h2><a href="contact.html">Contact Us</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>' +
+      '<div><h2>Fish Valley Project</h2><a href="fish_valley_properties.html">Project Overview</a><a href="fish_valley_properties.html#development">Development</a><a href="contact.html#contact-main">Sales Enquiries</a></div>' +
+      '<div><h2>Support</h2><a href="contact.html">Contact Us</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &; Conditions</a></div>' +
       '</div><div class="legal-footer-bottom"><span>© 2026 Fish Valley Investments &amp; Property Ltd. All rights reserved.</span><span>Registered in Nigeria.</span></div></footer>');
   }
 
