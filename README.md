@@ -1,2 +1,2 @@
 # FVIPWebsite
-Fish Valley Investment &amp; Properties
+Fish Valley Investment & Properties
