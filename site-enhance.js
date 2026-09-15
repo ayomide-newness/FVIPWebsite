@@ -53,6 +53,31 @@
     link.setAttribute("href", target === "home.html" ? "index.html" : "index.html" + target.slice("home.html".length));
   });
 
+  /* Fish Valley Project is a focused, standalone destination: retain only
+     the two relevant primary links before the compact menu is assembled. */
+  if (document.body.classList.contains("properties-page")) {
+    document.querySelectorAll(".nav-links > .nav-item").forEach(function (item) {
+      var label = (item.querySelector(":scope > .nav-link") || {}).textContent || "";
+      if (!/^(Home|Fish Valley Project)/.test(label.trim())) item.remove();
+    });
+    document.querySelectorAll(".properties-page .nav-item").forEach(function (item) {
+      var link = item.querySelector(":scope > .nav-link");
+      var menu = item.querySelector(":scope > .nav-dropdown, :scope > .nav-dd");
+      if (link && /^Home/.test(link.textContent.trim())) {
+        link.textContent = "Home";
+        if (menu) menu.remove();
+      }
+    });
+    document.querySelectorAll(".properties-page .m-btns, .properties-page .m-divider").forEach(function (item) { item.remove(); });
+  }
+
+  /* Legal links are kept consistent in each independently authored footer. */
+  document.querySelectorAll("a").forEach(function (link) {
+    var label = (link.textContent || "").trim();
+    if (label === "Privacy Policy") link.setAttribute("href", "privacy.html");
+    if (label === "Terms & Conditions" || label === "Terms of Use") link.setAttribute("href", "terms.html");
+  });
+
   /* Rebuild the compact menu from the desktop navigation.  This keeps every
      page's submenu accurate without maintaining a second set of links. */
   function buildMobileNavigation() {
