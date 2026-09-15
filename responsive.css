@@ -400,6 +400,41 @@ nav .nav-link:hover, nav .nav-item.active .nav-link { color: #9a6b21 !important;
 nav .nav-link svg { opacity: .8 !important; }
 nav .hamburger span { background: #102322 !important; }
 
+/* A clearer, easier-to-grab scrollbar across the site. */
+html { scrollbar-color: #b9904a #102322; scrollbar-width: auto; }
+::-webkit-scrollbar { width: 12px !important; height: 12px !important; }
+::-webkit-scrollbar-track { background: #102322 !important; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#d8be7a, #b9904a) !important; border: 3px solid #102322; border-radius: 12px; }
+::-webkit-scrollbar-thumb:hover { background: #efe3c2 !important; }
+
+/* The brand's second line stays legible wherever the navigation is used. */
+nav .logo-tag, nav .logo-sub { font-size: 10px !important; letter-spacing: 2.1px !important; font-weight: 800 !important; color: #081514 !important; }
+
+/* Fish Valley Project is intentionally distinct from the corporate pages. */
+.properties-page .nav-links { margin-left: auto; margin-right: 28px; }
+.properties-page .nav-link { padding-inline: 20px !important; }
+.properties-page .nav-item.active .nav-link { color: #9a6b21 !important; }
+.properties-page .btn-primary, .properties-page .btn-solid, .properties-page .btn-ghost-w,
+.properties-page .btn-outline-gold, .properties-page .pcta, .properties-page .ps-cta,
+.properties-page .btn-cta, .properties-page .btn-portal { border-radius: 6px !important; }
+.properties-page .breadcrumb { color: #d8be7a !important; font-weight: 700; }
+
+/* Target-market image carousel, placed after opportunities. */
+.audience-section { background: #f3f2f0; overflow: hidden; }
+.audience-heading { max-width: 690px; margin-bottom: 42px; }
+.audience-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(275px, 31%); gap: 18px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding: 4px 2px 24px; scrollbar-width: thin; }
+.audience-card { min-height: 440px; position: relative; overflow: hidden; scroll-snap-align: start; background: #102322; isolation: isolate; transition: transform .55s cubic-bezier(.22,1,.36,1), box-shadow .55s; }
+.audience-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.22,1,.36,1); }
+.audience-card:hover { transform: translateY(-9px); box-shadow: 0 24px 55px rgba(9,22,22,.2); }
+.audience-card:hover img { transform: scale(1.08); }
+.audience-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9,22,22,.04) 20%, rgba(9,22,22,.92) 100%); }
+.audience-content { position: absolute; left: 28px; right: 24px; bottom: 28px; color: #fff; }
+.audience-content span { display: block; color: #d8be7a; font-size: 10px; font-weight: 800; letter-spacing: 2.5px; margin-bottom: 12px; }
+.audience-content h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 28px; line-height: 1.06; font-weight: 500; margin-bottom: 10px; }
+.audience-content p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,.8); max-width: 250px; }
+@media (max-width: 900px) { .audience-carousel { grid-auto-columns: minmax(285px, 46%); } .ticker .tk-track { animation-duration: 6s !important; } }
+@media (max-width: 640px) { .audience-section { padding-block: 64px !important; } .audience-carousel { grid-auto-columns: minmax(278px, 82%); } .audience-card { min-height: 390px; } .ticker .tk-track { animation-duration: 4.5s !important; } }
+
 @property --neon-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 .btn-p, .btn-primary, .btn-cta, .m-btn.gold, .i-enter {
   --neon-angle: 0deg;
@@ -506,6 +541,48 @@ nav .hamburger span { background: #102322 !important; }
   .properties-page .dev-stat:last-child { grid-column: auto; }
 }
 
+/* Final FVIP refinement pass: composed, property-led rather than decorative. */
+.properties-page #navbar .nav-inner { position: relative; justify-content: space-between; }
+.properties-page #navbar .nav-links { flex: 1; }
+.properties-page .project-brand { position: absolute; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 12px; color: #102322; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(19px, 2.2vw, 28px); font-weight: 600; letter-spacing: -.02em; white-space: nowrap; }
+.properties-page .project-brand b { color: #9a6b21; font-weight: 700; }
+.properties-page .project-brand-mark { width: 46px; height: 46px; display: grid; place-items: center; }
+.properties-page .project-brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+.properties-page .project-nav-link { padding: 9px 0 !important; color: #102322 !important; font-size: 10px !important; font-weight: 800 !important; }
+.properties-page .project-nav-link::after { left: 0 !important; right: 0 !important; }
+.properties-page .nav-util { min-width: 175px; justify-content: flex-end; }
+.properties-page .btn-primary, .properties-page .btn-solid, .properties-page
+.properties-page .btn-outline-gold, .properties-page .pcta, .properties-page .ps-cta,
+.properties-page .btn-cta, .properties-page .btn-portal {
+  --neon-angle: 0deg;
+  border: 2px solid transparent !important; border-radius: 7px !important;
+  background: linear-gradient(135deg, #163a37, #0b201e) padding-box, conic-gradient(from var(--neon-angle), #00e5ff, #6577ff, #e64cff, #ff4f85, #ffbd45, #53f4b1, #00e5ff) border-box !important;
+  background-origin: border-box !important; background-clip: padding-box, border-box !important;
+  animation: fvip-neon-flow 3.8s linear infinite !important; box-shadow: 0 0 8px rgba(0,229,255,.48), 0 0 19px rgba(137,83,255,.28), 0 9px 0 rgba(5,17,16,.32), 0 18px 30px rgba(8,25,23,.22) !important; text-shadow: 0 1px 2px rgba(0,0,0,.55) !important;
+}
+.properties-page .btn-primary:hover, .properties-page .pcta:hover, .properties-page .btn-cta:hover { transform: translateY(-3px) !important; animation-duration: 1.25s !important; box-shadow: 0 0 12px rgba(0,229,255,.82), 0 0 28px rgba(230,76,255,.46), 0 12px 0 rgba(5,17,16,.28), 0 25px 38px rgba(8,25,23,.26) !important; }
+.properties-page .page-hero-bg { background-position: center 46% !important; filter: saturate(.92) contrast(1.04) brightness(.74) !important; }
+.properties-page .page-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,22,22,.82), rgba(9,22,22,.34) 58%, rgba(9,22,22,.12)); pointer-events: none; }
+.properties-page .page-hero-inner { position: relative; z-index: 2; }
+
+/* Leadership cards retain the full portrait, even before final photography is supplied. */
+#team { background: radial-gradient(circle at 12% 8%, rgba(216,190,122,.22), transparent 34%), #e9ece9; }
+#team .team-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
+#team .team-card { border: 1px solid rgba(255,255,255,.72); border-radius: 16px; background: rgba(255,255,255,.48); box-shadow: 0 16px 36px rgba(9,22,22,.09); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+#team .team-card:hover { transform: translateY(-7px); box-shadow: 0 25px 48px rgba(9,22,22,.16); }
+#team .team-img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: contain; object-position: center center; display: block; background: linear-gradient(135deg, #dfe5df, #f8f7f2); padding: 8px 8px 0; }
+#team .team-card:hover .team-img { transform: none; }
+#team .team-body { padding: 20px 20px 22px; border-top: 1px solid rgba(16,35,34,.08); }
+#team .team-role { color: #8a652a; letter-spacing: 1.8px; }
+
+@media (max-width: 700px) {
+  .properties-page .project-brand { font-size: 18px; gap: 8px; }
+  .properties-page .project-brand-mark { width: 36px; height: 36px; }
+  .properties-page .nav-links, .properties-page .nav-util { display: none; }
+  .properties-page .nav-inner { justify-content: flex-end !important; }
+  .properties-page .project-brand { left: 50%; }
+}
+
 /* Project imagery and development information architecture. */
 .park-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
 .park-media { overflow: hidden; border: 1px solid rgba(185,144,74,.24); background: rgba(255,255,255,.03); }
@@ -610,4 +687,40 @@ nav .hamburger span { background: #102322 !important; }
   animation: none !important;
   opacity: 1 !important;
   transform: none !important;
+}
+
+/* Fish Valley Project mobile hero: keep the masterplan image visible and move copy onto the light page panel. */
+@media (max-width: 700px) {
+  .properties-page .page-hero {
+    min-height: 0 !important;
+    display: block !important;
+    padding: 0 var(--page-gutter) 54px !important;
+    background: var(--fvip-paper, #f3f2f0) !important;
+  }
+  .properties-page .page-hero-bg {
+    inset: 0 0 auto 0 !important;
+    height: 244px !important;
+    background: url('masterplan-3d.png') center 46% / cover no-repeat !important;
+    filter: saturate(.92) contrast(1.02) brightness(1.03) !important;
+    animation: none !important;
+  }
+  .properties-page .page-hero::after {
+    content: '' !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    inset: 128px 0 0 !important;
+    background: linear-gradient(180deg, transparent 0, var(--fvip-paper, #f3f2f0) 116px) !important;
+    pointer-events: none !important;
+  }
+  .properties-page .page-hero-inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 190px 0 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  .properties-page .page-hero-h { color: #102322 !important; text-shadow: none !important; }
+  .properties-page .page-hero-h em { color: #a87524 !important; text-shadow: none !important; }
+  .properties-page .page-hero-sub { color: #264541 !important; font-weight: 500 !important; }
+  .properties-page .breadcrumb, .properties-page .ph-txt { color: #7a5720 !important; }
 }
